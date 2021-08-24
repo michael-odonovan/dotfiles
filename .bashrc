@@ -119,7 +119,7 @@ dotfilesbosh() {
 
 totalbosh() {
 	echo 'configbosh ============================================'
-	configbosh
+	dotfilesbosh
 	echo 'config bosh done --------------------------------------'
 	sleep 2
 	echo $'\n'

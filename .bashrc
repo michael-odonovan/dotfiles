@@ -20,7 +20,7 @@ alias ls='ls -F'
 export CLICOLOR=1
 
 # goes foreground/background ie. ex is one type.
-export LSCOLORS=exfxcxdxxxegedabagacad
+export LSCOLORS=exxxxxxxxxxxxxxxxxexex
 
 
 # This sets up the source for my bash scripts:

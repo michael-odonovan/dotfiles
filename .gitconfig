@@ -1,0 +1,8 @@
+[user]
+	name = mike-odonovan
+	email = mikeodonovan3@gmail.com
+[alias]
+	ac = !git add -A && git commit
+	st = !git status 
+[pull]
+	ff = only

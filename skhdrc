@@ -1,0 +1,70 @@
+# Potential Hotkeys:
+# shift + lctrl + alt - ___ :
+
+
+# alt + cmd - arrows : =======================================
+
+# Resize Windows
+alt + cmd - h : yabai -m window --resize left:-171:0; \
+                  yabai -m window --resize right:-171:0
+
+alt + cmd - l : yabai -m window --resize right:171:0; \
+                  yabai -m window --resize left:171:0
+
+# Fullscreen Toggle
+alt + cmd - k : yabai -m window --toggle zoom-fullscreen
+
+# Flip Windows
+alt + cmd - j : yabai -m space --mirror y-axis
+
+
+
+# ctrl + cmd - arrows : =======================================
+# Window Navigation
+cmd - h : yabai -m window --focus west
+cmd - l : yabai -m window --focus east
+ctrl + cmd - up : yabai -m window --focus north
+ctrl + cmd - down : yabai -m window --focus south
+
+
+# ctrl + alt - arrows : =======================================
+# Equalize size of windows
+ctrl + alt - down : yabai -m space --balance
+
+
+# ctrl + cmd + alt - arrows : =======================================
+# Move Window to Next Workspace
+ctrl + cmd + alt - right : yabai -m window --space next; yabai -m window --focus east
+ctrl + cmd + alt - left : yabai -m window --space prev; yabai -m space --focus prev
+
+
+
+
+# Unused ======================================================
+
+# Move focus container to workspace
+# shift + alt - m : yabai -m window --space last; yabai -m space --focus last
+# shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
+# shift + alt - n : yabai -m window --space next; yabai -m space --focus next
+# shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+# shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+# shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+# shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+
+# Moving windows
+# shift + alt - h : yabai -m window --warp west
+# shift + alt - j : yabai -m window --warp south
+# shift + alt - k : yabai -m window --warp north
+# shift + alt - l : yabai -mwindow --warp east
+
+# Float / Unfloat window
+# shift + alt - space : \
+    # yabai -m window --toggle float; \
+    # yabai -m window --toggle border
+
+# Restart Yabai
+# shift + lctrl + alt - r : \
+    # /usr/bin/env osascript <<< \
+        # "display notification \"Restarting Yabai\" with title \"Yabai\""; \
+    # launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+

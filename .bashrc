@@ -12,13 +12,17 @@ export PS1
 
 # Folder Colors when using $ ls
 # -F is the trailing "/", -G is the folder name colors
-alias ls='ls -F -G'
+alias ls='ls -F'
+
 # Remove Background Colors or writable folders:
 # followed this guide here:
 # https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/
 export CLICOLOR=1
+
 # goes foreground/background ie. ex is one type.
-export LSCOLORS=exfxcxdxbxegedabagacex
+export LSCOLORS=exfxcxdxxxegedabagacad
+
+
 # This sets up the source for my bash scripts:
 export PATH=$PATH:~/bin
 

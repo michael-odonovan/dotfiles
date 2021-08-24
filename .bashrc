@@ -167,14 +167,14 @@ totalbosh() {
 	echo $'\n'
 
 	echo 'Coding ============================================'
-	Scripts
+	Coding
 	bosh
 	echo 'Coding done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 
 	echo 'Sites ============================================'
-	Scripts
+	Sites
 	bosh
 	echo 'Sites done ----------------------------------------'
 	sleep 2

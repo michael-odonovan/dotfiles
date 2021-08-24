@@ -75,6 +75,7 @@ alias Sites='cd ~/Sites && ls -a'
 alias Writing='cd ~/Documents/notes-writing && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
 alias eBooks='cd ~/Documents/eBooks && ls -a'
+alias Dotfiles='cd ~/Dotfiles && ls -a'
 
 # Areas
 alias Desk='cd ~/desktop && ls -a'
@@ -110,8 +111,10 @@ function gacp() {
 	git push origin
 }
 
-configbosh() {
-	dotfiles.sh
+dotfilesbosh() {
+	collect-dotfiles.sh
+	Dotfiles
+	bosh
 }
 
 totalbosh() {

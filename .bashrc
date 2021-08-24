@@ -182,9 +182,11 @@ totalbosh() {
 
 	echo 'Scripts ============================================'
 	Scripts
-	Writing
+	bosh
 	echo 'Scripts done ----------------------------------------'
 	sleep 2
 	echo $'\n'
+
+	cd ~/
 }
 

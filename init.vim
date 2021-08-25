@@ -176,7 +176,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Blog :e ~/coding-files/blog
 :command! Scripts :e ~/bin
 :command! Blog :e ~/coding-files/javascript-react/next-js-projects/mike-od-blog/
-:command! Js :e ~/coding-files/js-projects
+:command! Js :e ~/Coding-notes/Js-projects
 :command! Jsnotes :e ~/coding-files/coding-notes/js-learning/
 
 " Areas
@@ -755,7 +755,7 @@ let @y="A/* ------------------------------------------------ */\<esc>"
 let @t="a<?php bloginfo('template_directory'); ?>/"
 
 " Changing general text into a Fold heading
-let @j=":Fold\<cr>\<esc>3j0v$hd3k2lp"
+let @j=":Fold\<cr>\<esc>3j0dawv$hd3k2lp"
 let @k="d2kp"
 
 " Html comments in PHP
@@ -775,17 +775,17 @@ nnoremap <leader>sn :-1read ~/coding-files/my-snippets/
 command! Fold :call Fold()
 function! Fold()
 	if &ft ==# "markdown"
-		:-1read ~/documents/coding-files/my-folds/md-fold.md | execute "normal! zoell" | startinsert
+		:-1read ~/Coding/my-folds/md-fold.md | execute "normal! zoell" | startinsert
 	elseif &ft ==# "html"
-		:-1read ~/documents/coding-files/my-folds/html-fold.html | execute "normal! zoell" | startinsert
+		:-1read ~/Coding/my-folds/html-fold.html | execute "normal! zoell" | startinsert
 	elseif &ft ==# "javascript"
-		:-1read ~/documents/coding-files/my-folds/javascript-fold.js | execute "normal! zoell" | startinsert
+		:-1read ~/Coding/my-folds/javascript-fold.js | execute "normal! zoell" | startinsert
 	elseif &ft ==# "php"
-		:-1read ~/documents/coding-files/my-folds/html-fold.html | execute "normal! zoell" | startinsert
+		:-1read ~/Coding/my-folds/html-fold.html | execute "normal! zoell" | startinsert
 	elseif &ft ==# "css"
-		:-1read ~/documents/coding-files/my-folds/css-fold.css | execute "normal! zof>ll" | startinsert
+		:-1read ~/Coding/my-folds/css-fold.css | execute "normal! zof>ll" | startinsert
 	elseif &ft ==# "vim"
-		:-1read ~/documents/coding-files/my-folds/vim-fold.vim | execute "normal! zoell" | startinsert
+		:-1read ~/Coding/my-folds/vim-fold.vim | execute "normal! zoell" | startinsert
 	endif
 endfunction
 
@@ -809,7 +809,7 @@ abbr htht ``` html
 " AutoOpen a file on vim startup
 augroup open-planning-on-startup
 	autocmd!
-	autocmd VimEnter * nested if argc() == 0 | edit ~/coding-files/coding-notes/planning.md | endif
+	autocmd VimEnter * nested if argc() == 0 | edit ~/Coding-notes/planning.md | endif
 	" autocmd VimEnter * nested if argc() == 0 | source ~/.config/nvim/sessions/js.vim | endif
 augroup END
 

@@ -12,7 +12,7 @@ export PS1
 
 # Folder Colors when using $ ls
 # -F is the trailing "/", -G is the folder name colors
-alias ls='ls -F'
+# alias ls='ls -F'
 
 # Remove Background Colors or writable folders:
 # followed this guide here:
@@ -105,7 +105,12 @@ alias vim="$VISUAL"
 
 # ========== Git Stuff ===========
 alias gst='git status'
-alias bosh='git add . && git commit -m "update" && git push'
+
+function bosh() {
+	git add .
+	git commit -m "update"
+	git push
+}
 
 # Add all, commit and push (to origin) all at once
 # $ gacp "commit message"

@@ -167,17 +167,14 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Template :e ~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores
 :command! Woolly :e ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores
 :command! Woollyold :e ~/coding-files/woolly-website
-:command! Parts :e ~/coding-files/parts
+:command! Parts :e ~/Coding/parts
 :command! Locals :e ~/local\ sites " can't have ls or local
-:command! Testing :e ~/coding-files/testing
+:command! Testing :e ~/Coding/testing
 :command! Nvimvim :e ~/.config/nvim/
 :command! Cronjobs :e ~/myscripts
-:command! Wp :cd %:p:h | :e app/public/wp-content/themes/my-underscores/style.css
-:command! Blog :e ~/coding-files/blog
 :command! Scripts :e ~/bin
-:command! Blog :e ~/coding-files/javascript-react/next-js-projects/mike-od-blog/
-:command! Js :e ~/Coding-notes/Js-projects
-:command! Jsnotes :e ~/coding-files/coding-notes/js-learning/
+:command! Js :e ~/Js-projects
+:command! Jsnotes :e ~/Coding-notes/js-learning/
 
 " Areas
 :command! Desk :e ~/desktop

@@ -120,7 +120,7 @@ function gacp() {
 	git push origin
 }
 
-dotfilesbosh() {
+dotbosh() {
 	collect-dotfiles.sh
 	Dotfiles
 	bosh

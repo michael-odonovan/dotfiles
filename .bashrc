@@ -45,6 +45,8 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
+alias Project='cd ~/Js-projects/pomodoros/react-pomodoro-timer/src && ls -a'
+
 alias session='vim -S Session.vim'
 alias ..='cd ..'
 
@@ -144,13 +146,6 @@ totalbosh() {
 	Pictures
 	bosh
 	echo 'Pictures done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'Js-projects ============================================'
-	Js
-	bosh
-	echo 'Js-projects ----------------------------------------'
 	sleep 2
 	echo $'\n'
 

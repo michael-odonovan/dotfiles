@@ -145,6 +145,9 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 
 " => Opening Files & Folders {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" Latest project
+:command! Project :e ~/Js-projects/pomodoros/react-pomodoro-timer/src
+
 " Files
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Vim :e ~/coding-files/coding-notes/vim.md

@@ -148,6 +148,9 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 " Latest project
 :command! Project :e ~/Js-projects/pomodoros/react-pomodoro-timer/src
 
+" Latest project
+:command! Scratch :e ~/Coding-notes/scratch.md
+
 " Files
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Vim :e ~/coding-files/coding-notes/vim.md
@@ -155,8 +158,6 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Bashrc :e ~/.bashrc
 :command! Init :e ~/.config/nvim/init.vim
 :command! Source :source ~/.config/nvim/init.vim
-:command! Images :e ~/coding-files/coding-notes/images.md
-:command! Scratch :e ~/coding-files/coding-notes/scratch.md
 
 " Folders
 :command! Cn :e ~/Coding-notes
@@ -668,7 +669,7 @@ let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
 
 " Turn off double sided printing
 " duplex is double sided
-set printoptions=paper:duplex:off,number:y,portrait:y,left:0pc
+set printoptions=paper:A4,duplex:off,number:y,portrait:y,left:0pc
 set printfont=Courier:h10
 
 " Neither of these work with lines that wrap

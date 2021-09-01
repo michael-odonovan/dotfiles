@@ -5,17 +5,17 @@
 # alt + cmd - arrows : =======================================
 
 # Resize Windows
-alt + cmd - h : yabai -m window --resize left:-171:0; \
+cmd + ctrl - h : yabai -m window --resize left:-171:0; \
                   yabai -m window --resize right:-171:0
 
-alt + cmd - l : yabai -m window --resize right:171:0; \
+cmd + ctrl - l : yabai -m window --resize right:171:0; \
                   yabai -m window --resize left:171:0
 
 # Fullscreen Toggle
-alt + cmd - k : yabai -m window --toggle zoom-fullscreen
+cmd + ctrl - k : yabai -m window --toggle zoom-fullscreen
 
 # Flip Windows
-alt + cmd - j : yabai -m space --mirror y-axis
+cmd + ctrl - j : yabai -m space --mirror y-axis
 
 
 
@@ -23,19 +23,19 @@ alt + cmd - j : yabai -m space --mirror y-axis
 # Window Navigation
 cmd - h : yabai -m window --focus west
 cmd - l : yabai -m window --focus east
-ctrl + cmd - up : yabai -m window --focus north
-ctrl + cmd - down : yabai -m window --focus south
+cmd + ctrl - up : yabai -m window --focus north
+cmd + ctrl - down : yabai -m window --focus south
 
 
 # ctrl + alt - arrows : =======================================
 # Equalize size of windows
-ctrl + alt - down : yabai -m space --balance
+cmd + ctrl - down : yabai -m space --balance
 
 
 # ctrl + cmd + alt - arrows : =======================================
 # Move Window to Next Workspace
-ctrl + cmd + alt - right : yabai -m window --space next; yabai -m window --focus east
-ctrl + cmd + alt - left : yabai -m window --space prev; yabai -m space --focus prev
+cmd + ctrl + alt - right : yabai -m window --space next; yabai -m window --focus east
+cmd + ctrl + alt - left : yabai -m window --space prev; yabai -m space --focus prev
 
 
 

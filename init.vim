@@ -167,7 +167,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Pedal :e ~/local\ sites/pedal-woocommerce/app/public/wp-content/themes/pedal-woocommerce
 :command! Static :e ~/coding-files/static-sites/one-page-template/style.css
 :command! Fel :e ~/coding-files/front-end-learning
-:command! Notes :e ~/documents/notes
+:command! Notes :e ~/Documents/notes-general
 :command! Template :e ~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores
 :command! Woolly :e ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores
 :command! Woollyold :e ~/coding-files/woolly-website

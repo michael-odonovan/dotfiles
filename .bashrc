@@ -46,6 +46,7 @@ fi
 
 # ========== Aliases ===========
 alias Project='cd ~/Js-projects/pomodoros/react-pomodoro-timer/src && ls -a'
+alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 
 alias session='vim -S Session.vim'
 alias ..='cd ..'

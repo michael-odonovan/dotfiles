@@ -166,7 +166,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Sessions :e ~/.config/nvim/sessions
 :command! Pedal :e ~/local\ sites/pedal-woocommerce/app/public/wp-content/themes/pedal-woocommerce
 :command! Static :e ~/coding-files/static-sites/one-page-template/style.css
-:command! Fel :e ~/coding-files/front-end-learning
+:command! Fel :e ~/Coding/front-end-learning
 :command! Notes :e ~/Documents/notes-general
 :command! Template :e ~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores
 :command! Woolly :e ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores
@@ -254,8 +254,8 @@ augroup END
 
 " => Tabs
 nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>n :tabn<CR>
-nnoremap <leader>p :tabp<CR>
+nnoremap <leader>l :tabn<CR>
+nnoremap <leader>h :tabp<CR>
 
 " => Splits ========================
 " new, :vnew

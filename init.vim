@@ -763,8 +763,8 @@ let @k="d2kp"
 let @h="I<!-- \<esc>A -->\<esc>V<\<esc>"
 let @g="^dt<\<esc>f>lD"
 
+" Change beginning of word to Capital
 let @s="b~"
-
 
 " }}}
 

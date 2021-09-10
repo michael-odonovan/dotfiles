@@ -792,11 +792,11 @@ endfunction
 
 " }}}
 
-" => Abbreviation {{{
+" => Abbreviations {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" these only work for one liners:
+" Abbreviations only work for one liners:
 
-" CSS Layout Borders
+" Usage - type the shortcut and then just hit the space key or any other normal syntax key.
 abbr bbbb border: 1px solid black;
 abbr bwbw border: 1px solid white;
 abbr jsjs ``` Javascript

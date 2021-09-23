@@ -449,14 +449,8 @@ Plug 'itchyny/lightline.vim'
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
 
-" Ranger
-Plug 'lokaltog/neoranger' " I have edited this plugin to stop it overriding netrw. <leader>r
-
 " Display CSS colors
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
-" Scrollbar - only works on 0.5
-"Plug 'Xuyuanp/scrollbar.nvim'
 
 " surrounding tags etc.
 Plug 'danielmiessler/vimblog'

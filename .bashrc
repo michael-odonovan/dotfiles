@@ -45,7 +45,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
-alias Project='cd ~/Js-projects/pomodoros/react-pomodoro-timer/src && ls -a'
+alias Project='cd ~/Javascript/my-nextjs-blog && ls -a'
 alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 

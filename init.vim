@@ -119,9 +119,6 @@ vmap > >gv
 noremap YY "+y<CR>
 noremap XX "+x<CR>
 
-nnoremap <C-j> <C-d> " moving up half a page with <C-j>
-nnoremap <C-k> <C-u> " moving up half a page with <C-k>
-
 nnoremap j gj
 nnoremap k gk
 
@@ -270,6 +267,8 @@ nnoremap <leader>d :vsp<CR>
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
 " Keep equal Vim split on resizing
 autocmd VimResized * wincmd =

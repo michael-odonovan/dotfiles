@@ -495,7 +495,7 @@ set t_Co=256
 
 " Plugin Settings:
 
-" indentLine {{{
+" indentLine => {{{
 
 " "let g:indentLine_showFirstIndentLevel = 1
 "let g:indentLine_fileType = ['javascript', 'c']
@@ -509,7 +509,7 @@ let g:indentLine_setConceal = 1
 let g:indentLine_concealcursor = "incv"
 let g:indentLine_conceallevel = 2
 
-let g:indentLine_char = '|'
+let g:indentLine_char = '┆'
 "let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " Leading Space
@@ -530,8 +530,8 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#616161'
 
 " Background (256, True)
-"let g:indentLine_bgcolor_term = 202
-"let g:indentLine_bgcolor_gui = '#FF5F00'
+" let g:indentLine_bgcolor_term = 202
+" let g:indentLine_bgcolor_gui = '#FF5F00'
 
 " }}}
 

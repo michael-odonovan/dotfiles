@@ -29,51 +29,7 @@ set number
 " set signcolumn=no
 set hidden " hides a buffer when it is abandoned
 set noerrorbells
-
-" runtime macros/matchit.vim
-"this is a vim included macro for matching brackets
-"hi MatchParen guifg=NONE guibg=NONE gui=underline cterm=underline
-
-" Indents and Trailing Whitespace ===============
-" set tabstop=2 " Number of spaces that a <Tab> in the file counts for.
-" set softtabstop=2 " Number of spaces that a <Tab> counts for while performing editing operations
-" set shiftwidth=2 " Indents will have a width of 4 ?????
-" set noexpandtab
-" "set autoindent " Copy indent from current line when starting a new line.
-" set smartindent
-" set indentexpr=
-
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-
 set path=.,,**
-
-" Sort out tabs to spaces and reindent
-function! TabSort()
-	:set list
-	:set ts=2 sts=2 sw=2 noet
-	:set noexpandtab
-	:set autoindent
-	:retab
-	:%retab!
-	:normal ggVG=
-endfunction
-
-" Sort out tabs to spaces and reindent to 4 spaces
-function! TabSort4()
-	:set list
-	:set ts=4 sts=4 sw=4 noet
-	:set autoindent
-	:retab
-	:%retab!
-	:normal ggVG=
-endfunction
-
-set list
-set lcs=tab:┊\ ,trail:·
-" options: ['|', '¦', '┆', '┊']
 
 " Strip whitespace on save:
 autocmd BufWritePre * %s/\s\+$//e
@@ -101,6 +57,40 @@ set cursorline " highlight current cursor line
 " set autochdir
 
 set viminfo='100,<50,s10,h,%
+
+" }}}
+
+" => Tabs {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" set list
+" set lcs=tab:┊\ ,trail:·
+" options: ['|', '¦', '┆', '┊']
+
+" Sort out tabs to spaces and reindent
+function! TabSort()
+	:set list
+	:set ts=2 sts=2 sw=2 noet
+	:set noexpandtab
+	:set autoindent
+	:retab
+	:%retab!
+	:normal ggVG=
+endfunction
+
+" Sort out tabs to spaces and reindent to 4 spaces
+function! TabSort4()
+	:set list
+	:set ts=4 sts=4 sw=4 noet
+	:set autoindent
+	:retab
+	:%retab!
+	:normal ggVG=
+endfunction
 
 " }}}
 
@@ -150,7 +140,7 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 " => Opening Files & Folders {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Latest project
-:command! Project :e ~/Js-projects/pomodoros/react-pomodoro-timer/src
+:command! Project :e ~/Javascript/my-nextjs-blog
 
 " Latest project
 :command! Scratch :e ~/Coding-notes/scratch.md
@@ -181,7 +171,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Nvimvim :e ~/.config/nvim/
 :command! Cronjobs :e ~/myscripts
 :command! Scripts :e ~/bin
-:command! Js :e ~/Js-projects
+:command! Js :e ~/Javascript
 :command! Jsnotes :e ~/Coding-notes/js-learning/
 
 " Areas
@@ -495,29 +485,20 @@ set t_Co=256
 
 " Plugin Settings:
 
-" indentLine => {{{
+" indentLine :IndentLinesToggle => {{{
+let g:indentLine_enabled = 0
 
-" "let g:indentLine_showFirstIndentLevel = 1
-"let g:indentLine_fileType = ['javascript', 'c']
 let g:indentLine_fileTypeExclude = ["vimwiki", "coc-explorer", "help", "undotree", "diff"]
 let g:indentLine_bufTypeExclude = ["help", "terminal"]
-"let g:indentLine_bufNameExclude = []
 let g:indentLine_indentLevel = 10
 
 " Conceal settings
 let g:indentLine_setConceal = 1
-let g:indentLine_concealcursor = "incv"
+let g:indentLine_concealcursor = "inc"
 let g:indentLine_conceallevel = 2
 
 let g:indentLine_char = '┆'
 "let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-" Leading Space
-"let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = "•"
-
-" Use Theme Colors
-"let g:indentLine_setColors = 0
 
 " 16 Color
 let g:indentLine_color_tty_light = 7 " (default: 4)
@@ -528,10 +509,6 @@ let g:indentLine_color_term = 239
 
 " True Color
 let g:indentLine_color_gui = '#616161'
-
-" Background (256, True)
-" let g:indentLine_bgcolor_term = 202
-" let g:indentLine_bgcolor_gui = '#FF5F00'
 
 " }}}
 

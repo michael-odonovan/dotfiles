@@ -810,6 +810,8 @@ function! Fold()
 		:-1read ~/Coding/my-folds/css-fold.css | execute "normal! zof>ll" | startinsert
 	elseif &ft ==# "vim"
 		:-1read ~/Coding/my-folds/vim-fold.vim | execute "normal! zoell" | startinsert
+	elseif &ft ==# "tmux"
+		:-1read ~/Coding/my-folds/vim-fold.vim | execute "normal! zoell" | startinsert
 	endif
 endfunction
 

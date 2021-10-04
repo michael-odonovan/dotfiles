@@ -10,10 +10,6 @@ export PS1
 
 # ========== General ===========
 
-# Folder Colors when using $ ls
-# -F is the trailing "/", -G is the folder name colors
-# alias ls='ls -F'
-
 # Remove Background Colors or writable folders:
 # followed this guide here:
 # https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/
@@ -52,7 +48,6 @@ alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias session='vim -S Session.vim'
 alias ..='cd ..'
 
-# Custom Bits
 # show largest 20 files in a folder:
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 

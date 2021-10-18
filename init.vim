@@ -405,6 +405,15 @@ autocmd FileType netrw setl bufhidden=delete
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
 
+" colorscheme
+Plug 'morhetz/gruvbox'
+
+" CSS colors: needs Golang installed,
+" also after PlugInstall, you also need to go to
+" cd ~/.config/nvim/plugins-storage/vim-hexokinase/
+" and then $ make hexokinase
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 " Indent Guides
 Plug 'Yggdroot/indentLine'
 
@@ -443,13 +452,9 @@ Plug 'junegunn/goyo.vim'
 
 " Status bar
 Plug 'itchyny/lightline.vim'
-" Plug 'hoob3rt/lualine.nvim' " Status line in lua, needs nvim 0.5
 
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
-
-" Display CSS colors
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " surrounding tags etc.
 Plug 'danielmiessler/vimblog'
@@ -463,10 +468,9 @@ call plug#end()
 
 " => Colorscheme {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-"colorscheme darcula
+" colorscheme gruvbox
 colorscheme daytona
-"colorscheme gypsygrin
-set background=light
+set background=dark
 
 " Find Syntax Elements with <leader>co
 nmap <leader>co :call <SID>SynStack()<CR>

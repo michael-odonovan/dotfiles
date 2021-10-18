@@ -6,7 +6,7 @@ window:
   startup_mode: Windowed
 
 font:
-  size: 18
+  size: 14
 
   offset:
     x: 0

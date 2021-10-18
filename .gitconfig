@@ -3,8 +3,8 @@
 	email = mikeodonovan3@gmail.com
 [alias]
 	ac = !git add -A && git commit
-	st = !git status 
+	st = !git status
 [pull]
 	ff = only
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+# [url "git@github.com:"]
+#	insteadOf = https://github.com/

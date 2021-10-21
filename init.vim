@@ -786,7 +786,11 @@ let @g="^dt<\<esc>f>lD"
 " Change beginning of word to Capital
 let @s="b~"
 
+" React - change normal css styles to {styles.mystyle}
 let @m="0f\"r{astyles.\<esc>f\"r}"
+
+let @b="oborder: 1px solid black;\<esc>"
+
 
 " }}}
 

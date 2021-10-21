@@ -456,9 +456,6 @@ Plug 'itchyny/lightline.vim'
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
 
-" surrounding tags etc.
-Plug 'danielmiessler/vimblog'
-
 
 call plug#end()
 "!!!!! Don't forget to quit and reopen nvim, then run PlugInstall!!!!
@@ -484,8 +481,6 @@ endfunc
 set t_Co=256
 
 " }}}
-
-
 
 " Plugin Settings:
 
@@ -524,6 +519,7 @@ let g:indentLine_color_gui = '#616161'
 
 " => Hexokinase Color Highlights {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:Hexokinase_highlighters = ['virtual']
 let g:Hexokinase_ftEnabled = ['vim', 'css', 'html', 'javascript', 'scss']
 
@@ -558,14 +554,13 @@ let php_htmlInStrings = 1
 set pumheight=10
 
 " Map choosing suggestions j,k and u
-" inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : coc#refresh()
-" inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : coc#refresh()
+inoremap <expr> <c-j> pumvisible() ? "\<C-n>" : coc#refresh()
+inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : coc#refresh()
 inoremap <expr> <c-u> pumvisible() ? coc#_select_confirm() : coc#refresh()
 
 " Disabling the Enter key from autocompleting
 inoremap <expr> <cr> "\<C-g>u\<CR>"
 " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -849,7 +844,4 @@ nnoremap <leader>sh :e ~/coding-files/coding-notes/planning.md<cr>
 
 " }}}
 
-
 :finish
-
-

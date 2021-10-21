@@ -202,7 +202,7 @@ alias Dotfiles='cd ~/Dotfiles && ls -a'
 
 # Areas
 alias Desk='cd ~/desktop && ls -a'
-alias Downloads='cd ~/downloads && ls -a'
+alias Downloads='cd ~/Downloads && ls -a'
 
 # Neovim stuff.
 # If ever need to open original vim just use $ vi

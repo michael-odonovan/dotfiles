@@ -173,6 +173,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Scripts :e ~/bin
 :command! Js :e ~/Javascript
 :command! Jsnotes :e ~/Coding-notes/js-learning/
+:command! Sites :e ~/Sites/
 
 " Areas
 :command! Desk :e ~/desktop
@@ -426,7 +427,8 @@ Plug 'jiangmiao/auto-pairs'
 
 " Markdown Stuff
 Plug 'godlygeek/tabular'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'plasticboy/vim-markdown'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Language Support ==============
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -640,7 +642,7 @@ let g:goyo_height=100
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntax highlighting in ```code blocks```
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'jsx=javascript.jsx']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'jsx=javascript.jsx',]
 
 " Creating ready-made code blocks in markdown:
 command! Codej :-1read ~/coding-files/my-snippets/block-js.md | execute "normal! j" | startinsert
@@ -680,7 +682,6 @@ let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
 
 " Another option for viewing markdown files that uses node:
 " :!npx markdown-preview % &
-
 
 " }}}
 

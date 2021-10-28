@@ -140,7 +140,7 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 " => Opening Files & Folders {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Latest project
-:command! Project :e ~/Javascript/my-nextjs-blog
+:command! Project :e ~/Javascript/recycle-mobility/
 
 " Latest project
 :command! Scratch :e ~/Coding-notes/scratch.md

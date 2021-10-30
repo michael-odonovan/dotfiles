@@ -147,7 +147,8 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 
 " Files
 map <leader>, :e ~/.config/nvim/init.vim<CR>
-:command! Vim :e ~/coding-files/coding-notes/vim.md
+:command! Firefox :e ~/Coding-notes/firefox.md
+:command! Vim :e ~/Coding-notes/vim.md
 :command! Daytona :vs ~/.config/nvim/colors/daytona.vim
 :command! Bashrc :e ~/.bashrc
 :command! Init :e ~/.config/nvim/init.vim

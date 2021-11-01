@@ -10,7 +10,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on " to find what filetype is set for an open file :set filetype?
 
-let mapleader=" " " leader key
+" leader key
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
@@ -68,7 +70,7 @@ set softtabstop=2
 set tabstop=2
 
 " set list
-" set lcs=tab:┊\ ,trail:·
+set lcs=tab:┊\ ,trail:·
 " options: ['|', '¦', '┆', '┊']
 
 " Sort out tabs to spaces and reindent

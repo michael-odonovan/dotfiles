@@ -1,0 +1,42 @@
+{
+  "accel_enable": false,
+  "accel_show_endtime": "<ctrl><super>T",
+  "accel_stop_next": "<ctrl><super>K",
+  "debug": false,
+  "detect_dupes": true,
+  "inhibit": 0,
+  "inhibit_max": 1800,
+  "notification_sticky": true,
+  "notification": true,
+  "notification_longtimeout": 30000,
+  "play_sound": true,
+  "prefer_presets": 2,
+  "save_quick_timers": false,
+  "show_endtime": false,
+  "show_label": false,
+  "show_progress": true,
+  "show_time": true,
+  "sort_by_duration": true,
+  "sort_descending": true,
+  "sound_file": "kitchen_timer.ogg",
+  "sound_loops": 3,
+  "volume_level_warn": false,
+  "volume_threshold": 25,
+  "quick_timers": [],
+  "timers": [
+    {
+      "id": "9ad235d5-c913-4f3c-8ff7-1ac08c504f24",
+      "name": "5 minutes",
+      "duration": 300,
+      "enabled": false,
+      "quick": false
+    },
+    {
+      "id": "9a2d5a01-3b64-4ded-b27f-1475e57d4eec",
+      "name": "25 minutes",
+      "duration": 1500,
+      "enabled": true,
+      "quick": false
+    }
+  ]
+}

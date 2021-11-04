@@ -149,6 +149,7 @@ nnoremap <leader>cdl :lcd %:p:h<CR>
 
 " Files
 map <leader>, :e ~/.config/nvim/init.vim<CR>
+:command! AAA :e ~/Coding-notes/AAAWorkingMemory.md
 :command! Firefox :e ~/Coding-notes/firefox.md
 :command! Vim :e ~/Coding-notes/vim.md
 :command! Daytona :vs ~/.config/nvim/colors/daytona.vim
@@ -160,22 +161,13 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Cn :e ~/Coding-notes
 :command! Cf :e ~/Coding
 :command! Snippets :e ~/coding-files/my-snippets
-:command! Sessions :e ~/.config/nvim/sessions
-:command! Pedal :e ~/local\ sites/pedal-woocommerce/app/public/wp-content/themes/pedal-woocommerce
-:command! Static :e ~/coding-files/static-sites/one-page-template/style.css
 :command! Fel :e ~/Coding/front-end-learning
 :command! Notes :e ~/Documents/notes-general
-:command! Template :e ~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores
-:command! Woolly :e ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores
-:command! Woollyold :e ~/coding-files/woolly-website
 :command! Parts :e ~/Coding/parts
 :command! Locals :e ~/local\ sites " can't have ls or local
 :command! Testing :e ~/Coding/testing
-:command! Nvimvim :e ~/.config/nvim/
-:command! Cronjobs :e ~/myscripts
 :command! Scripts :e ~/bin
 :command! Js :e ~/Javascript
-:command! Jsnotes :e ~/Coding-notes/js-learning/
 :command! Sites :e ~/Sites/
 
 " Areas
@@ -207,7 +199,7 @@ autocmd FileType html,css,php,javascript,jsx,markdown EmmetInstall
 
 " => Fuzzy Search {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-f> :FZF<CR>
+nnoremap <C-t> :FZF<CR>
 
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
@@ -446,7 +438,7 @@ Plug 'salcode/vim-wordpress-dict'
 Plug 'captbaritone/better-indent-support-for-php-with-html'
 
 " Fuzzy Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " <C-p>
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " git
@@ -703,6 +695,14 @@ function! Hardcopy()
 	:hardcopy
 	:syntax on
 endfunction
+
+command! Hardcopy :call Hardcopy()
+function! Hardcopy()
+	:syntax off
+	:hardcopy
+	:syntax on
+endfunction
+" :set printfont=courier:h18
 
 command! Print :call Print()
 function! Print()

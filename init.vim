@@ -453,6 +453,8 @@ Plug 'itchyny/lightline.vim'
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
 
+" Being able to repeat Surrounding Tags
+Plug 'tpope/vim-repeat'
 
 call plug#end()
 "!!!!! Don't forget to quit and reopen nvim, then run PlugInstall!!!!
@@ -697,12 +699,12 @@ function! Hardcopy()
 endfunction
 
 command! Hardcopy :call Hardcopy()
-function! Hardcopy()
+function! HardcopyLarge()
 	:syntax off
+	:set printfont=courier:h18
 	:hardcopy
 	:syntax on
 endfunction
-" :set printfont=courier:h18
 
 command! Print :call Print()
 function! Print()
@@ -764,33 +766,14 @@ nnoremap <leader>pp :!wp new ~/coding-files/blog/
 " CSS add !important
 let @i="0f;i !important\<esc>"
 
-" Surrounding Code with Paragraph Backticks
-let @u="o`\<esc>kko\<esc>i`\<esc>"
-
-" Add reset comment to css
-let @r="A /* reset */"
-
 " Convert html to css class
 let @p="0df\"i.\<esc>f\"Da {"
-
-" Marker for grid containers
-let @y="A/* ------------------------------------------------ */\<esc>"
-
-" Wordpress Image Path
-let @t="a<?php bloginfo('template_directory'); ?>/"
 
 " Changing general text into a Fold heading
 let @j=":Fold\<cr>\<esc>3j0dawv$hd3k2lp"
 let @k="d2kp"
 
-" Html comments in PHP
-let @h="I<!-- \<esc>A -->\<esc>V<\<esc>"
-let @g="^dt<\<esc>f>lD"
-
-" Change beginning of word to Capital
-let @s="b~"
-
-" React - change normal css styles to {styles.mystyle}
+" React css modules - change normal css styles to {styles.mystyle}
 let @m="0f\"r{astyles.\<esc>f\"r}"
 
 let @b="oborder: 1px solid black;\<esc>"

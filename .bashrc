@@ -246,6 +246,49 @@ dotbosh() {
 }
 
 totalbosh() {
+
+	echo 'react-phone-clock-apps ============================================'
+  cd ~/Javascript/my-apps/react-phone-clock-apps
+	bosh
+	echo 'react-phone-clock-apps done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
+	echo 'react-pomodoro-timer ============================================'
+  cd ~/Javascript/my-apps/react-pomodoro-timer
+	bosh
+	echo 'react-pomodoro-timer done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
+	echo 'next-slider ============================================'
+  cd ~/Javascript/my-apps/next-slider
+	bosh
+	echo 'next-slider done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
+	echo 'nextjs-template ============================================'
+  cd ~/Javascript/nextjs-template
+	bosh
+	echo 'nextjs-template done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
+	echo 'recycle-mobility ============================================'
+  cd ~/Javascript/recycle-mobility
+	bosh
+	echo 'recycle-mobility done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
+	echo 'my-nextjs-blog ============================================'
+  cd ~/Javascript/my-nextjs-blog
+	bosh
+	echo 'my-nextjs-blog done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
 	echo 'dotbosh ============================================'
 	dotbosh
 	echo 'dotbosh done --------------------------------------'

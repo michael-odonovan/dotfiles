@@ -247,6 +247,13 @@ dotbosh() {
 
 totalbosh() {
 
+	echo 'sites-general ============================================'
+  Sites
+	bosh
+	echo 'sites-general done ----------------------------------------'
+	sleep 2
+	echo $'\n'
+
 	echo 'react-phone-clock-apps ============================================'
   cd ~/Javascript/my-apps/react-phone-clock-apps
 	bosh

@@ -404,12 +404,6 @@ call plug#begin('~/.config/nvim/plugins-storage')
 " colorscheme
 Plug 'morhetz/gruvbox'
 
-" CSS colors: needs Golang installed,
-" also after PlugInstall, you also need to go to
-" cd ~/.config/nvim/plugins-storage/vim-hexokinase/
-" and then $ make hexokinase
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
 " Indent Guides
 Plug 'Yggdroot/indentLine'
 

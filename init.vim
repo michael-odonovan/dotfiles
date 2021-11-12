@@ -126,8 +126,10 @@ nnoremap k gk
 cnoremap <expr> <C-P> wildmenumode() ? "\<C-P>" : "\<C-k>"
 cnoremap <expr> <C-N> wildmenumode() ? "\<C-N>" : "\<C-j>"
 
+" Current Working Directory Stuff
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>cdl :lcd %:p:h<CR>
+autocmd BufEnter * silent! lcd %:p:h
 
 " }}}
 
@@ -197,9 +199,10 @@ autocmd FileType html,css,php,javascript,jsx,markdown EmmetInstall
 
 " }}}
 
-" => Fuzzy Search {{{
+" => FZF Fuzzy Search {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-t> :FZF<CR>
+" nnoremap <C-t> :Files<CR>
+nnoremap <C-t> :GitFiles<CR>
 
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',

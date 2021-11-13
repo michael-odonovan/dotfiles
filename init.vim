@@ -691,37 +691,10 @@ set printfont=Courier:h10
 command! Hardcopy :call Hardcopy()
 function! Hardcopy()
 	:syntax off
+	:set printfont=courier:h11
 	:hardcopy
 	:syntax on
 endfunction
-
-command! Hardcopy :call Hardcopy()
-function! HardcopyLarge()
-	:syntax off
-	:set printfont=courier:h18
-	:hardcopy
-	:syntax on
-endfunction
-
-command! Print :call Print()
-function! Print()
-	:TOhtml
-	/<!
-	:normal dit
-	:w
-	:exe ':silent !open -a /Applications/Google\ Chrome.app %'
-endfunction
-
-" @media print {
-"   * {
-"     white-space: pre-wrap;
-"   }
-" }
-
-" VS Code Solution using PrintCode extension:
-command! Vs :! code %
-" Then press fn + f1
-" type PrintCode
 
 " }}}
 

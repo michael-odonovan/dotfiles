@@ -168,6 +168,8 @@ alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias session='vim -S Session.vim'
 alias ..='cd ..'
 
+# connect to bluetooth amplifier
+alias Sound='sudo bluetoothctl connect 00:13:EF:A0:45:F5'
 # show largest 20 files in a folder:
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 

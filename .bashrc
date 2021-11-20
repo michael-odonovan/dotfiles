@@ -164,6 +164,7 @@ fi
 alias Project='cd ~/Javascript/recycle-mobility && ls -a'
 alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
+alias CopyFile='vim ~/bin/copy-file.sh'
 
 alias session='vim -S Session.vim'
 alias ..='cd ..'

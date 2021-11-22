@@ -165,6 +165,8 @@ alias Project='cd ~/Javascript/recycle-mobility && ls -a'
 alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'
+alias Testing='cd ~/Javascript/learning/testing-nextjs && ls -a'
+alias Patterns='cd ~/Javascript/learning/patterns && ls -a'
 
 alias session='vim -S Session.vim'
 alias ..='cd ..'
@@ -179,6 +181,7 @@ alias Init='cd ~/.config/nvim/ && vim init.vim'
 alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders
+alias Documents='cd ~/Documents && ls -a'
 alias Javascript='cd ~/Javascript && ls -a'
 alias Js='cd ~/Javascript && ls -a'
 alias Cn='cd ~/Coding-notes && ls -a'
@@ -193,7 +196,6 @@ alias Template='cd ~/local\ sites/my-underscores-template/app/public/wp-content/
 alias Woolly='cd ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores && ls -a'
 alias Parts='cd ~/Coding/parts && ls -a'
 alias Locals='cd ~/local\ sites && ls -a' # can't have ls or local!
-alias Testing='cd ~/Coding/testing && ls -a'
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'

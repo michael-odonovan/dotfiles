@@ -131,6 +131,9 @@ nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>cdl :lcd %:p:h<CR>
 autocmd BufEnter * silent! lcd %:p:h
 
+" turn line into Title Case
+:command! Title :s/\<\(\w\)\(\S*\)/\u\1\L\2/g
+
 " }}}
 
 " => Changing Wword Behaviour {{{
@@ -398,6 +401,7 @@ nnoremap <leader>e :call ToggleNetrw()<cr>
 autocmd FileType netrw setl bufhidden=delete
 
 " }}}
+
 
 " Plugins:
 " => Plugins {{{

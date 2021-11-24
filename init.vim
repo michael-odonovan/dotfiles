@@ -149,7 +149,10 @@ autocmd BufEnter * silent! lcd %:p:h
 " Latest project
 :command! Project :e ~/Javascript/recycle-mobility/
 
-" Latest project
+" Patterns
+:command! Patterns :e ~/Javascript/learning/patterns/pages/
+
+" Scratch File
 :command! Scratch :e ~/Coding-notes/scratch.md
 
 " Files

@@ -231,7 +231,7 @@ alias vim="$VISUAL"
 alias gst='git status'
 
 function bosh() {
-	git add .
+	git add -A
 	git commit -m "update"
 	git push
 }
@@ -239,7 +239,7 @@ function bosh() {
 # Add all, commit and push (to origin) all at once
 # $ gacp "commit message"
 function gacp() {
-	git add .
+	git add -A
 	git commit -m "$1"
 	git push origin
 }

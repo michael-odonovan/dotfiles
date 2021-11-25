@@ -167,6 +167,7 @@ alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'
 alias Testing='cd ~/Javascript/learning/testing-nextjs && ls -a'
 alias Patterns='cd ~/Javascript/learning/patterns && ls -a'
+alias Learning='cd ~/Javascript/learning && ls -a'
 
 alias session='vim -S Session.vim'
 alias ..='cd ..'

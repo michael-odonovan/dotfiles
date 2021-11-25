@@ -255,12 +255,14 @@ totalbosh() {
 
 	echo 'sites-general ============================================'
   Sites
+	echo 'pushing "Sites"'
 	bosh
 	echo 'sites-general done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 
 	echo 'react-phone-clock-apps ============================================'
+	echo 'pushing "react-phone-clock-apps"'
   cd ~/Javascript/my-apps/react-phone-clock-apps
 	bosh
 	echo 'react-phone-clock-apps done ----------------------------------------'
@@ -269,6 +271,7 @@ totalbosh() {
 
 	echo 'react-pomodoro-timer ============================================'
   cd ~/Javascript/my-apps/react-pomodoro-timer
+	echo 'pushing "react-pomodoro-timer"'
 	bosh
 	echo 'react-pomodoro-timer done ----------------------------------------'
 	sleep 2
@@ -276,6 +279,7 @@ totalbosh() {
 
 	echo 'next-slider ============================================'
   cd ~/Javascript/my-apps/next-slider
+	echo 'pushing "next-slider"'
 	bosh
 	echo 'next-slider done ----------------------------------------'
 	sleep 2
@@ -283,6 +287,7 @@ totalbosh() {
 
 	echo 'nextjs-template ============================================'
   cd ~/Javascript/nextjs-template
+	echo 'pushing "nextjs-template"'
 	bosh
 	echo 'nextjs-template done ----------------------------------------'
 	sleep 2
@@ -290,6 +295,7 @@ totalbosh() {
 
 	echo 'recycle-mobility ============================================'
   cd ~/Javascript/recycle-mobility
+	echo 'pushing "recycle-mobility"'
 	bosh
 	echo 'recycle-mobility done ----------------------------------------'
 	sleep 2
@@ -297,6 +303,7 @@ totalbosh() {
 
 	echo 'my-nextjs-blog ============================================'
   cd ~/Javascript/my-nextjs-blog
+	echo 'pushing "my-nextjs-blog"'
 	bosh
 	echo 'my-nextjs-blog done ----------------------------------------'
 	sleep 2
@@ -304,6 +311,7 @@ totalbosh() {
 
 	echo 'dotbosh ============================================'
 	dotbosh
+	echo 'pushing "Dotfiles"'
 	echo 'dotbosh done --------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -311,6 +319,7 @@ totalbosh() {
 	echo 'Coding-notes ============================================'
 	Cn
 	bosh
+	echo 'pushing "Coding-notes"'
 	echo 'Coding-notes done ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -318,6 +327,7 @@ totalbosh() {
 	echo 'Pictures ============================================'
 	Pictures
 	bosh
+	echo 'pushing "Pictures"'
 	echo 'Pictures done ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -325,6 +335,7 @@ totalbosh() {
 	echo 'eBooks ============================================'
 	eBooks
 	bosh
+	echo 'pushing "eBooks"'
 	echo 'eBooks ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -332,6 +343,7 @@ totalbosh() {
 	echo 'notes-writing ============================================'
 	Writing
 	bosh
+	echo 'pushing "notes-writing"'
 	echo 'notes-writing done ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -339,6 +351,7 @@ totalbosh() {
 	echo 'notes-general ============================================'
 	Notes
 	bosh
+	echo 'pushing "notes-general"'
 	echo 'notes-general ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -346,6 +359,7 @@ totalbosh() {
 	echo 'Coding ============================================'
 	Coding
 	bosh
+	echo 'pushing "Coding"'
 	echo 'Coding done ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -353,6 +367,7 @@ totalbosh() {
 	echo 'Sites ============================================'
 	Sites
 	bosh
+	echo 'pushing "Sites"'
 	echo 'Sites done ----------------------------------------'
 	sleep 2
 	echo $'\n'
@@ -360,6 +375,7 @@ totalbosh() {
 	echo 'Scripts ============================================'
 	Scripts
 	bosh
+	echo 'pushing "Scripts"'
 	echo 'Scripts done ----------------------------------------'
 	sleep 2
 	echo $'\n'

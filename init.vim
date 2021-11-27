@@ -146,17 +146,14 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " => Opening Files & Folders {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>, :e ~/.config/nvim/init.vim<CR>
+
 " Latest project
 :command! Project :e ~/Javascript/recycle-mobility/
 
-" Patterns
+:command! Learning :e ~/Javascript/learning
 :command! Patterns :e ~/Javascript/learning/patterns/pages/
-
-" Scratch File
 :command! Scratch :e ~/Coding-notes/scratch.md
-
-" Files
-map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! AAA :e ~/Coding-notes/AAAWorkingMemory.md
 :command! Firefox :e ~/Coding-notes/firefox.md
 :command! Vim :e ~/Coding-notes/vim.md
@@ -164,8 +161,6 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Bashrc :e ~/.bashrc
 :command! Init :e ~/.config/nvim/init.vim
 :command! Source :source ~/.config/nvim/init.vim
-
-" Folders
 :command! Cn :e ~/Coding-notes
 :command! Cf :e ~/Coding
 :command! Snippets :e ~/coding-files/my-snippets
@@ -177,12 +172,9 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Scripts :e ~/bin
 :command! Js :e ~/Javascript
 :command! Sites :e ~/Sites/
-
-" Areas
 :command! Desk :e ~/desktop
 :command! Docs :e ~/documents
 :command! Downloads :e ~/downloads
-
 
 " }}}
 

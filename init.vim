@@ -151,8 +151,8 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 " Latest project
 :command! Project :e ~/Javascript/recycle-mobility/
 
-:command! Learning :e ~/Javascript/learning
-:command! Patterns :e ~/Javascript/learning/patterns/pages/
+:command! Learning :e ~/Javascript/Learning
+:command! Patterns :e ~/Javascript/Learning/patterns/pages/
 :command! Scratch :e ~/Coding-notes/scratch.md
 :command! AAA :e ~/Coding-notes/AAAWorkingMemory.md
 :command! Firefox :e ~/Coding-notes/firefox.md

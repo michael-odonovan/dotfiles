@@ -174,7 +174,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Sites :e ~/Sites/
 :command! Desk :e ~/desktop
 :command! Docs :e ~/documents
-:command! Downloads :e ~/downloads
+:command! Downloads :e ~/Downloads
 
 " }}}
 

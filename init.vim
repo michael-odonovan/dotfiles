@@ -149,7 +149,7 @@ autocmd BufEnter * silent! lcd %:p:h
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
-:command! Project :e ~/Javascript/recycle-mobility/
+:command! Project :e ~/Sites/jan-cleaning
 
 :command! Learning :e ~/Javascript/Learning
 :command! Patterns :e ~/Javascript/Learning/patterns/pages/
@@ -312,12 +312,6 @@ augroup END
 
 " }}}
 
-" => Bracket/Tag Autocompletion {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Php
-" inoremap <?<CR> <?php<CR>?><Esc>O<Tab>
-" inoremap <?<tab> <?php<space><space>?><left><left><left>
-" }}}
 
 " => Remember last editing position in window {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""

@@ -161,7 +161,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
-alias Project='cd ~/Javascript/recycle-mobility && ls -a'
+alias Project='cd ~/Javascript/jan-cleaning && ls -a'
 alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'
@@ -189,14 +189,10 @@ alias Cn='cd ~/Coding-notes && ls -a'
 alias Coding='cd ~/Coding && ls -a'
 alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
-alias Pedal='cd ~/local\ sites/pedal-woocommerce/app/public/wp-content/themes/pedal-woocommerce && ls -a'
-alias Template='~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores-template'
 alias Fel='cd ~/Coding/front-end-learning && ls -a'
 alias Notes='cd ~/Documents/notes-general && ls -a'
-alias Template='cd ~/local\ sites/my-underscores-template/app/public/wp-content/themes/my-underscores && ls -a'
 alias Woolly='cd ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores && ls -a'
 alias Parts='cd ~/Coding/parts && ls -a'
-alias Locals='cd ~/local\ sites && ls -a' # can't have ls or local!
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'

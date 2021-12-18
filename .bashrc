@@ -161,7 +161,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
-alias Project='cd ~/Javascript/jan-cleaning && ls -a'
+alias Project='cd ~/Javascript/client-sites/woollyrhino && ls -a'
 alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
 alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'

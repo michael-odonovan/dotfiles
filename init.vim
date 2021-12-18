@@ -149,7 +149,7 @@ autocmd BufEnter * silent! lcd %:p:h
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
-:command! Project :e ~/Sites/jan-cleaning
+:command! Project :e ~/Javascript/client-sites/woollyrhino
 
 :command! Learning :e ~/Javascript/Learning
 :command! Patterns :e ~/Javascript/Learning/patterns/pages/

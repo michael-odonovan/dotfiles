@@ -191,12 +191,10 @@ alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias Fel='cd ~/Coding/front-end-learning && ls -a'
 alias Notes='cd ~/Documents/notes-general && ls -a'
-alias Woolly='cd ~/local\ sites/woolly-rhino/app/public/wp-content/themes/my-underscores && ls -a'
 alias Parts='cd ~/Coding/parts && ls -a'
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'
-alias Sites='cd ~/Sites && ls -a'
 alias Writing='cd ~/Documents/notes-writing && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
 alias eBooks='cd ~/Documents/eBooks && ls -a'
@@ -248,14 +246,6 @@ dotbosh() {
 }
 
 totalbosh() {
-
-	echo 'sites-general ============================================'
-  Sites
-	echo 'pushing "Sites"'
-	bosh
-	echo 'sites-general done ----------------------------------------'
-	sleep 2
-	echo $'\n'
 
 	echo 'react-phone-clock-apps ============================================'
 	echo 'pushing "react-phone-clock-apps"'
@@ -357,14 +347,6 @@ totalbosh() {
 	bosh
 	echo 'pushing "Coding"'
 	echo 'Coding done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'Sites ============================================'
-	Sites
-	bosh
-	echo 'pushing "Sites"'
-	echo 'Sites done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 

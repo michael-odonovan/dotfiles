@@ -5,6 +5,9 @@
 " function! NewFunction()
 " 	commands
 " endfunction
+" Calling functions:
+
+" :call NewFunction()
 
 " => Basic Setup {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -149,7 +152,7 @@ autocmd BufEnter * silent! lcd %:p:h
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
-:command! Project :e ~/Javascript/client-sites/woollyrhino
+:command! Project :e ~/Javascript/michaelodonovan-net
 
 :command! Learning :e ~/Javascript/Learning
 :command! Patterns :e ~/Javascript/Learning/patterns/pages/
@@ -193,7 +196,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let g:user_emmet_install_global = 0
 
-autocmd FileType html,css,php,javascript,jsx,markdown EmmetInstall
+autocmd FileType html,css,javascript,jsx,markdown,md EmmetInstall
 
 " }}}
 
@@ -402,6 +405,7 @@ Plug 'morhetz/gruvbox'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
+" if this isn't working you may need to use my TabSort() function on the file
 
 " Loremipsum
 Plug 'vim-scripts/loremipsum' " :Loremipsum [wordcount]
@@ -425,7 +429,6 @@ Plug 'AndrewRadev/tagalong.vim' " automatically rename matching HTML tags
 Plug 'tpope/vim-commentary' " Commenting out code with gc
 Plug 'sheerun/vim-polyglot'
 Plug 'salcode/vim-wordpress-dict'
-Plug 'captbaritone/better-indent-support-for-php-with-html'
 
 " Fuzzy Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -488,30 +491,7 @@ let g:indentLine_conceallevel = 2
 let g:indentLine_char = '┆'
 "let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
-" 16 Color
-let g:indentLine_color_tty_light = 7 " (default: 4)
-let g:indentLine_color_dark = 1 " (default: 2)
-
-" 256
-let g:indentLine_color_term = 239
-
-" True Color
-let g:indentLine_color_gui = '#616161'
-
-" }}}
-
-" => Vim Commentary {{{
-
-" autocmd FileType php setlocal commentstring=//\ %s
-
-" }}}
-
-" => Hexokinase Color Highlights {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:Hexokinase_highlighters = ['virtual']
-let g:Hexokinase_ftEnabled = ['vim', 'css', 'html', 'javascript', 'scss']
-
+let g:indentLine_color_term = 225
 
 " }}}
 
@@ -525,7 +505,6 @@ let g:coc_global_extensions = [
 			\ 'coc-html',
 			\ 'coc-json',
 			\ 'coc-marketplace',
-			\ 'coc-phpls',
 			\ 'coc-prettier',
 			\ 'coc-python',
 			\ 'coc-stylelintplus',
@@ -537,7 +516,6 @@ set nowritebackup
 set cmdheight=1
 set updatetime=1000
 "set shortmess+=a
-let php_htmlInStrings = 1
 
 " Set the height of suggestion window
 set pumheight=10
@@ -568,14 +546,9 @@ command! -nargs=0 Format :call CocAction('format')
 
 " => Ale Linting settings {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_linters = {'php': ['php', 'langserver', 'phan', 'csslint', 'html']}
-let g:ale_php_langserver_executable = expand('~/.config/composer/vendor/bin/php-language-server.php')
-let g:ale_php_phan_executable = expand('~/bin/phan_client_auto')
-let g:ale_php_phan_use_client = 1
 set shortmess+=at
 
 " intelliphense???
-
 
 " }}}
 
@@ -691,20 +664,10 @@ endfunction
 
 " }}}
 
-" => Changing Filetypes {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Change PHP filetype to html
-:command! Fth :set ft=html
-:command! Ftj :set ft=javascript
-:command! Ftp :set ft=php
-
-" }}}
-
 " => tagalong.vim {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:tagalong_filetypes = ['html', 'javascript', 'php', 'jsx', 'xml']
+let g:tagalong_filetypes = ['html', 'javascript', 'jsx', 'xml']
 
 " }}}
 
@@ -757,8 +720,6 @@ function! Fold()
 		:-1read ~/Coding/my-folds/html-fold.html | execute "normal! zoell" | startinsert
 	elseif &ft ==# "javascript"
 		:-1read ~/Coding/my-folds/javascript-fold.js | execute "normal! zoell" | startinsert
-	elseif &ft ==# "php"
-		:-1read ~/Coding/my-folds/html-fold.html | execute "normal! zoell" | startinsert
 	elseif &ft ==# "css"
 		:-1read ~/Coding/my-folds/css-fold.css | execute "normal! zof>ll" | startinsert
 	elseif &ft ==# "vim"

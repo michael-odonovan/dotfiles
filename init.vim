@@ -602,7 +602,7 @@ let g:goyo_height=100
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntax highlighting in ```code blocks```
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'jsx=javascript.jsx',]
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'jsx=javascript.jsx']
 
 " Creating ready-made code blocks in markdown:
 command! Codej :-1read ~/coding-files/my-snippets/block-js.md | execute "normal! j" | startinsert

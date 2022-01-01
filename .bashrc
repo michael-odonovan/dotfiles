@@ -162,8 +162,8 @@ fi
 
 # ========== Aliases ===========
 alias Project='cd ~/Javascript/michaelodonovan-net && ls -a'
-alias Scratch='cd ~/Coding-notes/ && vim scratch.md'
-alias Keyboard='cd ~/Coding-notes/keyboard && ls -a'
+alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
+alias Keyboard='cd ~/CodingNotes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'
 alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'
 alias Patterns='cd ~/Javascript/Learning/patterns && ls -a'
@@ -185,7 +185,7 @@ alias Bashrc='cd && vim .bashrc'
 alias Documents='cd ~/Documents && ls -a'
 alias Javascript='cd ~/Javascript && ls -a'
 alias Js='cd ~/Javascript && ls -a'
-alias Cn='cd ~/Coding-notes && ls -a'
+alias Cn='cd ~/CodingNotes && ls -a'
 alias Coding='cd ~/Coding && ls -a'
 alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
@@ -280,18 +280,18 @@ totalbosh() {
 	echo $'\n'
 
 	echo 'recycle-mobility ============================================'
-  cd ~/Javascript/recycle-mobility
+  cd ~/Javascript/client-sites/rbcmobility
 	echo 'pushing "recycle-mobility"'
 	bosh
 	echo 'recycle-mobility done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 
-	echo 'my-nextjs-blog ============================================'
-  cd ~/Javascript/my-nextjs-blog
-	echo 'pushing "my-nextjs-blog"'
+	echo 'michaelodonovan-net ============================================'
+  cd ~/Javascript/michaelodonovan-net
+	echo 'pushing "michaelodonovan-net"'
 	bosh
-	echo 'my-nextjs-blog done ----------------------------------------'
+	echo 'michaelodonovan-net done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 
@@ -302,11 +302,11 @@ totalbosh() {
 	sleep 2
 	echo $'\n'
 
-	echo 'Coding-notes ============================================'
+	echo 'CodingNotes ============================================'
 	Cn
 	bosh
-	echo 'pushing "Coding-notes"'
-	echo 'Coding-notes done ----------------------------------------'
+	echo 'pushing "CodingNotes"'
+	echo 'CodingNotes done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 

@@ -190,12 +190,12 @@ alias Coding='cd ~/Coding && ls -a'
 alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias Fel='cd ~/Coding/front-end-learning && ls -a'
-alias Notes='cd ~/Documents/notes-general && ls -a'
+alias Notes='cd ~/Documents/notesGeneral && ls -a'
 alias Parts='cd ~/Coding/parts && ls -a'
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'
-alias Writing='cd ~/Documents/notes-writing && ls -a'
+alias Writing='cd ~/Documents/notesWriting && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
 alias eBooks='cd ~/Documents/eBooks && ls -a'
 alias Dotfiles='cd ~/Dotfiles && ls -a'
@@ -326,19 +326,19 @@ totalbosh() {
 	sleep 2
 	echo $'\n'
 
-	echo 'notes-writing ============================================'
+	echo 'notesWriting ============================================'
 	Writing
 	bosh
-	echo 'pushing "notes-writing"'
-	echo 'notes-writing done ----------------------------------------'
+	echo 'pushing "notesWriting"'
+	echo 'notesWriting done ----------------------------------------'
 	sleep 2
 	echo $'\n'
 
-	echo 'notes-general ============================================'
+	echo 'notesGeneral ============================================'
 	Notes
 	bosh
-	echo 'pushing "notes-general"'
-	echo 'notes-general ----------------------------------------'
+	echo 'pushing "notesGeneral"'
+	echo 'notesGeneral ----------------------------------------'
 	sleep 2
 	echo $'\n'
 

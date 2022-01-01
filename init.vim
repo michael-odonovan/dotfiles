@@ -156,15 +156,13 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 :command! Learning :e ~/Javascript/Learning
 :command! Patterns :e ~/Javascript/Learning/patterns/pages/
-:command! Scratch :e ~/Coding-notes/scratch.md
-:command! AAA :e ~/Coding-notes/AAAWorkingMemory.md
-:command! Firefox :e ~/Coding-notes/firefox.md
-:command! Vim :e ~/Coding-notes/vim.md
+:command! Scratch :e ~/CodingNotes/scratch.md
+:command! Vim :e ~/CodingNotes/vim.md
 :command! Daytona :vs ~/.config/nvim/colors/daytona.vim
 :command! Bashrc :e ~/.bashrc
 :command! Init :e ~/.config/nvim/init.vim
 :command! Source :source ~/.config/nvim/init.vim
-:command! Cn :e ~/Coding-notes
+:command! Cn :e ~/CodingNotes
 :command! Cf :e ~/Coding
 :command! Snippets :e ~/coding-files/my-snippets
 :command! Fel :e ~/Coding/front-end-learning
@@ -749,13 +747,13 @@ abbr htht ``` html
 " AutoOpen a file on vim startup
 augroup open-planning-on-startup
 	autocmd!
-	autocmd VimEnter * nested if argc() == 0 | edit ~/Coding-notes/planning.md | endif
+	autocmd VimEnter * nested if argc() == 0 | edit ~/CodingNotes/planning.md | endif
 	" autocmd VimEnter * nested if argc() == 0 | source ~/.config/nvim/sessions/js.vim | endif
 augroup END
 
 nnoremap <leader>sl :source ~/.config/nvim/sessions/
 nnoremap <leader>ss :mks! ~/.config/nvim/sessions/
-nnoremap <leader>sh :e ~/coding-files/coding-notes/planning.md<cr>
+nnoremap <leader>sh :e ~/coding-files/codingNotes/planning.md<cr>
 
 " }}}
 

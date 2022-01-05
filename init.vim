@@ -167,6 +167,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Snippets :e ~/coding-files/my-snippets
 :command! Fel :e ~/Coding/front-end-learning
 :command! Notes :e ~/Documents/notes-general
+:command! Documents :e ~/Documents
 :command! Parts :e ~/Coding/parts
 :command! Locals :e ~/local\ sites " can't have ls or local
 :command! Testing :e ~/Coding/testing
@@ -750,10 +751,6 @@ augroup open-planning-on-startup
 	autocmd VimEnter * nested if argc() == 0 | edit ~/CodingNotes/planning.md | endif
 	" autocmd VimEnter * nested if argc() == 0 | source ~/.config/nvim/sessions/js.vim | endif
 augroup END
-
-nnoremap <leader>sl :source ~/.config/nvim/sessions/
-nnoremap <leader>ss :mks! ~/.config/nvim/sessions/
-nnoremap <leader>sh :e ~/coding-files/codingNotes/planning.md<cr>
 
 " }}}
 

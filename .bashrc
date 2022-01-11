@@ -162,6 +162,7 @@ fi
 
 # ========== Aliases ===========
 alias Project='cd ~/Javascript/michaelodonovan-net && ls -a'
+alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Keyboard='cd ~/CodingNotes/keyboard && ls -a'
 alias CopyFile='vim ~/bin/copy-file.sh'

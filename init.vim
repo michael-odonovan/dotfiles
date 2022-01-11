@@ -371,7 +371,7 @@ set foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_liststyle = 0
 let g:netrw_localrmdir='rm -r'
-let g:netrw_sort_by = "name"
+let g:netrw_sort_by = "exten"
 
 " AutoOpen NetRW if vim called without parameters i.e. vim augroup
 " netrw-auto-open-if-no-params autocmd!  autocmd VimEnter * if argc() == 0 |
@@ -427,7 +427,6 @@ Plug 'mattn/emmet-vim' " <TAB>
 Plug 'AndrewRadev/tagalong.vim' " automatically rename matching HTML tags
 Plug 'tpope/vim-commentary' " Commenting out code with gc
 Plug 'sheerun/vim-polyglot'
-Plug 'salcode/vim-wordpress-dict'
 
 " Fuzzy Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -507,6 +506,7 @@ let g:coc_global_extensions = [
 			\ 'coc-prettier',
 			\ 'coc-python',
 			\ 'coc-stylelintplus',
+			\ 'coc-styled-components',
 			\ 'coc-tsserver',
 			\]
 

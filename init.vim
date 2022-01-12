@@ -371,7 +371,7 @@ set foldmethod=marker
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_liststyle = 0
 let g:netrw_localrmdir='rm -r'
-let g:netrw_sort_by = "exten"
+let g:netrw_sort_by = "name"
 
 " AutoOpen NetRW if vim called without parameters i.e. vim augroup
 " netrw-auto-open-if-no-params autocmd!  autocmd VimEnter * if argc() == 0 |

@@ -566,18 +566,6 @@ let g:lightline = {
 
 " }}}
 
-" => Scrollbar Plugin setup for Neovim 0.5 {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup ScrollbarInit
-	autocmd!
-	autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-	autocmd WinEnter,FocusGained				* silent! lua require('scrollbar').show()
-	autocmd WinLeave,FocusLost				* silent! lua require('scrollbar').clear()
-augroup end
-
-
-" }}}
-
 " => Goyo Plugin for Zen Writing {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " :Goyo

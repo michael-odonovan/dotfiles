@@ -153,6 +153,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
 :command! Project :e ~/Javascript/michaelodonovan-net
+:command! Blog :e ~/Javascript/michaelodonovan-net
 
 :command! Learning :e ~/Javascript/Learning
 :command! Patterns :e ~/Javascript/Learning/patterns/pages/

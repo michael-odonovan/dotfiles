@@ -2,7 +2,7 @@
     // General
     "vim.leader": "<space>",
     "window.zoomLevel": 1.7,
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Dracula",
 
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -43,6 +43,15 @@
             "before": ["<C-d>"],
             "commands": ["workbench.action.closeActiveEditor"]
         },
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.explorer.fileView.focus"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+
     ],
 
     // Stay highlighted after indent

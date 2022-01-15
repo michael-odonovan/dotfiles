@@ -169,8 +169,9 @@ alias CopyFile='vim ~/bin/copy-file.sh'
 alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'
 alias Patterns='cd ~/Javascript/Learning/patterns && ls -a'
 alias Learning='cd ~/Javascript/Learning && ls -a'
+alias Printing3d='cd ~/Printing3d && ls -a'
+alias Learning='cd ~/Javascript/learning-site && ls -a'
 
-alias session='vim -S Session.vim'
 alias ..='cd ..'
 
 # connect to bluetooth amplifier
@@ -240,7 +241,7 @@ function gacp() {
 	git push origin
 }
 
-dotbosh() {
+Dotbosh() {
 	collect-dotfiles.sh
 	Dotfiles
 	bosh
@@ -248,116 +249,51 @@ dotbosh() {
 
 totalbosh() {
 
-	echo 'react-phone-clock-apps ============================================'
-	echo 'pushing "react-phone-clock-apps"'
-  cd ~/Javascript/my-apps/react-phone-clock-apps
-	bosh
-	echo 'react-phone-clock-apps done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'react-pomodoro-timer ============================================'
-  cd ~/Javascript/my-apps/react-pomodoro-timer
-	echo 'pushing "react-pomodoro-timer"'
-	bosh
-	echo 'react-pomodoro-timer done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'next-slider ============================================'
-  cd ~/Javascript/my-apps/next-slider
-	echo 'pushing "next-slider"'
-	bosh
-	echo 'next-slider done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'nextjs-template ============================================'
-  cd ~/Javascript/nextjs-template
-	echo 'pushing "nextjs-template"'
-	bosh
-	echo 'nextjs-template done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'recycle-mobility ============================================'
-  cd ~/Javascript/client-sites/rbcmobility
-	echo 'pushing "recycle-mobility"'
-	bosh
-	echo 'recycle-mobility done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'michaelodonovan-net ============================================'
-  cd ~/Javascript/michaelodonovan-net
-	echo 'pushing "michaelodonovan-net"'
-	bosh
-	echo 'michaelodonovan-net done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'dotbosh ============================================'
-	dotbosh
-	echo 'pushing "Dotfiles"'
-	echo 'dotbosh done --------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'CodingNotes ============================================'
-	Cn
-	bosh
-	echo 'pushing "CodingNotes"'
-	echo 'CodingNotes done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'Pictures ============================================'
-	Pictures
-	bosh
-	echo 'pushing "Pictures"'
-	echo 'Pictures done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'eBooks ============================================'
-	eBooks
-	bosh
-	echo 'pushing "eBooks"'
-	echo 'eBooks ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'notesWriting ============================================'
-	Writing
-	bosh
-	echo 'pushing "notesWriting"'
-	echo 'notesWriting done ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'notesGeneral ============================================'
-	Notes
-	bosh
-	echo 'pushing "notesGeneral"'
-	echo 'notesGeneral ----------------------------------------'
-	sleep 2
-	echo $'\n'
-
-	echo 'Coding ============================================'
 	Coding
 	bosh
-	echo 'pushing "Coding"'
-	echo 'Coding done ----------------------------------------'
-	sleep 2
-	echo $'\n'
 
-	echo 'Scripts ============================================'
+	Cn
+	bosh
+
+	Dotbosh
+
+  Printing3d
+  bosh
+
+  cd ~/Javascript/my-apps/react-phone-clock-apps
+	bosh
+
+  cd ~/Javascript/my-apps/react-pomodoro-timer
+	bosh
+
+  cd ~/Javascript/my-apps/next-slider
+	bosh
+
+  cd ~/Javascript/nextjs-template
+	bosh
+
+  cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
+	bosh
+
+  cd ~/Javascript/client-sites/rbcmobility/sanityRecycleMobility	bosh
+
+  Blog
+	bosh
+
+	Pictures
+	bosh
+
+	eBooks
+	bosh
+
+	Writing
+	bosh
+
+	Notes
+	bosh
+
 	Scripts
 	bosh
-	echo 'pushing "Scripts"'
-	echo 'Scripts done ----------------------------------------'
-	sleep 2
-	echo $'\n'
 
 	cd ~/
 }

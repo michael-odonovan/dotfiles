@@ -423,7 +423,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mattn/emmet-vim' " <TAB>
 Plug 'AndrewRadev/tagalong.vim' " automatically rename matching HTML tags
 Plug 'tpope/vim-commentary' " Commenting out code with gc

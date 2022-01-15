@@ -21,19 +21,30 @@
           "before": ["<leader>", "w"],
           "commands": [":w"]
         },
+        // Open Terminal
         {
           "before": ["<leader>", "b"],
           "commands": ["workbench.action.terminal.new"]
         },
+        // Change Tabs
         {
             "before": ["<leader>", "l"],
             "commands": ["workbench.action.nextEditor"]
         },
-          {
+        {
             "before": ["<leader>", "h"],
             "commands": ["workbench.action.previousEditor"]
-          },
-      ],
+        },
+        {
+            "before": ["<C-c>"],
+            "commands": ["workbench.action.closeWindow"]
+        },
+        {
+            "before": ["<C-d>"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+    ],
+
     // Stay highlighted after indent
     "vim.visualModeKeyBindings": [
         {

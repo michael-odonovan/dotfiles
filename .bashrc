@@ -164,11 +164,7 @@ fi
 alias Project='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
-alias Keyboard='cd ~/CodingNotes/keyboard && ls -a'
-alias CopyFile='vim ~/bin/copy-file.sh'
 alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'
-alias Patterns='cd ~/Javascript/Learning/patterns && ls -a'
-alias Learning='cd ~/Javascript/Learning && ls -a'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Javascript/learning-site && ls -a'
 
@@ -193,13 +189,11 @@ alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias Fel='cd ~/Coding/front-end-learning && ls -a'
 alias Notes='cd ~/Documents/notes-general && ls -a'
-alias Parts='cd ~/Coding/parts && ls -a'
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'
 alias Writing='cd ~/Documents/notes-writing && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
-alias eBooks='cd ~/Documents/eBooks && ls -a'
 alias Dotfiles='cd ~/Dotfiles && ls -a'
 
 # Areas
@@ -215,14 +209,6 @@ export EDITOR='nvim'
 # FZF Fuzzy Finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPS="--extended"
-
-# Stopping nvim terminal nesting
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-  export VISUAL="nvr -cc e --remote-wait +'set bufhidden=wipe'"
-else
-  export VISUAL="nvim"
-fi
-alias vim="$VISUAL"
 
 # ========== Git Stuff ===========
 alias gst='git status'
@@ -257,42 +243,49 @@ totalbosh() {
 
 	Dotbosh
 
-  Printing3d
+  cd ~/Javascript/client-sites/janandsonscleaningsolutions
+	bosh
+
+  Learning
   bosh
 
-  cd ~/Javascript/my-apps/react-phone-clock-apps
-	bosh
+  Blog
+  bosh
 
-  cd ~/Javascript/my-apps/react-pomodoro-timer
-	bosh
-
-  cd ~/Javascript/my-apps/next-slider
+  cd ~/Javascript/apps/next-slider
 	bosh
 
   cd ~/Javascript/nextjs-template
 	bosh
 
-  cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
-	bosh
-
-  cd ~/Javascript/client-sites/rbcmobility/sanityRecycleMobility	bosh
-
-  Blog
-	bosh
-
-	Pictures
-	bosh
-
-	eBooks
+	Notes
 	bosh
 
 	Writing
 	bosh
 
-	Notes
+	Pictures
+	bosh
+
+  cd ~/Javascript/my-apps/react-pomodoro-timer
+	bosh
+
+  Printing3d
+  bosh
+
+  cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
+	bosh
+
+  cd ~/Javascript/client-sites/rbcmobility/sanityRecycleMobility
+  bosh
+
+  cd ~/Javascript/my-apps/react-phone-clock-apps
 	bosh
 
 	Scripts
+	bosh
+
+  cd ~/WoollyRhinoBackup
 	bosh
 
 	cd ~/

@@ -24,7 +24,7 @@
           "commands": ["workbench.action.toggleSidebarVisibility"]
         },
         {
-          "before": ["<leader>", "e"],
+          "before": ["<leader>", "shift+e"],
           "commands": ["workbench.action.toggleActivityBarVisibility"]
         },
 

@@ -1,0 +1,103 @@
+{
+    // General
+    "vim.leader": "<space>",
+    "window.zoomLevel": 1.7,
+    "workbench.colorTheme": "Dracula",
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["esc"],
+          "commands": [":nohl"]
+        },
+        {
+          "before": ["<leader>", "d"],
+          "commands": ["workbench.action.splitEditor"]
+        },
+        {
+          "before": ["<leader>", "e"],
+          "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+          "before": ["<leader>", "w"],
+          "commands": [":w"]
+        },
+        // Open Terminal
+        {
+          "before": ["<leader>", "b"],
+          "commands": ["workbench.action.terminal.new"]
+        },
+        // Change Tabs
+        {
+            "before": ["<leader>", "l"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<C-c>"],
+            "commands": ["workbench.action.closeWindow"]
+        },
+        {
+            "before": ["<C-d>"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.explorer.fileView.focus"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+
+    ],
+
+    // Stay highlighted after indent
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "after": [">", "g", "v"]
+        },
+        {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+        },
+      ],
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[graphql]": {
+        "editor.tabSize": 2
+    },
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.labelFormat": "short",
+    "breadcrumbs.enabled": true
+}

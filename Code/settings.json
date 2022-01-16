@@ -3,6 +3,9 @@
     "vim.leader": "<space>",
     "window.zoomLevel": 1.7,
     "workbench.colorTheme": "Dracula",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.labelFormat": "short",
+    "breadcrumbs.enabled": true,
 
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -13,10 +16,20 @@
           "before": ["<leader>", "d"],
           "commands": ["workbench.action.splitEditor"]
         },
+
+
+
         {
           "before": ["<leader>", "e"],
           "commands": ["workbench.action.toggleSidebarVisibility"]
         },
+        {
+          "before": ["<leader>", "e"],
+          "commands": ["workbench.action.toggleActivityBarVisibility"]
+        },
+
+
+
         {
           "before": ["<leader>", "w"],
           "commands": [":w"]
@@ -97,7 +110,5 @@
     "[graphql]": {
         "editor.tabSize": 2
     },
-    "explorer.confirmDragAndDrop": false,
-    "workbench.editor.labelFormat": "short",
-    "breadcrumbs.enabled": true
+    "workbench.activityBar.visible": false
 }

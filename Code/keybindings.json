@@ -1,0 +1,14 @@
+[
+
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "explorerViewletFocus  && !inputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+
+]

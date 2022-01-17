@@ -1,5 +1,4 @@
 [
-
     {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
@@ -10,5 +9,8 @@
         "command": "workbench.action.navigateRight",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
-
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.openGlobalKeybindingsFile"
+    }
 ]

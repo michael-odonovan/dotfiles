@@ -201,7 +201,7 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_install_global = 1
 
 " This installs for each :set filetype?
-// autocmd FileType html,css,javascript,jsx,markdown,md,typescript,typescriptreact EmmetInstall
+" autocmd FileType html,css,javascript,jsx,markdown,md,typescript,typescriptreact EmmetInstall
 
 " }}}
 

@@ -6,7 +6,21 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.editor.labelFormat": "short",
     "breadcrumbs.enabled": true,
+    "workbench.activityBar.visible": false,
+
+    // multiCommand Plugin - called from keybindings.json
+    "multiCommand.commands": [
+        {
+          "command": "multiCommand.toggleSidebars",
+          "sequence": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.toggleActivityBarVisibility"
+          ]
+        }
+      ],
+
     "vim.normalModeKeyBindingsNonRecursive": [
+        // Open settings.json
         {
             "before": [
                 "<leader>",
@@ -16,6 +30,7 @@
                 "workbench.action.openSettingsJson"
             ]
         },
+        // escape hightlighting search
         {
             "before": [
                 "esc"
@@ -24,6 +39,7 @@
                 ":nohl"
             ]
         },
+        // open split
         {
             "before": [
                 "<leader>",
@@ -33,24 +49,16 @@
                 "workbench.action.splitEditor"
             ]
         },
+        // Close tab and terminal
         {
             "before": [
-                "<leader>",
-                "e"
+                "<C-d>"
             ],
             "commands": [
-                "workbench.action.toggleSidebarVisibility"
+                "workbench.action.closeActiveEditor"
             ]
         },
-        {
-            "before": [
-                "<leader>",
-                "shift+e"
-            ],
-            "commands": [
-                "workbench.action.toggleActivityBarVisibility"
-            ]
-        },
+        // save
         {
             "before": [
                 "<leader>",
@@ -60,7 +68,7 @@
                 ":w"
             ]
         },
-        // Open Terminal
+        // Open terminal
         {
             "before": [
                 "<leader>",
@@ -70,7 +78,7 @@
                 "workbench.action.terminal.new"
             ]
         },
-        // Change Tabs
+        // Change tabs left and right
         {
             "before": [
                 "<leader>",
@@ -89,6 +97,7 @@
                 "workbench.action.previousEditor"
             ]
         },
+        // Close VS Code
         {
             "before": [
                 "<C-c>"
@@ -97,14 +106,7 @@
                 "workbench.action.closeWindow"
             ]
         },
-        {
-            "before": [
-                "<C-d>"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
+        // move back and forth to file explorer
         {
             "before": [
                 "<C-h>"
@@ -122,7 +124,7 @@
             ]
         },
     ],
-    // Stay highlighted after indent
+    // Stay highlighted after tab/indent
     "vim.visualModeKeyBindings": [
         {
             "before": [
@@ -175,5 +177,5 @@
     },
     "[graphql]": {
         "editor.tabSize": 2
-    }
+    },
 }

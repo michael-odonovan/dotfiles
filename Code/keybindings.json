@@ -12,5 +12,15 @@
     {
         "key": "ctrl+,",
         "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+
+
+
+    {
+        "key": "ctrl+e",
+        "command": "extension.multiCommand.execute",
+        "args": { "command": "multiCommand.toggleSidebars" },
     }
+      
+
 ]

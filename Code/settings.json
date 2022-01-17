@@ -6,7 +6,6 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.editor.labelFormat": "short",
     "breadcrumbs.enabled": true,
-    "workbench.activityBar.visible": false,
 
     // multiCommand Plugin - called from keybindings.json
     "multiCommand.commands": [

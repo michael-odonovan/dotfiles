@@ -188,15 +188,20 @@ let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
 \  },
+\  'typescript' : {
+\      'extends' : 'tsx',
+\  },
 \}
 
 " Emmet - mapping activation key
 let g:user_emmet_expandabbr_key='<tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-let g:user_emmet_install_global = 0
+" This installs in Globally
+let g:user_emmet_install_global = 1
 
-autocmd FileType html,css,javascript,jsx,markdown,md,typescript,tsx EmmetInstall
+" This installs for each :set filetype?
+// autocmd FileType html,css,javascript,jsx,markdown,md,typescript,typescriptreact EmmetInstall
 
 " }}}
 

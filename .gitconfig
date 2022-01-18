@@ -2,12 +2,13 @@
 	name = mike-odonovan
 	email = mikeodonovan3@gmail.com
 [alias]
-	ac = !git add -A && git commit
-	st = !git status
+# These must be prefixed by git. I have better usage in .bashrc
+ac = !git add -A && git commit
+st = !git status
 [pull]
 	ff = only
 # [url "git@github.com:"]
 #	insteadOf = https://github.com/
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential

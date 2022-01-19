@@ -1,5 +1,5 @@
 [user]
-	name = mike-odonovan
+	name = michael o'donovan
 	email = mikeodonovan3@gmail.com
 [alias]
 # These must be prefixed by git. I have better usage in .bashrc
@@ -12,3 +12,7 @@ st = !git status
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main

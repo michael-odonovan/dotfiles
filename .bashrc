@@ -99,6 +99,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
+alias kill3000='kill -9 $(lsof -ti:3000)'
 alias Project='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'

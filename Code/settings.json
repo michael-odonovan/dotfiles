@@ -1,11 +1,15 @@
 {
     // General
     "vim.leader": "<space>",
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
     "window.zoomLevel": 1.7,
     "workbench.colorTheme": "Dracula",
     "explorer.confirmDragAndDrop": false,
     "workbench.editor.labelFormat": "short",
     "breadcrumbs.enabled": true,
+    "editor.wordWrap": "on",
+    "window.menuBarVisibility": "visible",
 
     // multiCommand Plugin - called from keybindings.json
     "multiCommand.commands": [
@@ -165,16 +169,5 @@
         "**/.DS_Store": true,
         "**/node_modules": true
     },
-    "[javascript]": {
-        "editor.tabSize": 2
-    },
-    "[typescriptreact]": {
-        "editor.tabSize": 2
-    },
-    "[typescript]": {
-        "editor.tabSize": 2
-    },
-    "[graphql]": {
-        "editor.tabSize": 2
-    },
+    "workbench.activityBar.visible": false,
 }

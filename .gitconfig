@@ -5,6 +5,8 @@
 # These must be prefixed by git. I have better usage in .bashrc
 ac = !git add -A && git commit
 st = !git status
+top = !git rev-parse --show-toplevel
+
 [pull]
 	ff = only
 # [url "git@github.com:"]

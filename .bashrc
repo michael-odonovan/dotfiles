@@ -167,7 +167,7 @@ function gacp() {
 	git push origin
 }
 
-Dotbosh() {
+dotbosh() {
 	collect-dotfiles.sh
 	Dotfiles
 	bosh

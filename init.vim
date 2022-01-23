@@ -1,48 +1,28 @@
-" example command:
-" command! Nf :call NewFunction()
-
-" example function:
-" function! NewFunction()
-" 	commands
-" endfunction
-" Calling functions:
-
-" :call NewFunction()
-
-" => Basic Setup {{{
+" => Basic Setup
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin on " to find what filetype is set for an open file :set filetype?
-
-" leader key
-nnoremap <SPACE> <Nop>
+filetype plugin on
 let mapleader=" "
-
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
-
-set path+=** " provides tab completion for Ex file-related tasks
+set number
+set noerrorbells
+set linebreak
+set scrolloff=8 " start scrolling screen 8 lines below the bottom
+set hidden " hides a buffer when it is abandoned
+set wrap
+set showmatch " highlight matching brackets
+set cursorline " highlight current cursor line
+set termguicolors
+syntax enable " for syntax highlighting
+set smartcase "when searching, ignores case except when you specify it"
+set incsearch " highlights as you search
 set wildmenu "display all matching files when we tab complete
+" set autochdir
 set wildignorecase " case-insensitive search
 set wildignore+=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
-
-set linebreak
-" set nowrap
-set wrap
-
-set exrc " if there is an init.vim inside the folder, use that
-set number
-" set signcolumn=no
-set hidden " hides a buffer when it is abandoned
-set noerrorbells
 set path=.,,**
-
-" Strip whitespace on save:
-autocmd BufWritePre * %s/\s\+$//e
-
-" Searching ===============
-set ignorecase
-set smartcase
-set incsearch " highlights as you search
+autocmd BufWritePre * %s/\s\+$//e " Strip whitespace on save:
 
 " No backups, use Undo Directory ===============
 set noswapfile
@@ -50,22 +30,12 @@ set nobackup
 set undofile
 set undodir=~/.config/nvim/undo-directory
 
-set termguicolors
-set scrolloff=8 " start scrolling screen 8 lines below the bottom
-
-syntax enable " for syntax highlighting
-
-set showmatch " highlight matching brackets
-set cursorline " highlight current cursor line
-
-" Sorting out Working Directory?
-" set autochdir
-
 set viminfo='100,<50,s10,h,%
 
 " }}}
 
-" => Tabs {{{
+" => Tabs
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
 set shiftwidth=2
@@ -152,7 +122,7 @@ autocmd BufEnter * silent! lcd %:p:h
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
-:command! Project :e ~/Javascript/michaelodonovan-net
+:command! Project :e ~/Javascript/client-sites/janandsonscleaningsolutions
 :command! Blog :e ~/Javascript/michaelodonovan-net
 
 :command! Learning :e ~/Javascript/Learning
@@ -428,7 +398,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mattn/emmet-vim' " <TAB>
 Plug 'AndrewRadev/tagalong.vim' " automatically rename matching HTML tags

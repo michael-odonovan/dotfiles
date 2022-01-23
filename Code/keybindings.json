@@ -13,14 +13,17 @@
         "key": "ctrl+,",
         "command": "workbench.action.openGlobalKeybindingsFile"
     },
-
-
-
     {
         "key": "ctrl+e",
-        "command": "extension.multiCommand.execute",
-        "args": { "command": "multiCommand.toggleSidebars" },
-    }
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+
+
+    // {
+    //     "key": "ctrl+e",
+    //     "command": "extension.multiCommand.execute",
+    //     "args": { "command": "multiCommand.toggleSidebars" },
+    // }
       
 
 ]

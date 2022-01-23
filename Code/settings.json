@@ -12,17 +12,27 @@
     "window.menuBarVisibility": "visible",
 
     // multiCommand Plugin - called from keybindings.json
-    "multiCommand.commands": [
-        {
-          "command": "multiCommand.toggleSidebars",
-          "sequence": [
-            "workbench.action.toggleSidebarVisibility",
-            "workbench.action.toggleActivityBarVisibility"
-          ]
-        }
-      ],
+    // "multiCommand.commands": [
+    //     {
+    //       "command": "multiCommand.toggleSidebars",
+    //       "sequence": [
+    //         "workbench.action.toggleSidebarVisibility",
+    //         "workbench.action.toggleActivityBarVisibility"
+    //       ]
+    //     }
+    //   ],
 
     "vim.normalModeKeyBindingsNonRecursive": [
+        // Toggle Sidebar
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
         // Open settings.json
         {
             "before": [
@@ -169,5 +179,4 @@
         "**/.DS_Store": true,
         "**/node_modules": true
     },
-    "workbench.activityBar.visible": false,
 }

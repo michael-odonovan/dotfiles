@@ -101,7 +101,7 @@ fi
 # ========== Aliases ===========
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
-alias Project='cd ~/Javascript/michaelodonovan-net && ls -a'
+alias Project='cd ~/Javascript/client-sites/janandsonscleaningsolutions && ls -a'
 alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'

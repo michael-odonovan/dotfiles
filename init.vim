@@ -6,7 +6,6 @@ let mapleader=" "
 
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
-set guicursor=
 set number
 set noerrorbells
 set linebreak
@@ -407,6 +406,7 @@ Plug 'itchyny/lightline.vim'
 
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
+Plug 'AndrewRadev/tagalong.vim'
 
 " Being able to repeat Surrounding Tags
 Plug 'tpope/vim-repeat'
@@ -428,7 +428,12 @@ set background=dark
 " .config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/colors/nightfox.lua :17
 " -- bg         = "#111111",
 " /home/mike/.config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/theme.lua :42
-" Folded = { fg = c.blue, bg = c.bg_highlight }, -- line used for closed folds
+" Folded = { fg = c.blue, bg = c.bg }, -- line used for closed folds
+" Using colors in Alacritty:
+" copied and pasted this file
+" /home/mike/.config/nvim/plugins-storage/nightfox.nvim/extra/nightfox/nightfox_alacritty.yml
+" To alacritty config:
+" .config/alacritty/alacritty.yml
 
 " Find Syntax Elements with <leader>co
 nmap <leader>co :call <SID>SynStack()<CR>
@@ -640,6 +645,10 @@ let @k="d2kp"
 let @m="0f\"r{astyles.\<esc>f\"r}"
 
 let @b="oborder: 1px solid red;\<esc>"
+
+" Remove whitspace just inside a div (vim-surround)
+let @d="?><cr>lx/><cr>hx<esc>"
+
 
 " }}}
 

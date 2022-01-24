@@ -120,6 +120,7 @@ alias Init='cd ~/.config/nvim/ && vim init.vim'
 alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders
+alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Documents='cd ~/Documents && ls -a'
 alias Javascript='cd ~/Javascript && ls -a'
 alias Js='cd ~/Javascript && ls -a'

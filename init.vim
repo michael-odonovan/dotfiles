@@ -3,12 +3,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 let mapleader=" "
+
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
+set guicursor=
 set number
 set noerrorbells
 set linebreak
+set foldmethod=marker
 set scrolloff=8 " start scrolling screen 8 lines below the bottom
+set signcolumn=yes
 set hidden " hides a buffer when it is abandoned
 set wrap
 set showmatch " highlight matching brackets
@@ -17,12 +21,20 @@ set termguicolors
 syntax enable " for syntax highlighting
 set smartcase "when searching, ignores case except when you specify it"
 set incsearch " highlights as you search
+set path+=**
 set wildmenu "display all matching files when we tab complete
 " set autochdir
 set wildignorecase " case-insensitive search
-set wildignore+=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
-set path=.,,**
-autocmd BufWritePre * %s/\s\+$//e " Strip whitespace on save:
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
+" Strip whitespace on save:
+autocmd BufWritePre * %s/\s\+$e 
 
 " No backups, use Undo Directory ===============
 set noswapfile
@@ -34,68 +46,84 @@ set viminfo='100,<50,s10,h,%
 
 " }}}
 
+" => Should Use more often
+vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text with //
+
+" copy pwd to clipboard
+:command! Pwd let @+ = expand('%:p')
+
 " => Tabs
 " {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-set expandtab
-set shiftwidth=2
-set softtabstop=2
 set tabstop=2
-
-" set list
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+set list
 set lcs=tab:┊\ ,trail:·
-" options: ['|', '¦', '┆', '┊']
 
 " Sort out tabs to spaces and reindent
-function! TabSort()
-	:set list
-	:set ts=2 sts=2 sw=2 noet
-	:set noexpandtab
-	:set autoindent
-	:retab
-	:%retab!
-	:normal ggVG=
+function! TabToSpacesSort()
+:set tabstop=2
+:set softtabstop=2
+:set shiftwidth=2
+:set expandtab
+:set smartindent
+:set autoindent
+:set list
+:set lcs=tab:┊\ ,trail:·
+:retab
+:%retab!
+:normal ggVG=
 endfunction
 
-" Sort out tabs to spaces and reindent to 4 spaces
-function! TabSort4()
-	:set list
-	:set ts=4 sts=4 sw=4 noet
-	:set autoindent
-	:retab
-	:%retab!
-	:normal ggVG=
+function! TabToSpacesSort4()
+:set tabstop=4
+:set softtabstop=4
+:set shiftwidth=4
+:set expandtab
+:set smartindent
+:set autoindent
+:set list
+:set lcs=tab:┊\ ,trail:·
+:retab
+:%retab!
+:normal ggVG=
 endfunction
 
 " }}}
 
-" => Remaps and General Stuff {{{
+" => Remaps and General Stuff
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Easier Saving
 nnoremap <leader>w :wa<CR>
-
-" Easier Quitting
 nnoremap <C-d> :q!<CR>
-
-" Make Highlighted Search go away on Enter
 nnoremap <esc> :silent! nohls<cr>
+
+" This is needed otherwise you can only paste once:
+xnoremap <silent> p p:let @"=@0<CR>
 
 " Make yank Y behave like D & C
 map Y y$
 
-" Stay in Visual Mode after indenting a block with > or <
+" Stay in Visual Mode after indenting a block
 vmap < <gv
 vmap > >gv
+
+" Search shortcuts
+nnoremap <space>f :%s/
+nnoremap <space>F :,$s/
 
 " Copy to the System Clipboard with YY
 noremap YY "+y<CR>
 noremap XX "+x<CR>
 
+" visual line movement
 nnoremap j gj
 nnoremap k gk
 
-" cnoremap <C-n> <C-j>
-" cnoremap <C-p> <C-k>
 cnoremap <expr> <C-P> wildmenumode() ? "\<C-P>" : "\<C-k>"
 cnoremap <expr> <C-N> wildmenumode() ? "\<C-N>" : "\<C-j>"
 
@@ -104,12 +132,16 @@ nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>cdl :lcd %:p:h<CR>
 autocmd BufEnter * silent! lcd %:p:h
 
+" Move to previous position in the file
+:nnoremap <leader>o <c-o>
+
 " turn line into Title Case
 :command! Title :s/\<\(\w\)\(\S*\)/\u\1\L\2/g
 
 " }}}
 
-" => Changing Wword Behaviour {{{
+" => Changing Wword Behaviour
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Commands must start with a capital
 :command! Wword setlocal iskeyword-=-
@@ -117,7 +149,8 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " }}}
 
-" => Opening Files & Folders {{{
+" => Opening Files & Folders
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
@@ -131,27 +164,21 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 :command! Vim :e ~/CodingNotes/vim.md
 :command! Daytona :vs ~/.config/nvim/colors/daytona.vim
 :command! Bashrc :e ~/.bashrc
-:command! Init :e ~/.config/nvim/init.vim
 :command! Source :source ~/.config/nvim/init.vim
 :command! Cn :e ~/CodingNotes
 :command! Cf :e ~/Coding
-:command! Snippets :e ~/coding-files/my-snippets
-:command! Fel :e ~/Coding/front-end-learning
 :command! Notes :e ~/Documents/notes-general
 :command! Documents :e ~/Documents
-:command! Parts :e ~/Coding/parts
-:command! Locals :e ~/local\ sites " can't have ls or local
-:command! Testing :e ~/Coding/testing
 :command! Scripts :e ~/bin
 :command! Js :e ~/Javascript
-:command! Sites :e ~/Sites/
 :command! Desk :e ~/desktop
 :command! Docs :e ~/documents
 :command! Downloads :e ~/Downloads
 
 " }}}
 
-" => Emmet {{{
+" => Emmet
+" {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:user_emmet_settings = {
@@ -175,7 +202,8 @@ let g:user_emmet_install_global = 1
 
 " }}}
 
-" => FZF Fuzzy Search {{{
+" => FZF Fuzzy Search
+" {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " nnoremap <C-t> :Files<CR>
 nnoremap <C-t> :GitFiles<CR>
@@ -191,18 +219,11 @@ let g:fzf_layout = { 'down': '70%' }
 
 " }}}
 
-" => Buffers, Tabs, Splits, Terminals {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Buffers
+" =>  {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" => Buffers ======================
-"
-" Swapping back and forth between 2 buffers
-" next and previous buffers
-" :nnoremap <leader>n :bnext<CR>
-" :nnoremap <leader>p :bprevious<CR>
-:nnoremap <leader>o <c-o>
-
-" function to close all buffers that aren't open in a window
+" Clear all buffers that aren't open in a window
 function Wipeout()
     let tpbl=[]
     call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
@@ -210,8 +231,6 @@ function Wipeout()
         silent execute 'bwipeout' buf
     endfor
 endfunction
-
-" call Wipeout() with a mapping
 nnoremap <leader>ca :call Wipeout()<cr>
 
 " call Wipeout() on entering Vim
@@ -220,27 +239,25 @@ augroup wipe-all-buffers-on-leave-vim
 	autocmd VimEnter * call Wipeout()
 augroup END
 
+" }}}
 
 " => Tabs
+" =>  {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>
 
-" => Splits ========================
-" new, :vnew
-" vim is quite funny and takes | (piping) within vim, but <bar> in shortcuts
+" }}}
+
+" => Splits
+" =>  {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set splitright
 set splitbelow
-
 nnoremap <leader>d :vsp<CR>
-
-
-" Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
 
 " Keep equal Vim split on resizing
 autocmd VimResized * wincmd =
@@ -248,9 +265,29 @@ autocmd VimResized * wincmd =
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
-" => Terminals ===========================
-" Can open files from terminal now as have alias for
-" nvr & neovim-remote process is in .bashrc
+
+" }}}
+
+" => Windows
+" =>  {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+augroup initvim-remember-cursor-position
+	autocmd!
+	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+augroup END
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+" }}}
+
+" => Terminals
+" =>  {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Opening a terminal in current buffer
 nnoremap <leader>T :term<CR>
@@ -260,9 +297,6 @@ nnoremap <leader>b :new<bar>:term<CR>
 
 " Opening Ranger in a window via 'lokaltog/neoranger' plugin:
 nnoremap <silent> <Leader>r :RangerCurrentFile<CR>
-
-
-" let g:rnvimr_ex_enable = 1
 
 " Moving around terminal windows like normal windows
 tnoremap <C-h> <C-\><C-n><C-w>h
@@ -277,12 +311,11 @@ autocmd TermOpen * startinsert
 " Exit terminal with just <C-d>
 augroup terminal_settings
 	autocmd!
-	autocmd BufWinEnter,WinEnter term://* startinsert
-	autocmd BufLeave term://* stopinsert
-
-	" Ignore various filetypes as those will close terminal automatically
-	" Ignore fzf, ranger, coc
-	autocmd TermClose term://*
+	autocmd BufWinEnter,WinEnter term:* startinsert
+	autocmd BufLeave term:* stopinsert
+	" and ignore various filetypes as those will close terminal automatically
+	" and ignore fzf, ranger, coc
+	autocmd TermClose term:*
 		\ if (expand('<afile>') !~ "fzf") && (expand('<afile>') !~ "ranger") && (expand('<afile>') !~ "coc") |
 		\	call nvim_input('<CR>')  |
 		\ endif
@@ -290,32 +323,18 @@ augroup END
 
 " }}}
 
-
-" => Remember last editing position in window {{{
+" => Open a file in Firefox/Chrome <leader>B
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
-augroup initvim-remember-cursor-position
-	autocmd!
-	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-augroup END
+nnoremap <leader>B :exe ':silent !open -a /Applications/Firefox.app %'<CR>
+" nnoremap <leader>B :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR>
 
 " }}}
 
-" => Pasting over the top of a line, repeatedly with yy Vp {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This is needed otherwise you can only paste once:
-xnoremap <silent> p p:let @"=@0<CR>
-" }}}
-
-" => Open a file in Firefox/Chrome <leader>B {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" nnoremap <leader>B :exe ':silent !open -a /Applications/Firefox.app %'<CR>
-nnoremap <leader>B :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR>
-
-" }}}
-
-" => Autosave a New Folder and File Together {{{
+" => Autosave a New Folder and File Together
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " automake directories"
 augroup automkdir
 	autocmd!
@@ -324,26 +343,11 @@ augroup automkdir
 				\ call mkdir(expand('<afile>:h'), 'p') |
 				\ endif
 augroup END
-" }}}
-
-" => Search {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <space>f :%s/
-nnoremap <space>F :,$s/
-
-vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text with //
 
 " }}}
 
-" => Folds {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set foldmethod=marker
-" set foldlevel=1
-
-" }}}
-
-" => netrw {{{
+" => netrw
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_liststyle = 0
 let g:netrw_localrmdir='rm -r'
@@ -369,9 +373,8 @@ autocmd FileType netrw setl bufhidden=delete
 
 " }}}
 
-
-" Plugins:
-" => Plugins {{{
+" => Plugins
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
 
@@ -401,7 +404,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mattn/emmet-vim' " <TAB>
-Plug 'AndrewRadev/tagalong.vim' " automatically rename matching HTML tags
 Plug 'tpope/vim-commentary' " Commenting out code with gc
 Plug 'sheerun/vim-polyglot'
 
@@ -430,7 +432,10 @@ call plug#end()
 
 " }}}
 
-" => Colorscheme {{{
+" => Plugin Settings
+
+" => Colorscheme
+" {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme gruvbox
 colorscheme daytona
@@ -449,9 +454,8 @@ set t_Co=256
 
 " }}}
 
-" Plugin Settings:
-
-" indentLine :IndentLinesToggle => {{{
+" indentLine :IndentLinesToggle =>
+" {{{
 let g:indentLine_enabled = 0
 
 let g:indentLine_fileTypeExclude = ["vimwiki", "coc-explorer", "help", "undotree", "diff"]
@@ -470,7 +474,8 @@ let g:indentLine_color_term = 225
 
 " }}}
 
-" => Coc - Conquer of Completion settings {{{
+" => Coc - Conquer of Completion settings
+" {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Coc extensions to be auto installed
 let g:coc_global_extensions = [
@@ -514,13 +519,10 @@ nmap <silent> gr <Plug>(coc-references)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
-" Note WP site -> make sure there is a .git folder in the public folder,
-" otherwise coc gets messed up. Can be an empty .git folder.
-
-
 " }}}
 
-" => Ale Linting settings {{{
+" => Ale Linting settings
+" {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=at
 
@@ -528,7 +530,8 @@ set shortmess+=at
 
 " }}}
 
-" => Status Line Lightline Plugin {{{
+" => Status Line Lightline Plugin
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
 			\ 'colorscheme': 'jellybeans',
@@ -543,15 +546,11 @@ let g:lightline = {
 
 " }}}
 
-" => Goyo Plugin for Zen Writing {{{
+" => Goyo Plugin for Zen Writing
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " :Goyo
-" :Goyo!
-" :Go
-" :Go!
-
 let g:goyo_linenr=1
-
 
 " command! Go Goyo 70%+80x100%
 " offset+widthxheight
@@ -562,7 +561,8 @@ let g:goyo_height=100
 
 " }}}
 
-" => Markdown Settings {{{
+" => Markdown Settings
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntax highlighting in ```code blocks```
@@ -609,7 +609,8 @@ let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
 
 " }}}
 
-" => Printing {{{
+" => Printing
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn off double sided printing
@@ -618,29 +619,18 @@ set printoptions=paper:A4,duplex:off,number:y,portrait:y,left:0pc
 set printfont=Courier:h10
 
 " Neither of these work with lines that wrap
-command! Hardcopy :call Hardcopy()
 function! Hardcopy()
 	:syntax off
 	:set printfont=courier:h11
 	:hardcopy
 	:syntax on
 endfunction
+command! Hardcopy :call Hardcopy()
 
 " }}}
 
-" => tagalong.vim {{{
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:tagalong_filetypes = ['html', 'javascript', 'jsx', 'xml']
-
-" }}}
-
-" copy pwd to clipboard
-:command! Pwd let @+ = expand('%:p')
-
-nnoremap <leader>pp :!wp new ~/coding-files/blog/
-
-" => Search Patterns/Regex {{{
+" => Search Patterns/Regex
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " From the cursor position onwards, move all sentences onto their own line:
@@ -648,8 +638,8 @@ nnoremap <leader>pp :!wp new ~/coding-files/blog/
 
 " }}}
 
-
-" => Macros `m {{{
+" => Macros `m
+" {{{
 
 " Notice the <Esc> etc. have to be escaped with \
 
@@ -666,16 +656,13 @@ let @k="d2kp"
 " React css modules - change normal css styles to {styles.mystyle}
 let @m="0f\"r{astyles.\<esc>f\"r}"
 
-let @b="oborder: 1px solid black;\<esc>"
-
+let @b="oborder: 1px solid red;\<esc>"
 
 " }}}
 
-" => Snippets {{{
+" => Folds
+" {{{
 
-nnoremap <leader>sn :-1read ~/coding-files/my-snippets/
-
-" Folds
 command! Fold :call Fold()
 function! Fold()
 	if &ft ==# "markdown"
@@ -697,27 +684,12 @@ endfunction
 
 " }}}
 
-" => Abbreviations {{{
+" => Abbreviations
+" {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abbreviations only work for one liners:
-
 " Usage - type the shortcut and then just hit the space key or any other normal syntax key.
-abbr bbbb border: 1px solid black;
-abbr bwbw border: 1px solid white;
 abbr jsjs ``` Javascript
-abbr htht ``` html
-
-" }}}
-
-" => Creating Own Startify {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" AutoOpen a file on vim startup
-augroup open-planning-on-startup
-	autocmd!
-	autocmd VimEnter * nested if argc() == 0 | edit ~/CodingNotes/planning.md | endif
-	" autocmd VimEnter * nested if argc() == 0 | source ~/.config/nvim/sessions/js.vim | endif
-augroup END
 
 " }}}
 

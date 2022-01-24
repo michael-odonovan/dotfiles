@@ -1,5 +1,5 @@
-" => Basic Setup
-" {{{
+"
+" => Basic Setup {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 let mapleader=" "
@@ -50,8 +50,7 @@ vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text 
 " copy pwd to clipboard
 :command! Pwd let @+ = expand('%:p')
 
-" => Indents
-" {{{
+" => Indents {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=2
 set softtabstop=2
@@ -93,8 +92,7 @@ endfunction
 
 " }}}
 
-" => Remaps and General Stuff
-" {{{
+" => Remaps and General Stuff {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>w :wa<CR>
 nnoremap <C-d> :q!<CR>
@@ -138,8 +136,7 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " }}}
 
-" => Changing Wword Behaviour
-" {{{
+" => Changing Wword Behaviour {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Commands must start with a capital
 :command! Wword setlocal iskeyword-=-
@@ -147,8 +144,7 @@ autocmd BufEnter * silent! lcd %:p:h
 
 " }}}
 
-" => Opening Files & Folders
-" {{{
+" => Opening Files & Folders {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
@@ -175,8 +171,7 @@ map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " }}}
 
-" => Emmet
-" {{{
+" => Emmet {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:user_emmet_settings = {
@@ -200,8 +195,7 @@ let g:user_emmet_install_global = 1
 
 " }}}
 
-" => FZF Fuzzy Search
-" {{{
+" => FZF Fuzzy Search {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " nnoremap <C-t> :Files<CR>
 nnoremap <C-t> :GitFiles<CR>
@@ -217,8 +211,7 @@ let g:fzf_layout = { 'down': '70%' }
 
 " }}}
 
-" => Buffers
-" =>  {{{
+" => Buffers =>  {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Clear all buffers that aren't open in a window
@@ -239,8 +232,7 @@ augroup END
 
 " }}}
 
-" => Tabs
-" =>  {{{
+" => Tabs =>  {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>t :tabnew<CR>
@@ -249,8 +241,7 @@ nnoremap <leader>h :tabp<CR>
 
 " }}}
 
-" => Splits
-" =>  {{{
+" => Splits =>  {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set splitright
@@ -266,8 +257,7 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 " }}}
 
-" => Windows
-" =>  {{{
+" => Windows =>  {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 augroup initvim-remember-cursor-position
@@ -283,8 +273,7 @@ nnoremap <C-k> <C-w>k
 
 " }}}
 
-" => Terminals
-" =>  {{{
+" => Terminals =>  {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Opening a terminal in current buffer
@@ -321,16 +310,14 @@ au TermClose * call feedkeys("i")
 
 " }}}
 
-" => Open a file in Firefox/Chrome <leader>B
-" {{{
+" => Open a file in Firefox/Chrome <leader>B {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>B :exe ':silent !open -a /Applications/Firefox.app %'<CR>
 " nnoremap <leader>B :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR>
 
 " }}}
 
-" => Autosave a New Folder and File Together
-" {{{
+" => Autosave a New Folder and File Together {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " automake directories"
@@ -344,8 +331,7 @@ augroup END
 
 " }}}
 
-" => netrw
-" {{{
+" => netrw {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:netrw_liststyle = 0
 let g:netrw_localrmdir='rm -r'
@@ -371,13 +357,14 @@ autocmd FileType netrw setl bufhidden=delete
 
 " }}}
 
-" => Plugins =================================
-" {{{
+
+" => Plugins ================================= {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
+let g:lightline = {'colorscheme': 'nightfox'}
 
 " colorscheme
-Plug 'morhetz/gruvbox'
+Plug 'EdenEast/nightfox.nvim'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
@@ -430,13 +417,18 @@ call plug#end()
 
 " }}}
 
+
 " => Plugin Settings ========================================
-" => Colorscheme
-" {{{
+
+" => Set Colorscheme {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" colorscheme gruvbox
-colorscheme daytona
+colorscheme nightfox
 set background=dark
+" Have added these modifications to nightfox colors:
+" .config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/colors/nightfox.lua :17
+" -- bg         = "#111111",
+" /home/mike/.config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/theme.lua :42
+" Folded = { fg = c.blue, bg = c.bg_highlight }, -- line used for closed folds
 
 " Find Syntax Elements with <leader>co
 nmap <leader>co :call <SID>SynStack()<CR>
@@ -451,8 +443,7 @@ set t_Co=256
 
 " }}}
 
-" indentLine :IndentLinesToggle =>
-" {{{
+" indentLine :IndentLinesToggle => {{{
 let g:indentLine_enabled = 0
 
 let g:indentLine_fileTypeExclude = ["vimwiki", "coc-explorer", "help", "undotree", "diff"]
@@ -471,8 +462,7 @@ let g:indentLine_color_term = 225
 
 " }}}
 
-" => Coc - Conquer of Completion settings
-" {{{
+" => Coc - Conquer of Completion settings {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Coc extensions to be auto installed
 let g:coc_global_extensions = [
@@ -518,8 +508,7 @@ command! -nargs=0 Format :call CocAction('format')
 
 " }}}
 
-" => Ale Linting settings
-" {{{
+" => Ale Linting settings {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=at
 
@@ -527,8 +516,7 @@ set shortmess+=at
 
 " }}}
 
-" => Status Line Lightline Plugin
-" {{{
+" => Status Line Lightline Plugin {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
 			\ 'colorscheme': 'jellybeans',
@@ -543,8 +531,7 @@ let g:lightline = {
 
 " }}}
 
-" => Goyo Plugin for Zen Writing
-" {{{
+" => Goyo Plugin for Zen Writing {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " :Goyo
 let g:goyo_linenr=1
@@ -561,8 +548,7 @@ let g:goyo_height=100
 " End Plugin Settings ========================================
 
 
-" => Markdown Settings
-" {{{
+" => Markdown Settings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Syntax highlighting in ```code blocks```
@@ -609,8 +595,7 @@ let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
 
 " }}}
 
-" => Printing
-" {{{
+" => Printing {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn off double sided printing
@@ -629,8 +614,7 @@ command! Hardcopy :call Hardcopy()
 
 " }}}
 
-" => Search Patterns/Regex
-" {{{
+" => Search Patterns/Regex {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " From the cursor position onwards, move all sentences onto their own line:
@@ -638,8 +622,7 @@ command! Hardcopy :call Hardcopy()
 
 " }}}
 
-" => Macros `m
-" {{{
+" => Macros `m {{{
 
 " Notice the <Esc> etc. have to be escaped with \
 
@@ -660,8 +643,7 @@ let @b="oborder: 1px solid red;\<esc>"
 
 " }}}
 
-" => Folds
-" {{{
+" => Folds {{{
 
 command! Fold :call Fold()
 function! Fold()
@@ -684,8 +666,7 @@ endfunction
 
 " }}}
 
-" => Abbreviations
-" {{{
+" => Abbreviations {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abbreviations only work for one liners:
 " Usage - type the shortcut and then just hit the space key or any other normal syntax key.

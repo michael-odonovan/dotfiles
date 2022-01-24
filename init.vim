@@ -55,6 +55,7 @@ vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text 
 " => Tabs
 " {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+let tabsize=2
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2

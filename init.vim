@@ -19,6 +19,7 @@ set showmatch " highlight matching brackets
 set cursorline " highlight current cursor line
 set termguicolors
 syntax enable " for syntax highlighting
+set ignorecase "need this with smartcase as well
 set smartcase "when searching, ignores case except when you specify it"
 set incsearch " highlights as you search
 set path+=**
@@ -34,7 +35,7 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 " Strip whitespace on save:
-autocmd BufWritePre * %s/\s\+$e 
+autocmd BufWritePre * %s/\s\+$e·
 
 " No backups, use Undo Directory ===============
 set noswapfile
@@ -52,10 +53,9 @@ vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text 
 " copy pwd to clipboard
 :command! Pwd let @+ = expand('%:p')
 
-" => Tabs
+" => Indents
 " {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let tabsize=2
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -66,7 +66,7 @@ set list
 set lcs=tab:┊\ ,trail:·
 
 " Sort out tabs to spaces and reindent
-function! TabToSpacesSort()
+function! Spaces2()
 :set tabstop=2
 :set softtabstop=2
 :set shiftwidth=2
@@ -80,7 +80,7 @@ function! TabToSpacesSort()
 :normal ggVG=
 endfunction
 
-function! TabToSpacesSort4()
+function! Spaces4()
 :set tabstop=4
 :set softtabstop=4
 :set shiftwidth=4

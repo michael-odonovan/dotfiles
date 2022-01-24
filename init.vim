@@ -34,9 +34,6 @@ set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
-" Strip whitespace on save:
-autocmd BufWritePre * %s/\s\+$e·
-
 " No backups, use Undo Directory ===============
 set noswapfile
 set nobackup
@@ -296,9 +293,6 @@ nnoremap <leader>T :term<CR>
 " Opening bottom terminal for git work:
 nnoremap <leader>b :new<bar>:term<CR>
 
-" Opening Ranger in a window via 'lokaltog/neoranger' plugin:
-nnoremap <silent> <Leader>r :RangerCurrentFile<CR>
-
 " Moving around terminal windows like normal windows
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-l> <C-\><C-n><C-w>l
@@ -321,6 +315,9 @@ augroup terminal_settings
 		\	call nvim_input('<CR>')  |
 		\ endif
 augroup END
+
+" gets rid of annoying [Process exited 0] message on closing neovim terminal
+au TermClose * call feedkeys("i")
 
 " }}}
 
@@ -374,7 +371,7 @@ autocmd FileType netrw setl bufhidden=delete
 
 " }}}
 
-" => Plugins
+" => Plugins =================================
 " {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
@@ -384,7 +381,7 @@ Plug 'morhetz/gruvbox'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
-" if this isn't working you may need to use my TabSort() function on the file
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Loremipsum
 Plug 'vim-scripts/loremipsum' " :Loremipsum [wordcount]
@@ -433,8 +430,7 @@ call plug#end()
 
 " }}}
 
-" => Plugin Settings
-
+" => Plugin Settings ========================================
 " => Colorscheme
 " {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -561,6 +557,9 @@ let g:goyo_width=80
 let g:goyo_height=100
 
 " }}}
+
+" End Plugin Settings ========================================
+
 
 " => Markdown Settings
 " {{{

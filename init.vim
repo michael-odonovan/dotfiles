@@ -357,6 +357,7 @@ autocmd FileType netrw setl bufhidden=delete
 " }}}
 
 
+" => Plugins
 " => Plugins ================================= {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
@@ -364,6 +365,7 @@ let g:lightline = {'colorscheme': 'nightfox'}
 
 " colorscheme
 Plug 'EdenEast/nightfox.nvim'
+Plug 'michael-odonovan/my-nvim-colorscheme'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
@@ -423,6 +425,7 @@ call plug#end()
 " => Set Colorscheme {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme nightfox
+" colorscheme foxtail
 set background=dark
 " Have added these modifications to nightfox colors:
 " .config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/colors/nightfox.lua :17

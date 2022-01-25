@@ -7,15 +7,14 @@ let mapleader=" "
 set clipboard+=unnamedplus "allows neovim to access the system clipboard"
 set fileencoding="utf-8"
 set mouse="a"
-set pumheight=10
+" set pumheight=10
 set showtabline=2
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
 set number
 set numberwidth=2
-set norelativenumber
-set nowritebackup
-set showmode
+" set relativenumber
+" set showmode
 set noerrorbells
 set linebreak
 set foldmethod=marker
@@ -24,13 +23,15 @@ set sidescrolloff=8
 set signcolumn=yes
 set hidden " hides a buffer when it is abandoned
 set wrap
-set showmatch " highlight matching brackets
 set cursorline " highlight current cursor line
 set termguicolors
 syntax enable " for syntax highlighting
+
 set ignorecase "need this with smartcase as well
 set smartcase "when searching, ignores case except when you specify it"
 set incsearch " highlights as you search
+set showmatch " highlight matching brackets
+
 set path+=**
 set wildmenu "display all matching files when we tab complete
 " set autochdir

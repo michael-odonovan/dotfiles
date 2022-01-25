@@ -315,7 +315,7 @@ augroup terminal_settings
 augroup END
 
 " gets rid of annoying [Process exited 0] message on closing neovim terminal
-" au TermClose * call feedkeys("i")
+au TermClose * call feedkeys("k")
 
 " }}}
 

@@ -4,13 +4,23 @@
 filetype plugin on
 let mapleader=" "
 
+set clipboard+=unnamedplus "allows neovim to access the system clipboard"
+set fileencoding="utf-8"
+set mouse="a"
+set pumheight=10
+set showtabline=2
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
 set number
+set numberwidth=2
+set norelativenumber
+set nowritebackup
+set showmode
 set noerrorbells
 set linebreak
 set foldmethod=marker
 set scrolloff=8 " start scrolling screen 8 lines below the bottom
+set sidescrolloff=8
 set signcolumn=yes
 set hidden " hides a buffer when it is abandoned
 set wrap
@@ -51,10 +61,10 @@ vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text 
 
 " => Indents {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2
+set tabstop=2 " insert 2 spaces for a tab
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+set expandtab " convert tabs to spaces
 set smartindent
 set autoindent
 set list
@@ -425,18 +435,10 @@ call plug#end()
 " => Set Colorscheme {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme nightfox
-" colorscheme foxtail
+" tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
+
 set background=dark
-" Have added these modifications to nightfox colors:
-" .config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/colors/nightfox.lua :17
-" -- bg         = "#111111",
-" /home/mike/.config/nvim/plugins-storage/nightfox.nvim/lua/nightfox/theme.lua :42
-" Folded = { fg = c.blue, bg = c.bg }, -- line used for closed folds
-" Using colors in Alacritty:
-" copied and pasted this file
-" /home/mike/.config/nvim/plugins-storage/nightfox.nvim/extra/nightfox/nightfox_alacritty.yml
-" To alacritty config:
-" .config/alacritty/alacritty.yml
+" tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
 
 " Find Syntax Elements with <leader>co
 nmap <leader>co :call <SID>SynStack()<CR>
@@ -490,7 +492,7 @@ let g:coc_global_extensions = [
 " CoC (taken from github.com/neoclide/coc.nvim with comments removed)
 set nowritebackup
 set cmdheight=1
-set updatetime=1000
+set updatetime=300
 "set shortmess+=a
 
 " Set the height of suggestion window

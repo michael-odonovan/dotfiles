@@ -455,6 +455,30 @@ set t_Co=256
 
 " }}}
 
+
+"vimscript
+lua << EOF
+local nightfox = require('nightfox')
+
+nightfox.setup({
+  styles = {
+    comments = "italic", -- change style of comments to be italic
+  },
+  colors = {
+    bg = "#111111",
+		bg_highlight = "#333333"
+  },
+  hlgroups = {
+    Folded = { fg = "c.blue", bg = "c.bg" }, -- line used for closed folds
+    markdownH3 = { fg = "c.red", style = "bold" },
+    markdownH4 = { fg = "c.green", style = "bold" },
+  }
+})
+
+nightfox.load()
+EOF
+
+
 " indentLine :IndentLinesToggle => {{{
 let g:indentLine_enabled = 0
 

@@ -5,16 +5,16 @@ filetype plugin on
 let mapleader=" "
 
 set clipboard+=unnamedplus "allows neovim to access the system clipboard"
-set fileencoding="utf-8"
-set mouse="a"
-" set pumheight=10
+set fileencoding=utf-8
+set mouse=a
+set pumheight=10
 set showtabline=2
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay
 set number
 set numberwidth=2
 " set relativenumber
-" set showmode
+set showmode
 set noerrorbells
 set linebreak
 set foldmethod=marker
@@ -376,7 +376,6 @@ let g:lightline = {'colorscheme': 'nightfox'}
 
 " colorscheme
 Plug 'EdenEast/nightfox.nvim'
-Plug 'michael-odonovan/my-nvim-colorscheme'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
@@ -435,10 +434,8 @@ call plug#end()
 
 " => Set Colorscheme {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme nightfox
-" tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
-
 set background=dark
+colorscheme nightfox
 " tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
 
 " Find Syntax Elements with <leader>co
@@ -451,6 +448,10 @@ function! <SID>SynStack()
 endfunc
 
 set t_Co=256
+
+
+" Nightfox Settings
+
 
 " }}}
 

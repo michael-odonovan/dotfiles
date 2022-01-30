@@ -162,10 +162,9 @@ function bosh() {
 
 # Add all, commit and push (to origin) all at once
 # $ gacp "commit message"
-function gacp() {
+function gac() {
 	git add -A
 	git commit -m "$1"
-	git push origin
 }
 
 dotbosh() {

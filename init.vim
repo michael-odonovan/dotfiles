@@ -2,6 +2,8 @@
 " => Basic Setup {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
+filetype plugin indent on
+set nocompatible
 let mapleader=" "
 
 set clipboard+=unnamedplus "allows neovim to access the system clipboard"
@@ -25,6 +27,7 @@ set hidden " hides a buffer when it is abandoned
 set wrap
 set cursorline " highlight current cursor line
 set termguicolors
+syntax on
 syntax enable " for syntax highlighting
 
 set ignorecase "need this with smartcase as well
@@ -55,7 +58,8 @@ set viminfo='100,<50,s10,h,%
 " }}}
 
 " => Should Use more often
-vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> " Search for visually selected text with //
+" Search for visually selected text with //
+vnoremap  y/\V<C-R>=escape(@",'/\')<CR><CR> 
 
 " copy pwd to clipboard
 :command! Pwd let @+ = expand('%:p')
@@ -303,20 +307,21 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 autocmd TermOpen * startinsert
 
 " Exit terminal with just <C-d>
-augroup terminal_settings
-	autocmd!
-	autocmd BufWinEnter,WinEnter term:* startinsert
-	autocmd BufLeave term:* stopinsert
+ augroup terminal_settings
+ 	autocmd!
+ 	autocmd BufWinEnter,WinEnter term://* startinsert
+ 	autocmd BufLeave term://* stopinsert
+
 	" and ignore various filetypes as those will close terminal automatically
 	" and ignore fzf, ranger, coc
-	autocmd TermClose term:*
+	autocmd TermClose term://*
 		\ if (expand('<afile>') !~ "fzf") && (expand('<afile>') !~ "ranger") && (expand('<afile>') !~ "coc") |
 		\	call nvim_input('<CR>')  |
 		\ endif
 augroup END
 
 " gets rid of [Process exited 0] message on closing neovim terminal
-au TermClose * call feedkeys("i")
+" au TermClose * call feedkeys("i")
 
 " }}}
 
@@ -379,13 +384,11 @@ Plug 'EdenEast/nightfox.nvim'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
-" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Loremipsum
 Plug 'vim-scripts/loremipsum' " :Loremipsum [wordcount]
 
 " Auto Closing Brackets
-" Plug 'rstacruz/vim-closer'
 Plug 'jiangmiao/auto-pairs'
 
 " Markdown Stuff
@@ -431,12 +434,13 @@ call plug#end()
 
 
 " => Plugin Settings ========================================
-
-" => Set Colorscheme {{{
+" => Colorscheme =========================================== {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme nightfox
 " tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
+
+let g:lightline = {'colorscheme': 'nightfox'}
 
 " Find Syntax Elements with <leader>co
 nmap <leader>co :call <SID>SynStack()<CR>
@@ -451,12 +455,6 @@ set t_Co=256
 
 
 " Nightfox Settings
-
-
-" }}}
-
-
-"vimscript
 lua << EOF
 local nightfox = require('nightfox')
 
@@ -470,14 +468,18 @@ nightfox.setup({
   },
   hlgroups = {
     Folded = { fg = "c.blue", bg = "c.bg" }, -- line used for closed folds
-    markdownH3 = { fg = "c.red", style = "bold" },
-    markdownH4 = { fg = "c.green", style = "bold" },
+		-- Markdown Heading colors
+    htmlH1 = { fg = "${red}", style = "bold" },
+    htmlH2 = { fg = "${orange}", style = "bold" },
+    htmlH3 = { fg = "${blue}", style = "bold" },
+    htmlH4 = { fg = "${green}", style = "bold" },
   }
 })
 
 nightfox.load()
 EOF
 
+" }}}
 
 " indentLine :IndentLinesToggle => {{{
 let g:indentLine_enabled = 0
@@ -714,4 +716,3 @@ abbr jsjs ``` Javascript
 
 " }}}
 
-:finish

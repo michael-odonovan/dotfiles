@@ -469,10 +469,11 @@ nightfox.setup({
   hlgroups = {
     Folded = { fg = "c.blue", bg = "c.bg" }, -- line used for closed folds
 		-- Markdown Heading colors
-    htmlH1 = { fg = "${red}", style = "bold" },
-    htmlH2 = { fg = "${orange}", style = "bold" },
-    htmlH3 = { fg = "${blue}", style = "bold" },
-    htmlH4 = { fg = "${green}", style = "bold" },
+    htmlH1 = { fg = "${orange}", style = "bold" },
+    htmlH2 = { fg = "${blue}", style = "bold" },
+    htmlH3 = { fg = "${green}", style = "bold" },
+    htmlH4 = { fg = "${magenta}", style = "bold" },
+    htmlH5 = { fg = "${red}", style = "bold" },
   }
 })
 

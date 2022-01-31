@@ -138,7 +138,7 @@ alias Pictures='cd ~/Pictures && ls -a'
 alias Dotfiles='cd ~/Dotfiles && ls -a'
 
 # Areas
-alias Desk='cd ~/desktop && ls -a'
+alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
 
 # Neovim stuff.

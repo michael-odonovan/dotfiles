@@ -381,6 +381,8 @@ let g:lightline = {'colorscheme': 'nightfox'}
 
 " colorscheme
 Plug 'EdenEast/nightfox.nvim'
+" note: if you want to not use nightfox, you have to comment out it's settings
+Plug 'morhetz/gruvbox'
 
 " Indent Guides
 Plug 'Yggdroot/indentLine'
@@ -392,9 +394,11 @@ Plug 'vim-scripts/loremipsum' " :Loremipsum [wordcount]
 Plug 'jiangmiao/auto-pairs'
 
 " Markdown Stuff
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" Has functions aligning text
+Plug 'godlygeek/tabular'
 
 " Language Support ==============
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -421,10 +425,11 @@ Plug 'itchyny/lightline.vim'
 
 " Surrounding tags etc.
 Plug 'tpope/vim-surround'
-Plug 'AndrewRadev/tagalong.vim'
-
 " Being able to repeat Surrounding Tags
 Plug 'tpope/vim-repeat'
+" Change inside tag name
+Plug 'AndrewRadev/tagalong.vim'
+
 
 call plug#end()
 "!!!!! Don't forget to quit and reopen nvim, then run PlugInstall!!!!
@@ -437,7 +442,8 @@ call plug#end()
 " => Colorscheme =========================================== {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme nightfox
+" colorscheme nightfox
+colorscheme gruvbox
 " tweaks are in my Dotfiles repo. Colorscheme is also copied into the alacritty.yml config file.
 
 let g:lightline = {'colorscheme': 'nightfox'}
@@ -583,38 +589,8 @@ let g:goyo_height=100
 
 " }}}
 
-" End Plugin Settings ========================================
-
-
-" => Markdown Settings {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Syntax highlighting in ```code blocks```
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'javascript', 'js=javascript', 'json=javascript', 'sass', 'xml', 'jsx=javascript.jsx']
-
-" Creating ready-made code blocks in markdown:
-command! Codej :-1read ~/coding-files/my-snippets/block-js.md | execute "normal! j" | startinsert
-command! Codeb :-1read ~/coding-files/my-snippets/block-bash.md | execute "normal! j" | startinsert
-command! Codeh :-1read ~/coding-files/my-snippets/block-html.md | execute "normal! j" | startinsert
-
-
-" Automatically set file to wrap if markdown or txt file:
-augroup Markdown
-	autocmd!
-	autocmd FileType markdown,text setlocal wrap
-augroup END
-
-" Turn off indentLine plugin on markdown files
-autocmd FileType markdown let g:indentLine_enabled = 0
-
-" plasticboy/vim-markdown plugin ==============
-let g:vim_markdown_folding_disabled = 1 " Turn off auto folding at titles.
-let g:vim_markdown_conceal = 0 " Turn off concealing syntax in md source file
-let g:vim_markdown_conceal_code_blocks = 0 " Turn off concealing syntax in md source file
-let g:vim_markdown_follow_anchor = 1
-let g:vim_markdown_autowrite = 1 " If you follow a link using the ge shortcut, automatically save any edits you made before moving
-
-" iamcco/markdown-preview.nvim =================
+" => iamcco/markdown-preview.nvim {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>m <Plug>MarkdownPreview
 " let g:mkdp_auto_start = 1 " Automatically open the .md file preview
 " let g:mkdp_auto_open= 1 " Automatically open the .md file browser preview
@@ -632,6 +608,43 @@ let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
 " :!npx markdown-preview % &
 
 " }}}
+
+" => plasticboy/vim-markdown plugin {{{
+
+let g:vim_markdown_folding_disabled = 1 " Turn off auto folding at titles.
+let g:vim_markdown_conceal = 0 " Turn off concealing syntax in md source file
+let g:vim_markdown_conceal_code_blocks = 0 " Turn off concealing syntax in md source file
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_autowrite = 1 " If you follow a link using the ge shortcut, automatically save any edits you made before moving
+
+" }}}
+
+" => Built-In Vim Markdown Settings {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Syntax highlighting in ```code blocks```
+let g:markdown_fenced_languages = [ 'html', 'xml', 'python', 'bash=sh', 'css', 'sass', 'javascript', 'js=javascript', 'json=javascript', 'jsx=javascript.jsx', 'typescript', 'tsx=typescript.tsx' ]
+
+" Creating ready-made code blocks in markdown:
+command! Codej :-1read ~/coding-files/my-snippets/block-js.md | execute "normal! j" | startinsert
+command! Codeb :-1read ~/coding-files/my-snippets/block-bash.md | execute "normal! j" | startinsert
+command! Codeh :-1read ~/coding-files/my-snippets/block-html.md | execute "normal! j" | startinsert
+
+
+" }}}
+
+" => indentline {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Turn off indentLine plugin on markdown files
+autocmd FileType markdown let g:indentLine_enabled = 0
+
+" }}}
+
+" End Plugin Settings ========================================
+
+
+
 
 " => Printing {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""

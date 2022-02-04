@@ -63,7 +63,7 @@ parse_git_branch() {
 }
 # This follows the Linux Command Line book, page 149.
 # good color guide: https://gist.github.com/vratiu/9780109
-PS1="\[\033[0;95m\] [\u@\h] \[\033[0;36m\]\w \[\033[0;31m\]\$(parse_git_branch)\[\033[0;36m\] \$\[\033[0m\] "
+PS1="\[\033[0;95m\] [\h] \[\033[0;36m\]\w \[\033[0;31m\]\$(parse_git_branch)\[\033[0;36m\] \$\[\033[0m\] "
 export PS1
 
 # ========== General ===========

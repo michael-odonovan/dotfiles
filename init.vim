@@ -377,7 +377,9 @@ autocmd FileType netrw setl bufhidden=delete
 " => Plugins ================================= {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
-let g:lightline = {'colorscheme': 'nightfox'}
+
+" CSS Colors Previews
+Plug 'norcalli/nvim-colorizer.lua'
 
 " colorscheme
 Plug 'EdenEast/nightfox.nvim'
@@ -393,9 +395,10 @@ Plug 'vim-scripts/loremipsum' " :Loremipsum [wordcount]
 " Auto Closing Brackets
 Plug 'jiangmiao/auto-pairs'
 
-" Markdown Stuff
-Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" :MarkdownPreview
+Plug 'davidgranstrom/nvim-markdown-preview'
+" node dependencies: live-server, pandoc
+" note: code syntax highlighting is built into vim - search 'vim markdown' in this file.
 
 " Has functions aligning text
 Plug 'godlygeek/tabular'
@@ -484,6 +487,15 @@ nightfox.setup({
 
 nightfox.load()
 EOF
+
+let g:lightline = {'colorscheme': 'nightfox'}
+
+" }}}
+
+" => CSS Colors Preview {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+lua require'colorizer'.setup()
 
 " }}}
 
@@ -589,35 +601,16 @@ let g:goyo_height=100
 
 " }}}
 
-" => iamcco/markdown-preview.nvim {{{
+" => indentline {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>m <Plug>MarkdownPreview
-" let g:mkdp_auto_start = 1 " Automatically open the .md file preview
-" let g:mkdp_auto_open= 1 " Automatically open the .md file browser preview
-let g:mkdp_auto_close = 1 " Automatically close the .md file browser preview
-let g:mkdp_refresh_slow = 1
-" setting up a custom css file for markdown previews in the browser:
-let g:mkdp_markdown_css='/Users/mike/.config/nvim/github-markdown.css'
-" this is actually the file that appears as markdown.css in the browser
-" inspector. It must be substiting but keeping the original/variable name.
 
-" Note css is currently coming from both the above custom css and the default page.css located here:
-" /Users/mike/.config/nvim/plugins-storage/markdown-preview.nvim/app/_static
-
-" Another option for viewing markdown files that uses node:
-" :!npx markdown-preview % &
+" Turn off indentLine plugin on markdown files
+autocmd FileType markdown let g:indentLine_enabled = 0
 
 " }}}
 
-" => plasticboy/vim-markdown plugin {{{
+" End Plugin Settings ========================================
 
-let g:vim_markdown_folding_disabled = 1 " Turn off auto folding at titles.
-let g:vim_markdown_conceal = 0 " Turn off concealing syntax in md source file
-let g:vim_markdown_conceal_code_blocks = 0 " Turn off concealing syntax in md source file
-let g:vim_markdown_follow_anchor = 1
-let g:vim_markdown_autowrite = 1 " If you follow a link using the ge shortcut, automatically save any edits you made before moving
-
-" }}}
 
 " => Built-In Vim Markdown Settings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -632,19 +625,6 @@ command! Codeh :-1read ~/coding-files/my-snippets/block-html.md | execute "norma
 
 
 " }}}
-
-" => indentline {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Turn off indentLine plugin on markdown files
-autocmd FileType markdown let g:indentLine_enabled = 0
-
-" }}}
-
-" End Plugin Settings ========================================
-
-
-
 
 " => Printing {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""

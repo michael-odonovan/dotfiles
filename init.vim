@@ -163,7 +163,7 @@ autocmd BufEnter * silent! lcd %:p:h
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
 " Latest project
-:command! Project :e ~/Javascript/client-sites/janandsonscleaningsolutions
+:command! Project :e ~/Javascript/client-sites/rbcmobility
 :command! Blog :e ~/Javascript/michaelodonovan-net
 
 :command! Learning :e ~/Javascript/Learning
@@ -377,6 +377,9 @@ autocmd FileType netrw setl bufhidden=delete
 " => Plugins ================================= {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
+
+" Styled Components
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " CSS Colors Previews
 Plug 'norcalli/nvim-colorizer.lua'

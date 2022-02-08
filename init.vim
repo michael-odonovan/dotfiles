@@ -83,35 +83,6 @@ set expandtab " convert tabs to spaces
 set smartindent
 set autoindent
 set list
-set lcs=tab:>-
-" Sort out tabs to spaces and reindent
-function! Spaces2()
-:set tabstop=2
-:set softtabstop=2
-:set shiftwidth=2
-:set expandtab
-:set smartindent
-:set autoindent
-:set list
-:set lcs=tab:â\ ,trail:Â·
-:retab
-:%retab!
-:normal ggVG=
-endfunction
-
-function! Spaces4()
-:set tabstop=4
-:set softtabstop=4
-:set shiftwidth=4
-:set expandtab
-:set smartindent
-:set autoindent
-:set list
-:set lcs=tab:â\ ,trail:Â·
-:retab
-:%retab!
-:normal ggVG=
-endfunction
 
 " }}}
 
@@ -387,6 +358,10 @@ autocmd FileType netrw setl bufhidden=delete
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
 
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+
+Plug 'lambdalisue/fern.vim'
 " file manager?
 
 " Better Global Search and Replace
@@ -533,7 +508,6 @@ let g:indentLine_concealcursor = "inc"
 let g:indentLine_conceallevel = 2
 
 let g:indentLine_char = '┆'
-
 let g:indentLine_color_term = 225
 
 " }}}

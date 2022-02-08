@@ -142,8 +142,7 @@ autocmd BufEnter * silent! lcd %:p:h
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
-" Latest project
-:command! Project :e ~/Javascript/client-sites/rbcmobility
+:command! Project :e ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
 :command! Blog :e ~/Javascript/michaelodonovan-net
 
 :command! Learning :e ~/Javascript/Learning
@@ -670,6 +669,8 @@ let @d="?><cr>lx/><cr>hx<esc>"
 
 " css modules to styled components conversion - half finished
 let@n="khx~hiconst ea = styled.div`jlDjdt}dt}vt}V/}dkbdd"
+
+let @c="ccconst Variable = styled.div`\<esc>x/}\<cr>r`"
 
 " }}}
 

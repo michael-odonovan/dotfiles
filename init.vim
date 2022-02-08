@@ -1,9 +1,14 @@
-"
+" New Learning
+" Global Search and Replace 
+" :Rg SEARCH_TERM
+" cwindow opens
+" ggVG select all occurances of my search
+" :s/SEARCH_TERM/REPLACE/g
+
 " => Basic Setup {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 filetype plugin indent on
-set nocompatible
 let mapleader=" "
 
 set clipboard+=unnamedplus "allows neovim to access the system clipboard"
@@ -55,7 +60,12 @@ set undodir=~/.config/nvim/undo-directory
 
 set viminfo='100,<50,s10,h,%
 
+" stops new lines continuing to add comments
+" set formatoptions-=ro
+" autocmd FileType * set formatoptions-=ro
+
 " }}}
+
 
 " => Should Use more often
 " Search for visually selected text with //
@@ -73,8 +83,7 @@ set expandtab " convert tabs to spaces
 set smartindent
 set autoindent
 set list
-set lcs=tab:┊\ ,trail:·
-
+set lcs=tab:>-
 " Sort out tabs to spaces and reindent
 function! Spaces2()
 :set tabstop=2
@@ -84,7 +93,7 @@ function! Spaces2()
 :set smartindent
 :set autoindent
 :set list
-:set lcs=tab:┊\ ,trail:·
+:set lcs=tab:â\ ,trail:Â·
 :retab
 :%retab!
 :normal ggVG=
@@ -98,7 +107,7 @@ function! Spaces4()
 :set smartindent
 :set autoindent
 :set list
-:set lcs=tab:┊\ ,trail:·
+:set lcs=tab:â\ ,trail:Â·
 :retab
 :%retab!
 :normal ggVG=
@@ -378,8 +387,11 @@ autocmd FileType netrw setl bufhidden=delete
 """""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugins-storage')
 
-" Styled Components
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" file manager?
+
+" Better Global Search and Replace
+Plug 'jremmen/vim-ripgrep'
+Plug 'stefandtw/quickfix-reflector.vim'
 
 " CSS Colors Previews
 Plug 'norcalli/nvim-colorizer.lua'
@@ -443,8 +455,14 @@ call plug#end()
 
 " }}}
 
-
 " => Plugin Settings ========================================
+
+" => vim-ripgrep {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:rg_command = 'rg --vimgrep -S'
+
+" }}}
+
 " => Colorscheme =========================================== {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
@@ -480,8 +498,8 @@ nightfox.setup({
   },
   hlgroups = {
     Folded = { fg = "c.blue", bg = "c.bg" }, -- line used for closed folds
-    htmlH1 = { fg = "${orange}", style = "bold" },
-    htmlH2 = { fg = "${blue}", style = "bold" },
+    markdownH1 = { fg = "${orange}", style = "bold" },
+    markdownH2 = { fg = "${blue}", style = "bold" },
     htmlH3 = { fg = "${magenta}", style = "bold" },
     htmlH4 = { fg = "${green}", style = "bold" },
     htmlH5 = { fg = "${red}", style = "bold" },
@@ -515,7 +533,6 @@ let g:indentLine_concealcursor = "inc"
 let g:indentLine_conceallevel = 2
 
 let g:indentLine_char = '┆'
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 let g:indentLine_color_term = 225
 
@@ -614,7 +631,6 @@ autocmd FileType markdown let g:indentLine_enabled = 0
 
 " End Plugin Settings ========================================
 
-
 " => Built-In Vim Markdown Settings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -678,6 +694,8 @@ let @b="oborder: 1px solid red;\<esc>"
 " Remove whitspace just inside a div (vim-surround)
 let @d="?><cr>lx/><cr>hx<esc>"
 
+" css modules to styled components conversion - half finished
+let@n="khx~hiconst ea = styled.div`jlDjdt}dt}vt}V/}dkbdd"
 
 " }}}
 
@@ -712,3 +730,4 @@ abbr jsjs ``` Javascript
 
 " }}}
 
+:finish

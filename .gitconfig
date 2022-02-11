@@ -1,19 +1,6 @@
-[user]
-	name = michael o'donovan
-	email = mikeodonovan3@gmail.com
-[alias]
-# These must be prefixed by git. I have better usage in .bashrc
-ac = !git add -A && git commit
-st = !git status
-
-[pull]
-	ff = only
-# [url "git@github.com:"]
-#	insteadOf = https://github.com/
 [credential "https://github.com"]
-	helper =
+	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[core]
-	editor = nvim
-[init]
-	defaultBranch = main
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

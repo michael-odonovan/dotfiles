@@ -106,7 +106,7 @@ alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'
 alias Printing3d='cd ~/Printing3d && ls -a'
-alias Learning='cd ~/Javascript/learning-site && ls -a'
+alias Learning='cd ~/Javascript/Learning && ls -a'
 
 alias ..='cd ..'
 
@@ -129,13 +129,14 @@ alias Coding='cd ~/Coding && ls -a'
 alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias Fel='cd ~/Coding/front-end-learning && ls -a'
-alias Notes='cd ~/Documents/notes-general && ls -a'
+alias Notes-General='cd ~/Documents/notes-general && ls -a'
 alias Nvimvim='cd ~/.config/nvim/ && ls -a'
 alias Cronjobs='cd ~/myscripts && ls -a'
 alias Scripts='cd ~/bin && ls -a'
 alias Writing='cd ~/Documents/notes-writing && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
 alias Dotfiles='cd ~/Dotfiles && ls -a'
+alias NewInstall='cd ~/NewInstall && ls -a'
 
 # Areas
 alias Desk='cd ~/Desktop && ls -a'
@@ -181,8 +182,14 @@ totalbosh() {
 	Cn
 	bosh
 
+  # NewInstall - ignore this as have alread done Dotfiles
 	Dotbosh
 
+  # NewInstall - 
+  # mkdir Javascript
+  # mkdir Javascript/client-sites
+  # cd Javascript/client-sites
+  # download jan gh repo
   cd ~/Javascript/client-sites/janandsonscleaningsolutions
 	bosh
 
@@ -192,13 +199,15 @@ totalbosh() {
   Blog
   bosh
 
+  # NewInstall 
+  # mkdir ~/Javascript/apps
   cd ~/Javascript/apps/next-slider
 	bosh
 
   cd ~/Javascript/nextjs-template
 	bosh
 
-	Notes
+	Notes-General
 	bosh
 
 	Writing
@@ -207,16 +216,15 @@ totalbosh() {
 	Pictures
 	bosh
 
-  cd ~/Javascript/my-apps/react-pomodoro-timer
-	bosh
-
   Printing3d
   bosh
 
+  # New Install -
+  # mkdir ~/Javascript/rbcmobility
   cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
 	bosh
 
-  cd ~/Javascript/client-sites/rbcmobility/sanityRecycleMobility
+  cd ~/Javascript/client-sites/rbcmobility/rbcmobility-sanityio
   bosh
 
   cd ~/Javascript/my-apps/react-phone-clock-apps
@@ -231,3 +239,44 @@ totalbosh() {
 	cd ~/
 }
 
+newinstall() {
+
+# adding number navigation to Workspaces
+gsettings set org.gnome.shell.keybindings switch-to-application-1  []
+gsettings set org.gnome.shell.keybindings switch-to-application-2  []
+gsettings set org.gnome.shell.keybindings switch-to-application-3  []
+gsettings set org.gnome.shell.keybindings switch-to-application-4  []
+gsettings set org.gnome.shell.keybindings switch-to-application-5  []
+gsettings set org.gnome.shell.keybindings switch-to-application-6  []
+gsettings set org.gnome.shell.keybindings switch-to-application-7  []
+gsettings set org.gnome.shell.keybindings switch-to-application-8  []
+gsettings set org.gnome.shell.keybindings switch-to-application-9  []
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1  "['<Super>1']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2  "['<Super>2']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3  "['<Super>3']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4  "['<Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5  "['<Super>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6  "['<Super>6']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7  "['<Super>7']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8  "['<Super>8']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9  "['<Super>9']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super>0']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1  "['<Super><Shift>1']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2  "['<Super><Shift>2']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3  "['<Super><Shift>3']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4  "['<Super><Shift>4']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5  "['<Super><Shift>5']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6  "['<Super><Shift>6']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7  "['<Super><Shift>7']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8  "['<Super><Shift>8']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9  "['<Super><Shift>9']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Shift>0']"
+
+# github
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh
+
+
+}

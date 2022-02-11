@@ -16,17 +16,14 @@ font:
 font:
   # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
+
+    # family: monospace
     family: Hack Nerd Font
     style: Regular
 
   # Bold font face
   bold:
+    # family: monospace
     family: Hack Nerd Font
     style: Bold
 

@@ -355,6 +355,12 @@ autocmd FileType netrw setl bufhidden=delete
 " => Plugins
 " => Plugins ================================= {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
 call plug#begin('~/.config/nvim/plugins-storage')
 
 Plug 'kyazdani42/nvim-web-devicons' " for file icons

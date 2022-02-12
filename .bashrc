@@ -128,7 +128,7 @@ alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias NotesGeneral='cd ~/NotesGeneral && ls -a'
 alias Scripts='cd ~/bin && ls -a'
 alias Writing='cd ~/Writing && ls -a'
-alias Pictures='cd ~/Pictures && ls -a'
+alias Photos='cd ~/Pictures/Photos && ls -a'
 alias DotFiles='cd ~/DotFiles && ls -a'
 alias NewInstall='cd ~/NewInstall && ls -a'
 
@@ -270,16 +270,16 @@ NewInstall2() {
   sudo add-apt-repository ppa:neovim-ppa/stable
   sudo apt-get update
   sudo apt-get install neovim
-
-  # npm apps
-  sudo npm install -g live-server
-  sudo npm install -g @sanity.io
-  sudo npm install --global yarn
 }
 
 NewInstallApt() {
-  # apt apps
   sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs
+}
+
+NewInstallNpm() {
+  sudo npm install -g live-server
+  sudo npm install -g @sanity/cli
+  sudo npm install -g yarn
 }
 
 # NewInstallReverseDotBosh

@@ -101,12 +101,12 @@ fi
 # ========== Aliases ===========
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
-alias Project='cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs && ls -a'
-alias Blog='cd ~/Javascript/michaelodonovan-net && ls -a'
+alias Project='cd ~/RbcMobilityNextJs && ls -a'
+alias Blog='cd ~/Blog && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
-alias Testing='cd ~/Javascript/Learning/testing-nextjs && ls -a'
 alias Printing3d='cd ~/Printing3d && ls -a'
-alias Learning='cd ~/Javascript/Learning && ls -a'
+alias Learning='cd ~/Learning && ls -a'
+alias Photos='cd ~/Pictures/Photos'
 
 alias ..='cd ..'
 
@@ -122,20 +122,14 @@ alias Bashrc='cd && vim .bashrc'
 # Go To Folders
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Documents='cd ~/Documents && ls -a'
-alias Javascript='cd ~/Javascript && ls -a'
-alias Js='cd ~/Javascript && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
 alias Coding='cd ~/Coding && ls -a'
-alias Snippets='cd ~/Coding/my-snippets && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
-alias Fel='cd ~/Coding/front-end-learning && ls -a'
-alias Notes-General='cd ~/Documents/notes-general && ls -a'
-alias Nvimvim='cd ~/.config/nvim/ && ls -a'
-alias Cronjobs='cd ~/myscripts && ls -a'
+alias NotesGeneral='cd ~/NotesGeneral && ls -a'
 alias Scripts='cd ~/bin && ls -a'
-alias Writing='cd ~/Documents/notes-writing && ls -a'
+alias Writing='cd ~/Writing && ls -a'
 alias Pictures='cd ~/Pictures && ls -a'
-alias Dotfiles='cd ~/Dotfiles && ls -a'
+alias DotFiles='cd ~/DotFiles && ls -a'
 alias NewInstall='cd ~/NewInstall && ls -a'
 
 # Areas
@@ -169,114 +163,159 @@ function gac() {
 }
 
 dotbosh() {
-	collect-dotfiles.sh
-	Dotfiles
-	bosh
+  cp ~/.gitconfig ~/Dotfiles/.gitconfig
+  cp ~/.bashrc ~/Dotfiles/.bashrc
+  cp ~/.bash_profile ~/Dotfiles/.bash_profile
+  cp ~/.tmux.conf ~/Dotfiles/.tmux.conf
+  cp ~/.config/alacritty/alacritty.yml ~/Dotfiles/alacritty.yml
+  cp ~/.config/nvim/init.vim ~/Dotfiles/init.vim
+  cp ~/.config/Code/User/settings.json ~/Dotfiles/vs-code/settings.json
+  cp ~/.config/Code/User/keybindings.json ~/Dotfiles/vs-code/keybindings.json
+  # cp ~/.config/karabiner/karabiner.json ~/Dotfiles/karabiner.json
+  # cp ~/.config/yabai/yabairc ~/Dotfiles/yabairc
+  # cp ~/.config/skhd/skhdrc ~/Dotfiles/skhdrc
+  DotFiles
+  bosh
 }
 
 totalbosh() {
-
-	Coding
-	bosh
-
-	Cn
-	bosh
-
-  # NewInstall - ignore this as have alread done Dotfiles
-	Dotbosh
-
-  # NewInstall - 
-  # mkdir Javascript
-  # mkdir Javascript/client-sites
-  # cd Javascript/client-sites
-  # download jan gh repo
-  cd ~/Javascript/client-sites/janandsonscleaningsolutions
-	bosh
-
-  Learning
+  cd ~/bin
   bosh
-
-  Blog
+  cd ~/Blog
   bosh
-
-  # NewInstall 
-  # mkdir ~/Javascript/apps
-  cd ~/Javascript/apps/next-slider
-	bosh
-
-  cd ~/Javascript/nextjs-template
-	bosh
-
-	Notes-General
-	bosh
-
-	Writing
-	bosh
-
-	Pictures
-	bosh
-
-  Printing3d
+  cd ~/Bookmarks
   bosh
-
-  # New Install -
-  # mkdir ~/Javascript/rbcmobility
-  cd ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
-	bosh
-
-  cd ~/Javascript/client-sites/rbcmobility/rbcmobility-sanityio
+  cd ~/Coding
   bosh
-
-  cd ~/Javascript/my-apps/react-phone-clock-apps
-	bosh
-
-	Scripts
-	bosh
-
-  cd ~/WoollyRhinoBackup
-	bosh
-
-	cd ~/
+  cd ~/CodingNotes
+  bosh
+  dotbosh
+  cd ~/JanAndSonsCleaningSolutions
+  bosh
+  cd ~/Learning
+  bosh
+  cd ~/NewInstall
+  bosh
+  cd ~/NextJsTemplate
+  bosh
+  cd ~/NotesGeneral
+  bosh
+  cd ~/Pictures/Photos
+  bosh
+  cd ~/PomodoroTimer
+  bosh
+  cd ~/Printing3d
+  bosh
+  cd ~/RbcMobilityNextJs
+  bosh
+  cd ~/RbcMobilitySanity
+  bosh
+  cd ~/Slider
+  bosh
+  cd ~/WRBackup
+  bosh
+  cd ~/Writing
+  bosh
+  cd ~/
 }
 
-newinstall() {
 
-# adding number navigation to Workspaces
-gsettings set org.gnome.shell.keybindings switch-to-application-1  []
-gsettings set org.gnome.shell.keybindings switch-to-application-2  []
-gsettings set org.gnome.shell.keybindings switch-to-application-3  []
-gsettings set org.gnome.shell.keybindings switch-to-application-4  []
-gsettings set org.gnome.shell.keybindings switch-to-application-5  []
-gsettings set org.gnome.shell.keybindings switch-to-application-6  []
-gsettings set org.gnome.shell.keybindings switch-to-application-7  []
-gsettings set org.gnome.shell.keybindings switch-to-application-8  []
-gsettings set org.gnome.shell.keybindings switch-to-application-9  []
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1  "['<Super>1']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2  "['<Super>2']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3  "['<Super>3']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4  "['<Super>4']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5  "['<Super>5']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6  "['<Super>6']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7  "['<Super>7']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8  "['<Super>8']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9  "['<Super>9']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super>0']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1  "['<Super><Shift>1']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2  "['<Super><Shift>2']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3  "['<Super><Shift>3']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4  "['<Super><Shift>4']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5  "['<Super><Shift>5']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6  "['<Super><Shift>6']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7  "['<Super><Shift>7']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8  "['<Super><Shift>8']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9  "['<Super><Shift>9']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Shift>0']"
+# NEW INSTALL =======================================================
 
-# github
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
+  NewInstall1() {
+  # update first
+  sudo apt update
+  sudo apt upgrade
 
+  # adding number navigation to Workspaces
+  gsettings set org.gnome.shell.keybindings switch-to-application-1  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-2  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-3  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-4  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-5  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-6  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-7  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-8  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-9  []
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1  "['<Super>1']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2  "['<Super>2']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3  "['<Super>3']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4  "['<Super>4']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5  "['<Super>5']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6  "['<Super>6']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7  "['<Super>7']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8  "['<Super>8']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9  "['<Super>9']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super>0']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1  "['<Super><Shift>1']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2  "['<Super><Shift>2']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3  "['<Super><Shift>3']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4  "['<Super><Shift>4']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5  "['<Super><Shift>5']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6  "['<Super><Shift>6']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7  "['<Super><Shift>7']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8  "['<Super><Shift>8']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9  "['<Super><Shift>9']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Shift>0']"
+}
 
+NewInstall2() {
+  # install github
+  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+  sudo apt update
+  sudo apt install gh
+
+  # install neovim ppa
+  sudo add-apt-repository ppa:neovim-ppa/stable
+  sudo apt-get update
+  sudo apt-get install neovim
+
+  # npm apps
+  sudo npm install -g live-server
+  sudo npm install -g @sanity.io
+  sudo npm install --global yarn
+}
+
+NewInstallApt() {
+  # apt apps
+  sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs
+}
+
+# NewInstallReverseDotBosh
+NewInstallRepos() {
+  cd
+  gh repo clone michael-odonovan/bin
+  gh repo clone michael-odonovan/Blog
+  gh repo clone michael-odonovan/Bookmarks
+  gh repo clone michael-odonovan/Coding
+  gh repo clone michael-odonovan/CodingNotes
+  gh repo clone michael-odonovan/DotFiles
+  gh repo clone michael-odonovan/JanAndSonsCleaningSolutions
+  gh repo clone michael-odonovan/Learning
+  gh repo clone michael-odonovan/NewInstall
+  gh repo clone michael-odonovan/NextJsTemplate
+  gh repo clone michael-odonovan/NotesGeneral
+  cd ~/Pictures
+  gh repo clone michael-odonovan/Photos
+  cd
+  gh repo clone michael-odonovan/PomodoroTimer
+  gh repo clone michael-odonovan/Printing3d
+  gh repo clone michael-odonovan/RbcMobilityNextJs
+  gh repo clone michael-odonovan/RbcMobilitySanity
+  gh repo clone michael-odonovan/Slider
+  gh repo clone michael-odonovan/WRBackup
+  gh repo clone michael-odonovan/Writing
+}
+
+NewInstallDotFiles() {
+  cd
+  cp ~/Dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+  cp ~/Dotfiles/init.vim ~/.config/nvim/init.vim
+  cp ~/Dotfiles/.bash_profile ~/.bash_profile
+  cp ~/Dotfiles/.bashrc ~/.bashrc
+  cp ~/Dotfiles/.gitconfig ~/.gitconfig
+  cp ~/Dotfiles/.tmux.conf ~/.tmux.conf
+  cp ~/Dotfiles/vs-code/settings.json ~/.config/Code/User/settings.json
+  cp ~/Dotfiles/vs-code/keybindings.json ~/.config/Code/User/keybindings.json
 }

@@ -18,23 +18,23 @@ font:
   normal:
 
     # family: monospace
-    family: Hack Nerd Font
+    family: Hack
     style: Regular
 
   # Bold font face
   bold:
     # family: monospace
-    family: Hack Nerd Font
+    family: Hack
     style: Bold
 
   # Italic font face
   italic:
-    family: Hack Nerd Font
+    family: Hack
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Hack Nerd Font
+    family: Hack
     style: Bold Italic
 
   # Point size

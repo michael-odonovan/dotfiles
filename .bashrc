@@ -163,17 +163,17 @@ function gac() {
 }
 
 dotbosh() {
-  cp ~/.gitconfig ~/Dotfiles/.gitconfig
-  cp ~/.bashrc ~/Dotfiles/.bashrc
-  cp ~/.bash_profile ~/Dotfiles/.bash_profile
-  cp ~/.tmux.conf ~/Dotfiles/.tmux.conf
-  cp ~/.config/alacritty/alacritty.yml ~/Dotfiles/alacritty.yml
-  cp ~/.config/nvim/init.vim ~/Dotfiles/init.vim
-  cp ~/.config/Code/User/settings.json ~/Dotfiles/vs-code/settings.json
-  cp ~/.config/Code/User/keybindings.json ~/Dotfiles/vs-code/keybindings.json
-  # cp ~/.config/karabiner/karabiner.json ~/Dotfiles/karabiner.json
-  # cp ~/.config/yabai/yabairc ~/Dotfiles/yabairc
-  # cp ~/.config/skhd/skhdrc ~/Dotfiles/skhdrc
+  cp ~/.gitconfig ~/DotFiles/.gitconfig
+  cp ~/.bashrc ~/DotFiles/.bashrc
+  cp ~/.bash_profile ~/DotFiles/.bash_profile
+  cp ~/.tmux.conf ~/DotFiles/.tmux.conf
+  cp ~/.config/alacritty/alacritty.yml ~/DotFiles/alacritty.yml
+  cp ~/.config/nvim/init.vim ~/DotFiles/init.vim
+  cp ~/.config/Code/User/settings.json ~/DotFiles/vs-code/settings.json
+  cp ~/.config/Code/User/keybindings.json ~/DotFiles/vs-code/keybindings.json
+  # cp ~/.config/karabiner/karabiner.json ~/DotFiles/karabiner.json
+  # cp ~/.config/yabai/yabairc ~/DotFiles/yabairc
+  # cp ~/.config/skhd/skhdrc ~/DotFiles/skhdrc
   DotFiles
   bosh
 }
@@ -310,12 +310,12 @@ NewInstallRepos() {
 
 NewInstallDotFiles() {
   cd
-  cp ~/Dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-  cp ~/Dotfiles/init.vim ~/.config/nvim/init.vim
-  cp ~/Dotfiles/.bash_profile ~/.bash_profile
-  cp ~/Dotfiles/.bashrc ~/.bashrc
-  cp ~/Dotfiles/.gitconfig ~/.gitconfig
-  cp ~/Dotfiles/.tmux.conf ~/.tmux.conf
-  cp ~/Dotfiles/vs-code/settings.json ~/.config/Code/User/settings.json
-  cp ~/Dotfiles/vs-code/keybindings.json ~/.config/Code/User/keybindings.json
+  cp ~/DotFiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+  cp ~/DotFiles/init.vim ~/.config/nvim/init.vim
+  cp ~/DotFiles/.bash_profile ~/.bash_profile
+  cp ~/DotFiles/.bashrc ~/.bashrc
+  cp ~/DotFiles/.gitconfig ~/.gitconfig
+  cp ~/DotFiles/.tmux.conf ~/.tmux.conf
+  cp ~/DotFiles/vs-code/settings.json ~/.config/Code/User/settings.json
+  cp ~/DotFiles/vs-code/keybindings.json ~/.config/Code/User/keybindings.json
 }

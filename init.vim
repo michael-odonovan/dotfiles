@@ -142,19 +142,16 @@ autocmd BufEnter * silent! lcd %:p:h
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>, :e ~/.config/nvim/init.vim<CR>
 
-:command! Project :e ~/Javascript/client-sites/rbcmobility/recycle-mobility-nextjs
-:command! Blog :e ~/Javascript/michaelodonovan-net
+:command! Project :e ~/RbcMobilityNextJs
+:command! Blog :e ~/Blog
 
-:command! Learning :e ~/Javascript/Learning
-:command! Patterns :e ~/Javascript/Learning/patterns/pages/
+:command! Learning :e ~/Learning
 :command! Scratch :e ~/CodingNotes/scratch.md
-:command! Vim :e ~/CodingNotes/vim.md
-:command! Daytona :vs ~/.config/nvim/colors/daytona.vim
 :command! Bashrc :e ~/.bashrc
 :command! Source :source ~/.config/nvim/init.vim
 :command! Cn :e ~/CodingNotes
 :command! Cf :e ~/Coding
-:command! Notes :e ~/Documents/notes-general
+:command! NotesGeneral :e ~/NotesGeneral
 :command! Documents :e ~/Documents
 :command! Scripts :e ~/bin
 :command! Js :e ~/Javascript

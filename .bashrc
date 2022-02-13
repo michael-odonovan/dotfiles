@@ -168,7 +168,7 @@ dotbosh() {
   cp ~/.bash_profile ~/DotFiles/.bash_profile
   cp ~/.tmux.conf ~/DotFiles/.tmux.conf
   cp ~/.config/alacritty/alacritty.yml ~/DotFiles/alacritty.yml
-  cp ~/.config/nvim/init.vim ~/DotFiles/init.vim
+  cp ~/.config/nvim-old/init.vim ~/DotFiles/init.vim
   cp ~/.config/Code/User/settings.json ~/DotFiles/vs-code/settings.json
   cp ~/.config/Code/User/keybindings.json ~/DotFiles/vs-code/keybindings.json
   # cp ~/.config/karabiner/karabiner.json ~/DotFiles/karabiner.json
@@ -199,6 +199,8 @@ totalbosh() {
   cd ~/NextJsTemplate
   bosh
   cd ~/NotesGeneral
+  bosh
+  cd ~/.config/nvim
   bosh
   cd ~/Pictures/Photos
   bosh
@@ -296,6 +298,8 @@ NewInstallRepos() {
   gh repo clone michael-odonovan/NewInstall
   gh repo clone michael-odonovan/NextJsTemplate
   gh repo clone michael-odonovan/NotesGeneral
+  cd ~/.config
+  gh repo clone michael-odonovan/nvim
   cd ~/Pictures
   gh repo clone michael-odonovan/Photos
   cd
@@ -311,7 +315,6 @@ NewInstallRepos() {
 NewInstallDotFiles() {
   cd
   cp ~/DotFiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-  cp ~/DotFiles/init.vim ~/.config/nvim/init.vim
   cp ~/DotFiles/.bash_profile ~/.bash_profile
   cp ~/DotFiles/.bashrc ~/.bashrc
   cp ~/DotFiles/.gitconfig ~/.gitconfig

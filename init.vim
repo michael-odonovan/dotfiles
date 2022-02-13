@@ -357,9 +357,6 @@ call plug#begin('~/.config/nvim/plugins-storage')
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
-Plug 'lambdalisue/fern.vim'
-" file manager?
-
 " Better Global Search and Replace
 Plug 'jremmen/vim-ripgrep'
 Plug 'stefandtw/quickfix-reflector.vim'

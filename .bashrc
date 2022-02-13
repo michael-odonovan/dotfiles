@@ -179,43 +179,63 @@ dotbosh() {
 }
 
 totalbosh() {
+  echo Scripts
   cd ~/bin
   bosh
+  echo Blog
   cd ~/Blog
   bosh
+  echo Bookmarks
   cd ~/Bookmarks
   bosh
+  echo Codong
   cd ~/Coding
   bosh
+  echo Coding Notes
   cd ~/CodingNotes
   bosh
+  echo dotbosh
   dotbosh
+  echo JanAndSons
   cd ~/JanAndSonsCleaningSolutions
   bosh
+  echo Learning
   cd ~/Learning
   bosh
+  echo NewInstall
   cd ~/NewInstall
   bosh
+  echo NextJsTemplate
   cd ~/NextJsTemplate
   bosh
+  echo NotesGeneral
   cd ~/NotesGeneral
   bosh
+  echo nvim
   cd ~/.config/nvim
   bosh
+  echo Photos
   cd ~/Pictures/Photos
   bosh
+  echo PomodoroTimer
   cd ~/PomodoroTimer
   bosh
+  echo Printing3d
   cd ~/Printing3d
   bosh
+  echo RbcMobilityNextJs
   cd ~/RbcMobilityNextJs
   bosh
+  echo RbcMobilitySanity
   cd ~/RbcMobilitySanity
   bosh
+  echo Slider
   cd ~/Slider
   bosh
+  echo WRBackup
   cd ~/WRBackup
   bosh
+  echo Writing
   cd ~/Writing
   bosh
   cd ~/

@@ -188,7 +188,7 @@ totalbosh() {
   echo Bookmarks
   cd ~/Bookmarks
   bosh
-  echo Codong
+  echo Coding
   cd ~/Coding
   bosh
   echo Coding Notes

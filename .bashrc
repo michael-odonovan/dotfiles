@@ -179,127 +179,106 @@ dotbosh() {
 }
 
 totalbosh() {
-  echo Scripts
+  echo Scripts =========================
   cd ~/bin
   bosh
-  echo
   echo 
 
-  echo Blog
+  echo Blog =========================
   cd ~/Blog
   bosh
-  echo
   echo 
 
-  echo Bookmarks
+  echo Bookmarks =========================
   cd ~/Bookmarks
   bosh
-  echo
   echo 
 
-  echo Coding
+  echo Coding =========================
   cd ~/Coding
   bosh
-  echo
   echo 
 
-  echo Coding Notes
+  echo Coding Notes =========================
   cd ~/CodingNotes
   bosh
-  echo
   echo 
 
-  echo dotbosh
-  echo
+  echo dotbosh =========================
   echo 
 
   dotbosh
   echo
-  echo 
 
-  echo JanAndSons
+  echo JanAndSons =========================
   cd ~/JanAndSonsCleaningSolutions
   bosh
-  echo
   echo 
 
-  echo Learning
+  echo Learning =========================
   cd ~/Learning
   bosh
   echo
-  echo 
 
-  echo NewInstall
+  echo NewInstall =========================
   cd ~/NewInstall
   bosh
   echo
-  echo 
 
-  echo NextJsTemplate
+  echo NextJsTemplate =========================
   cd ~/NextJsTemplate
   bosh
   echo
-  echo 
 
-  echo NotesGeneral
+  echo NotesGeneral =========================
   cd ~/NotesGeneral
   bosh
   echo
-  echo 
 
-  echo nvim
+  echo nvim =========================
   cd ~/.config/nvim
   bosh
   echo
-  echo 
 
-  echo Photos
+  echo Photos =========================
   cd ~/Pictures/Photos
   bosh
   echo
-  echo 
 
-  echo PomodoroTimer
+  echo PomodoroTimer =========================
   cd ~/PomodoroTimer
   bosh
-  echo
   echo 
 
-  echo Printing3d
+  echo Printing3d =========================
   cd ~/Printing3d
   bosh
-  echo
   echo 
 
-  echo RbcMobilityNextJs
+  echo RbcMobilityNextJs =========================
   cd ~/RbcMobilityNextJs
   bosh
-  echo
   echo 
 
-  echo RbcMobilitySanity
+  echo RbcMobilitySanity =========================
   cd ~/RbcMobilitySanity
   bosh
   echo
-  echo 
 
-  echo Slider
+  echo Slider =========================
   cd ~/Slider
   bosh
   echo
-  echo 
 
-  echo WRBackup
+  echo WRBackup =========================
   cd ~/WRBackup
   bosh
   echo
-  echo 
 
-  echo Writing
+  echo Writing =========================
   cd ~/Writing
   bosh
   echo
-  echo 
 
   cd ~/
 }

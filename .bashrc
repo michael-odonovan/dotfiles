@@ -102,7 +102,7 @@ fi
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias Project='cd ~/RbcMobilityNextJs && ls -a'
-alias Blog='cd ~/Blog && ls -a'
+alias Blog='cd ~/Blog && vim .'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'

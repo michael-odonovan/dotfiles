@@ -182,62 +182,125 @@ totalbosh() {
   echo Scripts
   cd ~/bin
   bosh
+  echo
+  echo 
+
   echo Blog
   cd ~/Blog
   bosh
+  echo
+  echo 
+
   echo Bookmarks
   cd ~/Bookmarks
   bosh
+  echo
+  echo 
+
   echo Coding
   cd ~/Coding
   bosh
+  echo
+  echo 
+
   echo Coding Notes
   cd ~/CodingNotes
   bosh
+  echo
+  echo 
+
   echo dotbosh
+  echo
+  echo 
+
   dotbosh
+  echo
+  echo 
+
   echo JanAndSons
   cd ~/JanAndSonsCleaningSolutions
   bosh
+  echo
+  echo 
+
   echo Learning
   cd ~/Learning
   bosh
+  echo
+  echo 
+
   echo NewInstall
   cd ~/NewInstall
   bosh
+  echo
+  echo 
+
   echo NextJsTemplate
   cd ~/NextJsTemplate
   bosh
+  echo
+  echo 
+
   echo NotesGeneral
   cd ~/NotesGeneral
   bosh
+  echo
+  echo 
+
   echo nvim
   cd ~/.config/nvim
   bosh
+  echo
+  echo 
+
   echo Photos
   cd ~/Pictures/Photos
   bosh
+  echo
+  echo 
+
   echo PomodoroTimer
   cd ~/PomodoroTimer
   bosh
+  echo
+  echo 
+
   echo Printing3d
   cd ~/Printing3d
   bosh
+  echo
+  echo 
+
   echo RbcMobilityNextJs
   cd ~/RbcMobilityNextJs
   bosh
+  echo
+  echo 
+
   echo RbcMobilitySanity
   cd ~/RbcMobilitySanity
   bosh
+  echo
+  echo 
+
   echo Slider
   cd ~/Slider
   bosh
+  echo
+  echo 
+
   echo WRBackup
   cd ~/WRBackup
   bosh
+  echo
+  echo 
+
   echo Writing
   cd ~/Writing
   bosh
+  echo
+  echo 
+
   cd ~/
 }
 

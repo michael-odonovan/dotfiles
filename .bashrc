@@ -116,7 +116,7 @@ alias Sound='bluetoothctl connect 00:13:EF:A0:45:F5'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
 # Open Files
-alias Init='cd ~/.config/nvim/ && vim init.vim'
+alias Init='cd ~/.config/nvim/ && vim .'
 alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders

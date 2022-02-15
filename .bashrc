@@ -106,7 +106,7 @@ alias Blog='cd ~/Blog && vim .'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'
-alias Photos='cd ~/Pictures/Photos'
+alias Pictures='cd ~/Pictures'
 
 alias ..='cd ..'
 

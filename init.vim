@@ -14,7 +14,6 @@ let mapleader=" "
 set clipboard+=unnamedplus "allows neovim to access the system clipboard"
 set fileencoding=utf-8
 set mouse=a
-set pumheight=10
 set showtabline=2
 set timeoutlen=1000 " amount of mapping delay
 set ttimeoutlen=5 " amount of keycode delay

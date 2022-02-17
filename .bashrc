@@ -102,7 +102,7 @@ fi
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias Project='cd ~/RbcMobilityNextJs && ls -a'
-alias Blog='cd ~/Blog && vim .'
+alias Blog='cd ~/Blog && ls -a'
 alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'
@@ -116,11 +116,12 @@ alias Sound='bluetoothctl connect 00:13:EF:A0:45:F5'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
 # Open Files
-alias Init='cd ~/.config/nvim/ && vim .'
+alias Init='cd ~/.config/nvim/ && ls -a'
 alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders
 alias Nvim='cd ~/.config/nvim/ && ls -a'
+alias Snippets='cd ~/MySnippets && vim .'
 alias Documents='cd ~/Documents && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
 alias Coding='cd ~/Coding && ls -a'

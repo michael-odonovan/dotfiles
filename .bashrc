@@ -221,6 +221,11 @@ totalbosh() {
   bosh
   echo
 
+  echo MySnippets =========================
+  cd ~/MySnippets
+  bosh
+  echo
+
   echo NewInstall =========================
   cd ~/NewInstall
   bosh

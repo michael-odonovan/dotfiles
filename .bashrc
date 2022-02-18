@@ -121,7 +121,7 @@ alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders
 alias Nvim='cd ~/.config/nvim/ && ls -a'
-alias Snippets='cd ~/MySnippets && vim .'
+alias Snippets='cd ~/.config/nvim/snippets && vim .'
 alias Documents='cd ~/Documents && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
 alias Coding='cd ~/Coding && ls -a'
@@ -218,11 +218,6 @@ totalbosh() {
 
   echo Learning =========================
   cd ~/Learning
-  bosh
-  echo
-
-  echo MySnippets =========================
-  cd ~/MySnippets
   bosh
   echo
 

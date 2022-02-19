@@ -121,7 +121,7 @@ alias Bashrc='cd && vim .bashrc'
 
 # Go To Folders
 alias Nvim='cd ~/.config/nvim/ && ls -a'
-alias Snippets='cd ~/.config/nvim/snippets && vim .'
+alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode && vim .'
 alias Documents='cd ~/Documents && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
 alias Coding='cd ~/Coding && ls -a'

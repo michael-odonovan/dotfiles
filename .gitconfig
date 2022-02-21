@@ -4,9 +4,11 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-
-[alias]
-	st = status
 [user]
 	name = michael o'donovan
 	email = mikeodonovan3@gmail.com
+
+# g = 'git' is in .bashrc
+[alias]
+	st = status
+

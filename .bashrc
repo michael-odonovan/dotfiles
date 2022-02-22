@@ -354,6 +354,7 @@ NewInstall4() {
   sudo npm install -g live-server
   sudo npm install -g @sanity/cli
   sudo npm install -g yarn
+  sudo npm install -g commitizen
 }
 
 NewInstall5() {

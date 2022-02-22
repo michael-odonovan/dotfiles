@@ -286,9 +286,11 @@ totalbosh() {
 }
 
 
-# NEW INSTALL =======================================================
+# NEW INSTALL SCRIPTS =======================================================
 
   NewInstall1() {
+  # Update and Sort Gnome Desktop keybindings
+
   # update first
   sudo apt update
   sudo apt upgrade
@@ -326,6 +328,8 @@ totalbosh() {
 }
 
 NewInstall2() {
+  # Install github cli and neovim
+
   # install github
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
@@ -338,18 +342,23 @@ NewInstall2() {
   sudo apt-get install neovim
 }
 
-NewInstallApt() {
+NewInstall3() {
+  # install apt packages
+
   sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs python3-dev python3-pip
 }
 
-NewInstallNpm() {
+NewInstall4() {
+  # install npm packages
+
   sudo npm install -g live-server
   sudo npm install -g @sanity/cli
   sudo npm install -g yarn
 }
 
-# NewInstallReverseDotBosh
-NewInstallRepos() {
+NewInstall5() {
+  # install repos
+
   cd
   gh repo clone michael-odonovan/bin
   gh repo clone michael-odonovan/Blog
@@ -376,7 +385,9 @@ NewInstallRepos() {
   gh repo clone michael-odonovan/Writing
 }
 
-NewInstallDotFiles() {
+NewInstall6() {
+  # install dotfiles
+
   cd
   cp ~/DotFiles/alacritty.yml ~/.config/alacritty/alacritty.yml
   cp ~/DotFiles/.bash_profile ~/.bash_profile
@@ -386,3 +397,11 @@ NewInstallDotFiles() {
   cp ~/DotFiles/vs-code/settings.json ~/.config/Code/User/settings.json
   cp ~/DotFiles/vs-code/keybindings.json ~/.config/Code/User/keybindings.json
 }
+
+NewInstall7() {
+  # install pip3 packages
+
+  cd
+  sudo pip3 install -U Commitizen
+}
+

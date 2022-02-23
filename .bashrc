@@ -78,7 +78,7 @@ export LSCOLORS=exxxxxxxxxxxxxxxxxexex
 
 
 # This sets up the source for my bash scripts:
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/.local/bin
 
 # This was to solve an error I was getting in nvim terminal:
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -118,6 +118,8 @@ alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head 
 # Open Files
 alias Init='cd ~/.config/nvim/ && vim init.lua'
 alias Bashrc='cd && vim .bashrc'
+alias GitConfig='cd && vim .gitconfig'
+alias GitPractise='cd ~/GitPractise/ && vim .'
 
 # Go To Folders
 alias Nvim='cd ~/.config/nvim/ && ls -a'
@@ -150,6 +152,7 @@ export FZF_DEFAULT_OPS="--extended"
 # ========== Git Stuff ===========
 alias g='git'
 alias gst='git status'
+alias czInit='pip install -U commitizen'
 
 function bosh() {
 	git add -A
@@ -186,11 +189,6 @@ totalbosh() {
   bosh
   echo 
 
-  echo Blog =========================
-  cd ~/Blog
-  bosh
-  echo 
-
   echo Bookmarks =========================
   cd ~/Bookmarks
   bosh
@@ -212,11 +210,6 @@ totalbosh() {
   dotbosh
   echo
 
-  echo JanAndSons =========================
-  cd ~/JanAndSonsCleaningSolutions
-  bosh
-  echo 
-
   echo Learning =========================
   cd ~/Learning
   bosh
@@ -224,11 +217,6 @@ totalbosh() {
 
   echo NewInstall =========================
   cd ~/NewInstall
-  bosh
-  echo
-
-  echo NextJsTemplate =========================
-  cd ~/NextJsTemplate
   bosh
   echo
 
@@ -247,30 +235,10 @@ totalbosh() {
   bosh
   echo
 
-  echo PomodoroTimer =========================
-  cd ~/PomodoroTimer
-  bosh
-  echo 
-
   echo Printing3d =========================
   cd ~/Printing3d
   bosh
   echo 
-
-  echo RbcMobilityNextJs =========================
-  cd ~/RbcMobilityNextJs
-  bosh
-  echo 
-
-  echo RbcMobilitySanity =========================
-  cd ~/RbcMobilitySanity
-  bosh
-  echo
-
-  echo Slider =========================
-  cd ~/Slider
-  bosh
-  echo
 
   echo WRBackup =========================
   cd ~/WRBackup
@@ -291,11 +259,8 @@ totalbosh() {
   NewInstall1() {
   # Update and Sort Gnome Desktop keybindings
 
-  # update first
   sudo apt update
   sudo apt upgrade
-
-  # adding number navigation to Workspaces
   gsettings set org.gnome.shell.keybindings switch-to-application-1  []
   gsettings set org.gnome.shell.keybindings switch-to-application-2  []
   gsettings set org.gnome.shell.keybindings switch-to-application-3  []
@@ -330,13 +295,11 @@ totalbosh() {
 NewInstall2() {
   # Install github cli and neovim
 
-  # install github
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
   sudo apt update
   sudo apt install gh
 
-  # install neovim ppa
   sudo add-apt-repository ppa:neovim-ppa/stable
   sudo apt-get update
   sudo apt-get install neovim
@@ -344,13 +307,11 @@ NewInstall2() {
 
 NewInstall3() {
   # install apt packages
-
   sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs python3-dev python3-pip
 }
 
 NewInstall4() {
   # install npm packages
-
   sudo npm install -g live-server
   sudo npm install -g @sanity/cli
   sudo npm install -g yarn
@@ -359,7 +320,6 @@ NewInstall4() {
 
 NewInstall5() {
   # install repos
-
   cd
   gh repo clone michael-odonovan/bin
   gh repo clone michael-odonovan/Blog
@@ -367,6 +327,7 @@ NewInstall5() {
   gh repo clone michael-odonovan/Coding
   gh repo clone michael-odonovan/CodingNotes
   gh repo clone michael-odonovan/DotFiles
+  gh repo clone michael-odonovan/GitPractise
   gh repo clone michael-odonovan/JanAndSonsCleaningSolutions
   gh repo clone michael-odonovan/Learning
   gh repo clone michael-odonovan/NewInstall
@@ -388,7 +349,6 @@ NewInstall5() {
 
 NewInstall6() {
   # install dotfiles
-
   cd
   cp ~/DotFiles/alacritty.yml ~/.config/alacritty/alacritty.yml
   cp ~/DotFiles/.bash_profile ~/.bash_profile
@@ -401,7 +361,6 @@ NewInstall6() {
 
 NewInstall7() {
   # install pip3 packages
-
   cd
   sudo pip3 install -U Commitizen
 }

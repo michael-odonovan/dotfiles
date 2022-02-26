@@ -107,6 +107,8 @@ alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'
 alias Pictures='cd ~/Pictures'
+alias Wiki='cd ~/Wiki && vim index.md'
+alias Trash='cd ~/.local/share/Trash/files/'
 
 alias ..='cd ..'
 
@@ -307,15 +309,14 @@ NewInstall2() {
 
 NewInstall3() {
   # install apt packages
-  sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs python3-dev python3-pip
+  sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs python3-dev python3-pip xsel
 }
 
 NewInstall4() {
   # install npm packages
-  sudo npm install -g live-server
-  sudo npm install -g @sanity/cli
-  sudo npm install -g yarn
-  sudo npm install -g commitizen
+  sudo npm install -g live-server @sanity/cli yarn commitizen typescript typescript-language-server eslint prettier
+ # Neovim node support
+  npm i -g neovim
 }
 
 NewInstall5() {
@@ -360,8 +361,13 @@ NewInstall6() {
 }
 
 NewInstall7() {
-  # install pip3 packages
+  # install pip3 packages and rust
   cd
+  # app that prompts you for better commits
   sudo pip3 install -U Commitizen
+  sudo pip3 install pynvim
+  sudo pip3 install pyls-black
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
+. "$HOME/.cargo/env"

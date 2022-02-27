@@ -314,7 +314,7 @@ NewInstall3() {
 
 NewInstall4() {
   # install npm packages
-  sudo npm install -g live-server @sanity/cli yarn commitizen typescript typescript-language-server eslint prettier
+  sudo npm install -g live-server @sanity/cli yarn commitizen typescript typescript-language-server eslint prettier vscode-langservers-extracted
  # Neovim node support
   npm i -g neovim
 }
@@ -361,13 +361,19 @@ NewInstall6() {
 }
 
 NewInstall7() {
-  # install pip3 packages and rust
+  # install pip3 packages, rust, NVM (Node Version Manager)
   cd
   # app that prompts you for better commits
   sudo pip3 install -U Commitizen
   sudo pip3 install pynvim
   sudo pip3 install pyls-black
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 }
 
 . "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

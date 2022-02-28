@@ -172,7 +172,6 @@ function gac() {
 dotbosh() {
   cp ~/.gitconfig ~/DotFiles/.gitconfig
   cp ~/.bashrc ~/DotFiles/.bashrc
-  cp ~/.bashrc-new-install ~/DotFiles/.bashrc-new-install
   cp ~/.bash_profile ~/DotFiles/.bash_profile
   cp ~/.tmux.conf ~/DotFiles/.tmux.conf
   cp ~/.config/alacritty/alacritty.yml ~/DotFiles/alacritty.yml
@@ -256,3 +255,125 @@ totalbosh() {
   cd ~/
 }
 
+
+# NEW INSTALL SCRIPTS =======================================================
+
+  NewInstall1() {
+  # Update and Sort Gnome Desktop keybindings
+
+  sudo apt update
+  sudo apt upgrade
+  gsettings set org.gnome.shell.keybindings switch-to-application-1  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-2  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-3  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-4  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-5  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-6  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-7  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-8  []
+  gsettings set org.gnome.shell.keybindings switch-to-application-9  []
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1  "['<Super>1']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2  "['<Super>2']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3  "['<Super>3']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4  "['<Super>4']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5  "['<Super>5']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6  "['<Super>6']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7  "['<Super>7']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8  "['<Super>8']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9  "['<Super>9']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Super>0']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1  "['<Super><Shift>1']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2  "['<Super><Shift>2']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3  "['<Super><Shift>3']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4  "['<Super><Shift>4']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5  "['<Super><Shift>5']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6  "['<Super><Shift>6']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7  "['<Super><Shift>7']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8  "['<Super><Shift>8']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9  "['<Super><Shift>9']"
+  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Super><Shift>0']"
+}
+
+NewInstall2() {
+  # Install github cli and neovim
+
+  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+  sudo apt update
+  sudo apt install gh
+
+  sudo add-apt-repository ppa:neovim-ppa/stable
+  sudo apt-get update
+  sudo apt-get install neovim
+}
+
+NewInstall3() {
+  # install apt packages
+  sudo apt install alacritty tmux gparted nodejs npm node-typescript trash-cli timeshift gnome-tweaks gnome-shell-extensions keepassxc filezilla calibre gthumb ripgrep handbrake transmission rename fzf lm-sensors drawing freecad imagemagick ppa-purge ratbagd piper tree vim pandoc libwebp-dev wmctrl hfsprogs python3-dev python3-pip xsel
+}
+
+NewInstall4() {
+  # install npm packages
+  sudo npm install -g live-server @sanity/cli yarn commitizen typescript typescript-language-server eslint prettier vscode-langservers-extracted jsonls
+ # Neovim node support
+  npm i -g neovim
+}
+
+NewInstall5() {
+  # install repos
+  cd
+  gh repo clone michael-odonovan/bin
+  gh repo clone michael-odonovan/Blog
+  gh repo clone michael-odonovan/Bookmarks
+  gh repo clone michael-odonovan/Coding
+  gh repo clone michael-odonovan/CodingNotes
+  gh repo clone michael-odonovan/DotFiles
+  gh repo clone michael-odonovan/GitPractise
+  gh repo clone michael-odonovan/JanAndSonsCleaningSolutions
+  gh repo clone michael-odonovan/Learning
+  gh repo clone michael-odonovan/NewInstall
+  gh repo clone michael-odonovan/NextJsTemplate
+  gh repo clone michael-odonovan/NotesGeneral
+  cd ~/.config
+  gh repo clone michael-odonovan/nvim
+  cd ~/Pictures
+  gh repo clone michael-odonovan/Photos
+  cd
+  gh repo clone michael-odonovan/PomodoroTimer
+  gh repo clone michael-odonovan/Printing3d
+  gh repo clone michael-odonovan/RbcMobilityNextJs
+  gh repo clone michael-odonovan/RbcMobilitySanity
+  gh repo clone michael-odonovan/Slider
+  gh repo clone michael-odonovan/WRBackup
+  gh repo clone michael-odonovan/Writing
+}
+
+NewInstall6() {
+  # install dotfiles
+  cd
+  cp ~/DotFiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+  cp ~/DotFiles/.bash_profile ~/.bash_profile
+  cp ~/DotFiles/.bashrc ~/.bashrc
+  cp ~/DotFiles/.gitconfig ~/.gitconfig
+  cp ~/DotFiles/.tmux.conf ~/.tmux.conf
+  cp ~/DotFiles/vs-code/settings.json ~/.config/Code/User/settings.json
+  cp ~/DotFiles/vs-code/keybindings.json ~/.config/Code/User/keybindings.json
+}
+
+NewInstall7() {
+  # install pip3 packages, rust, NVM (Node Version Manager)
+  cd
+  # app that prompts you for better commits
+  sudo pip3 install -U Commitizen
+  sudo pip3 install pynvim
+  sudo pip3 install pyls-black
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+}
+
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

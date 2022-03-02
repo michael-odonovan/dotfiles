@@ -107,7 +107,6 @@ alias Scratch='cd ~/CodingNotes/ && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'
 alias Pictures='cd ~/Pictures'
-alias Wiki='cd ~/Wiki && vim index.md'
 alias Trash='cd ~/.local/share/Trash/files/'
 
 alias ..='cd ..'
@@ -118,17 +117,18 @@ alias Sound='bluetoothctl connect 00:13:EF:A0:45:F5'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
 # Open Files
-alias Init='cd ~/.config/nvim/ && vim init.lua'
-alias Bashrc='cd && vim .bashrc'
-alias GitConfig='cd && vim .gitconfig'
-alias GitPractise='cd ~/GitPractise/ && vim .'
+alias Init='vim ~/.config/nvim/init.lua'
+alias Bashrc='vim ~/.bashrc'
+alias GitConfig='vim ~/.gitconfig'
+alias Wiki='cd ~/Wiki && vim index.md'
+alias Coding='cd ~/Wiki && vim Coding-Notes.md'
 
 # Go To Folders
+alias GitPractise='cd ~/GitPractise/ && vim .'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode && vim .'
 alias Documents='cd ~/Documents && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
-alias Coding='cd ~/Coding && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'
 alias NotesGeneral='cd ~/NotesGeneral && ls -a'
 alias Scripts='cd ~/bin && ls -a'
@@ -198,7 +198,7 @@ totalbosh() {
   echo 
 
   echo Coding =========================
-  cd ~/Coding
+  cd ~/CodingWiki
   bosh
   echo 
 

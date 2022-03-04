@@ -122,7 +122,7 @@ alias Bashrc='vim ~/.bashrc'
 alias GitConfig='vim ~/.gitconfig'
 alias Wiki='cd ~/Wiki && vim index.md'
 alias Coding='cd ~/Wiki && vim Coding-Notes.md'
-alias CV='cd ~/CV && vim README.md'
+alias CV='cd ~/CV && vim .'
 
 # Go To Folders
 alias GitPractise='cd ~/GitPractise/ && vim .'

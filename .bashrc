@@ -117,11 +117,12 @@ alias Sound='bluetoothctl connect 00:13:EF:A0:45:F5'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 
 # Open Files
-alias Init='vim ~/.config/nvim/init.lua'
+alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'
 alias GitConfig='vim ~/.gitconfig'
 alias Wiki='cd ~/Wiki && vim index.md'
 alias Coding='cd ~/Wiki && vim Coding-Notes.md'
+alias CV='cd ~/CV && vim README.md'
 
 # Go To Folders
 alias GitPractise='cd ~/GitPractise/ && vim .'

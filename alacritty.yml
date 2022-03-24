@@ -3,6 +3,10 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
 
+  padding: 
+    x: 10
+    y: 10
+
   # Startup Mode (changes require restart)
   startup_mode: Windowed
 

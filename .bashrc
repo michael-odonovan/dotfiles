@@ -127,7 +127,7 @@ alias CV='cd ~/CV && vim .'
 # Go To Folders
 alias GitPractise='cd ~/GitPractise/ && vim .'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
-alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode && vim .'
+alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias Documents='cd ~/Documents && ls -a'
 alias Cn='cd ~/CodingNotes && ls -a'
 alias Sessions='cd ~/.config/nvim/sessions && ls -a'

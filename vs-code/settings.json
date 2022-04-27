@@ -1,182 +1,95 @@
 {
-    // General
-    "vim.leader": "<space>",
-    "editor.fontSize": 14,
-    "editor.tabSize": 2,
-    "window.zoomLevel": 1.7,
-    "workbench.colorTheme": "Dracula",
-    "explorer.confirmDragAndDrop": false,
-    "workbench.editor.labelFormat": "short",
-    "breadcrumbs.enabled": true,
-    "editor.wordWrap": "on",
-    "window.menuBarVisibility": "visible",
-
-    // multiCommand Plugin - called from keybindings.json
-    // "multiCommand.commands": [
-    //     {
-    //       "command": "multiCommand.toggleSidebars",
-    //       "sequence": [
-    //         "workbench.action.toggleSidebarVisibility",
-    //         "workbench.action.toggleActivityBarVisibility"
-    //       ]
-    //     }
-    //   ],
-
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Toggle Sidebar
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
-            ]
-        },
-        // Open settings.json
-        {
-            "before": [
-                "<leader>",
-                ","
-            ],
-            "commands": [
-                "workbench.action.openSettingsJson"
-            ]
-        },
-        // escape hightlighting search
-        {
-            "before": [
-                "esc"
-            ],
-            "commands": [
-                ":nohl"
-            ]
-        },
-        // open split
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "commands": [
-                "workbench.action.splitEditor"
-            ]
-        },
-        // Close tab and terminal
-        {
-            "before": [
-                "<C-d>"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        // save
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                ":w"
-            ]
-        },
-        // Open terminal
-        {
-            "before": [
-                "<leader>",
-                "b"
-            ],
-            "commands": [
-                "workbench.action.terminal.new"
-            ]
-        },
-        // Change tabs left and right
-        {
-            "before": [
-                "<leader>",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
-        },
-        // Close VS Code
-        {
-            "before": [
-                "<C-c>"
-            ],
-            "commands": [
-                "workbench.action.closeWindow"
-            ]
-        },
-        // move back and forth to file explorer
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "commands": [
-                "workbench.explorer.fileView.focus"
-            ]
-        },
-        {
-            "before": [
-                "<C-l>"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
-        },
-    ],
-    // Stay highlighted after tab/indent
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "after": [
-                ">",
-                "g",
-                "v"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "after": [
-                "<",
-                "g",
-                "v"
-            ]
-        },
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<esc>"
-            ]
-        }
-    ],
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/node_modules": true
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "*html": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "vim.leader": "<space>",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "window.zoomLevel": 1.7,
+  "workbench.colorTheme": "Dracula",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.enabled": true,
+  "editor.wordWrap": "on",
+  "window.menuBarVisibility": "visible",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
+    {
+      "before": ["<leader>", ","],
+      "commands": ["workbench.action.openSettingsJson"]
+    },
+    {
+      "before": ["esc"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<C-d>"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.terminal.new"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<C-c>"],
+      "commands": ["workbench.action.closeWindow"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "eslint.run": "onSave",
+  "eslint.nodePath": "",
+  "eslint.format.enable": true
 }

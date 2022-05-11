@@ -89,7 +89,9 @@
     "**/.DS_Store": true,
     "**/node_modules": true
   },
-  "eslint.run": "onSave",
-  "eslint.nodePath": "",
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.nodePath": ""
 }

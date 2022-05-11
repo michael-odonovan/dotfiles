@@ -107,16 +107,10 @@ function dotbosh() {
   cp ~/.bashrc ~/Repos/DotFiles/.bashrc
   cp ~/.bash_profile ~/Repos/DotFiles/.bash_profile
   cp ~/.tmux.conf ~/Repos/DotFiles/.tmux.conf
-  cp ~/.yabairc ~/Repos/DotFiles/yabairc
-  cp ~/.skhdrc ~/Repos/DotFiles/skhdrc
-
-
+  cp ~/.yabairc ~/Repos/DotFiles/.yabairc
+  cp ~/.skhdrc ~/Repos/DotFiles/.skhdrc
   cp ~/Library/Application\ Support/Code/User/settings.json ~/Repos/DotFiles/vs-code/settings.json 
-
   cp ~/Library/Application\ Support/Code/User/keybindings.json ~/Repos/DotFiles/vs-code/keybindings.json 
-
-  cp ~/.config/karabiner/karabiner.json ~/Repos/DotFiles/karabiner.json
-
   cd ~/Repos/DotFiles
   bosh
 }

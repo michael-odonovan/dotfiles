@@ -1,0 +1,60 @@
+# Must live here!: ~/.skhdrc
+
+# Move Focus to Window ===========================
+# Window Navigation
+cmd - h : yabai -m window --focus west
+cmd - l : yabai -m window --focus east
+# cmd + ctrl - up : yabai -m window --focus north
+# cmd + ctrl - down : yabai -m window --focus south
+
+
+# Resize Windows  ============================
+# alt + cmd - h,j,k,l
+cmd + ctrl - h : yabai -m window --resize left:-171:0; \
+                  yabai -m window --resize right:-171:0
+
+cmd + ctrl - l : yabai -m window --resize right:171:0; \
+                  yabai -m window --resize left:171:0
+
+# Fullscreen Toggle ===============================
+cmd + ctrl - k : yabai -m window --toggle zoom-fullscreen
+
+# Flip Windows ===================================
+cmd + ctrl - j : yabai -m space --mirror y-axis
+
+
+# Move Window to Other Workspace (then use ctrl + 1,2,3,4,5 to move there)
+ctrl + shift - 1 : yabai -m window --space 1
+ctrl + shift - 2 : yabai -m window --space 2
+ctrl + shift - 3 : yabai -m window --space 3
+ctrl + shift - 4 : yabai -m window --space 4
+ctrl + shift - 5 : yabai -m window --space 5
+
+# Float / Unfloat window
+cmd + shift - space : \
+    yabai -m window --toggle float; \
+    yabai -m window --toggle border
+
+
+
+# Unused ======================================================
+# Equalize size of windows
+# cmd + ctrl - down : yabai -m space --balance
+
+# Move focus container to workspace
+# shift + alt - m : yabai -m window --space last; yabai -m space --focus last
+# shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
+# shift + alt - n : yabai -m window --space next; yabai -m space --focus next
+
+# Moving windows
+# shift + alt - h : yabai -m window --warp west
+# shift + alt - j : yabai -m window --warp south
+# shift + alt - k : yabai -m window --warp north
+# shift + alt - l : yabai -mwindow --warp east
+
+# Restart Yabai
+# shift + lctrl + alt - r : \
+    # /usr/bin/env osascript <<< \
+        # "display notification \"Restarting Yabai\" with title \"Yabai\""; \
+    # launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+

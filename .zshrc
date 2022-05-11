@@ -105,7 +105,6 @@ function dotbosh() {
   cp ~/.gitconfig ~/Repos/DotFiles/.gitconfig
   cp ~/.zshrc ~/Repos/DotFiles/.zshrc
   cp ~/.bashrc ~/Repos/DotFiles/.bashrc
-  cp ~/.bashrc-new-install ~/Repos/DotFiles/.bashrc-new-install
   cp ~/.bash_profile ~/Repos/DotFiles/.bash_profile
   cp ~/.tmux.conf ~/Repos/DotFiles/.tmux.conf
   cp ~/.config/alacritty/alacritty.yml ~/Repos/DotFiles/alacritty.yml

@@ -110,9 +110,13 @@ function dotbosh() {
   cp ~/.yabairc ~/Repos/DotFiles/yabairc
   cp ~/.skhdrc ~/Repos/DotFiles/skhdrc
 
-  cp ~/.config/Code/User/settings.json ~/Repos/DotFiles/vs-code/settings.json
-  cp ~/.config/Code/User/keybindings.json ~/Repos/DotFiles/vs-code/keybindings.json
+
+  cp ~/Library/Application\ Support/Code/User/settings.json ~/Repos/DotFiles/vs-code/settings.json 
+
+  cp ~/Library/Application\ Support/Code/User/keybindings.json ~/Repos/DotFiles/vs-code/keybindings.json 
+
   cp ~/.config/karabiner/karabiner.json ~/Repos/DotFiles/karabiner.json
+
   cd ~/Repos/DotFiles
   bosh
 }

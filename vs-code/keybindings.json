@@ -1,0 +1,28 @@
+[
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "explorerViewletFocus  && !inputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+
+
+    // {
+    //     "key": "ctrl+e",
+    //     "command": "extension.multiCommand.execute",
+    //     "args": { "command": "multiCommand.toggleSidebars" },
+    // }
+
+]

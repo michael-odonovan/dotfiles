@@ -45,40 +45,37 @@ alias yabaistart='brew services start yabai'
 alias yabaistop='brew services stop yabai'
 
 # files
-alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
 alias PR='vim ~/Repos/GitPractise/PR-template.md'
 alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'
 alias Zsh='vim ~/.zshrc'
 alias GitConfig='vim ~/.gitconfig'
 alias Wiki='cd ~/Repos/Wiki && vim index.md'
-alias CV='cd ~/CV && vim .'
 alias Scratch='cd && vim scratch.md'
 ### vscode
 alias Settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
 alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
 
-# folders
+# Repos
+alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
 alias Repos='cd ~/Repos && ls -a'
+alias CV='cd ~/Repos/CV && vim .'
+alias GitPractise='cd ~/Repos/GitPractise/ && vim .'
+alias Writing='cd ~/Repos/Writing && ls -a'
+alias Blog='cd ~/Repos/Blog && ls -a'
+
+# folders
 alias CR='cd ~/ComicRelief && ls -a'
-alias GitPractise='cd ~/GitPractise/ && vim .'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias Documents='cd ~/Documents && ls -a'
-alias Cn='cd ~/CodingNotes && ls -a'
-alias Sessions='cd ~/.config/nvim/sessions && ls -a'
-alias NotesGeneral='cd ~/NotesGeneral && ls -a'
 alias Scripts='cd ~/bin && ls -a'
-alias Writing='cd ~/Writing && ls -a'
 alias Photos='cd ~/Pictures/Photos && ls -a'
-alias DotFiles='cd ~/DotFiles && ls -a'
-alias NewInstall='cd ~/NewInstall && ls -a'
 
 # areas
+alias Project='cd ~/RbcMobilityNextJs && ls -a'
 alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
-alias Project='cd ~/RbcMobilityNextJs && ls -a'
-alias Blog='cd ~/Blog && ls -a'
 alias Printing3d='cd ~/Printing3d && ls -a'
 alias Learning='cd ~/Learning && ls -a'
 alias Pictures='cd ~/Pictures'
@@ -89,39 +86,16 @@ alias gst='git status'
 # ??? delete this? =>
 alias czInit='pip install -U commitizen'
 
-function bosh() {
-	git add -A
-	git commit -m "update"
-	git push
-}
-
 # $ gacp "commit message"
 function gac() {
 	git add -A
 	git commit -m "$1"
 }
 
-
-# backups ======================================
-function dotbosh() {
-  cd
-  # git
-  cp ~/.gitmessage ~/Repos/DotFiles/.gitmessage
-  cp ~/.gitconfig ~/Repos/DotFiles/.gitconfig
-
-  cp ~/.zshrc ~/Repos/DotFiles/.zshrc
-  cp ~/.bashrc ~/Repos/DotFiles/.bashrc
-  cp ~/.bash_profile ~/Repos/DotFiles/.bash_profile
-  cp ~/.tmux.conf ~/Repos/DotFiles/.tmux.conf
-
-  # window manager
-  cp ~/.yabairc ~/Repos/DotFiles/.yabairc
-  cp ~/.skhdrc ~/Repos/DotFiles/.skhdrc
-
-  # vscode
-  cp ~/Library/Application\ Support/Code/User/settings.json ~/Repos/DotFiles/vs-code/settings.json 
-  cp ~/Library/Application\ Support/Code/User/keybindings.json ~/Repos/DotFiles/vs-code/keybindings.json 
-
-  cd ~/Repos/DotFiles
-  bosh
+# lazy lazy git update
+function bosh() {
+	git add -A
+	git commit -m "update"
+	git push
 }
+

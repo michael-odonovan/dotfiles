@@ -95,6 +95,7 @@ export EDITOR='nvim'
 export FZF_DEFAULT_OPS="--extended"
 
 # ========== Git Stuff ===========
+alias g='git'
 alias gst='git status'
 alias czInit='pip install -U commitizen'
 
@@ -111,8 +112,7 @@ function gac() {
 	git commit -m "$1"
 }
 
-function dotbosh() {
-  cd
+dotbosh() {
   cp ~/.gitconfig ~/DotFiles/.gitconfig
   cp ~/.bashrc ~/DotFiles/.bashrc
   cp ~/.bashrc-new-install ~/DotFiles/.bashrc-new-install
@@ -125,7 +125,7 @@ function dotbosh() {
   # cp ~/.config/karabiner/karabiner.json ~/DotFiles/karabiner.json
   # cp ~/.config/yabai/yabairc ~/DotFiles/yabairc
   # cp ~/.config/skhd/skhdrc ~/DotFiles/skhdrc
-  cd DotFiles
+  DotFiles
   bosh
 }
 

@@ -1,17 +1,16 @@
-
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = michael o'donovan
 	email = mikeodonovan3@gmail.com
   user = michael-odonovan
-
 [init]
 	defaultBranch = main
 
-[alias]
 # g = 'git' is in .bashrc
+[alias]
 	st = status
 	llog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [credential]
-	helper = store
-[commit]
-	template = /Users/mike/.gitmessage
+	helper = cache

@@ -59,7 +59,7 @@ alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindin
 # Repos
 alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
 alias Repos='cd ~/Repos && ls -a'
-alias CV='cd ~/Repos/CV && vim .'
+alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
 alias GitPractise='cd ~/Repos/GitPractise/ && vim .'
 alias Writing='cd ~/Repos/Writing && ls -a'
 alias Blog='cd ~/Repos/Blog && ls -a'

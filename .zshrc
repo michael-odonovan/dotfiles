@@ -45,6 +45,7 @@ alias yabaistart='brew services start yabai'
 alias yabaistop='brew services stop yabai'
 
 # files
+alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
 alias PR='vim ~/Repos/GitPractise/PR-template.md'
 alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'

@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # zsh theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 
 plugins=(git)
 
@@ -42,6 +42,7 @@ alias kill3000='kill -9 $(lsof -ti:3000)'
 alias vim='nvim' # If ever need to open original vim just use $ vi
 alias vi='vim'
 alias yabaistart='brew services start yabai'
+alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
 
 # files
@@ -83,10 +84,6 @@ alias Pictures='cd ~/Pictures'
 alias Trash='cd ~/.local/share/Trash/files/'
 
 # git ================================
-alias gst='git status'
-# ??? delete this? =>
-alias czInit='pip install -U commitizen'
-
 # $ gacp "commit message"
 function gac() {
 	git add -A

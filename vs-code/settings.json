@@ -93,5 +93,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.nodePath": ""
+  "eslint.nodePath": "",
+  "git.ignoreMissingGitWarning": true
 }

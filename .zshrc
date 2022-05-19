@@ -65,9 +65,12 @@ alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
 alias GitPractise='cd ~/Repos/GitPractise/ && vim .'
 alias Writing='cd ~/Repos/Writing && ls -a'
 alias Blog='cd ~/Repos/Blog && ls -a'
+alias Printing3d='cd ~/Repos/Printing3d && ls -a'
+alias Project='cd ~/Repos/RbcMobilityNextJs && ls -a'
+alias Learning='cd ~/Repos/Learning && ls -a'
+alias Pictures='cd ~/Repos/Pictures'
 
 # folders
-alias CR='cd ~/ComicRelief && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias Documents='cd ~/Documents && ls -a'
@@ -75,13 +78,14 @@ alias Scripts='cd ~/bin && ls -a'
 alias Photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
-alias Project='cd ~/RbcMobilityNextJs && ls -a'
 alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
-alias Printing3d='cd ~/Printing3d && ls -a'
-alias Learning='cd ~/Learning && ls -a'
-alias Pictures='cd ~/Pictures'
 alias Trash='cd ~/.local/share/Trash/files/'
+
+# current workplace
+alias cr='cd ~/ComicRelief && ls -a'
+alias cl='cd ~/ComicRelief/component-library/ && ls -a'
+alias cont='cd ~/ComicRelief/comicrelief-contentful/ && ls -a'
 
 # git ================================
 # $ gacp "commit message"

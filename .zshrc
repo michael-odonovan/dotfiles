@@ -88,13 +88,20 @@ alias cl='cd ~/ComicRelief/component-library/ && ls -a'
 alias cont='cd ~/ComicRelief/comicrelief-contentful/ && ls -a'
 
 # git ================================
-# $ gacp "commit message"
+# $ gac "commit message"
 function gac() {
 	git add -A
 	git commit -m "$1"
 }
 
-# lazy lazy git update
+# $ gacp "commit message"
+function gacp() {
+	git add -A
+	git commit -m "$1"
+  git push
+}
+
+# lazy lazy git update for personal repos
 function bosh() {
 	git add -A
 	git commit -m "update"

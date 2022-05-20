@@ -1,4 +1,4 @@
-### Subject (50 characters or less) ================
+### Subject ================
 
 # feat: A new feature
 # fix: A bug fix
@@ -12,5 +12,4 @@
 # chore: Other changes that don't modify src or test files
 # revert: Reverts a previous commit
 
-### Details (72 characters) ====================
-
+### Details ====================

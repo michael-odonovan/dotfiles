@@ -7,12 +7,11 @@
   user = michael-odonovan
 [init]
 	defaultBranch = main
-
-# g = 'git' is in .bashrc
 [alias]
-	st = status
 	llog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [credential]
 	helper = store
 [pull]
 	rebase = false
+[commit]
+  template = ~/.gitmessage

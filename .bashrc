@@ -199,3 +199,4 @@ totalbosh() {
   cd ~/
 }
 
+. "$HOME/.cargo/env"

@@ -46,6 +46,7 @@ alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
 
 # files
+alias Sticky='vim ~/Sticky.md'
 alias PR='vim ~/Repos/GitPractise/PR-template.md'
 alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'
@@ -71,6 +72,7 @@ alias Learning='cd ~/Repos/Learning && ls -a'
 alias Pictures='cd ~/Repos/Pictures'
 
 # folders
+alias Learning='cd ~/Repos/Learning && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias Documents='cd ~/Documents && ls -a'
@@ -83,9 +85,9 @@ alias Downloads='cd ~/Downloads && ls -a'
 alias Trash='cd ~/.local/share/Trash/files/'
 
 # current workplace
-alias cr='cd ~/ComicRelief && ls -a'
-alias cl='cd ~/ComicRelief/component-library/ && ls -a'
-alias cont='cd ~/ComicRelief/comicrelief-contentful/ && ls -a'
+alias CR='cd ~/CR && ls -a'
+alias CL='cd ~/CR/component-library/ && ls -a'
+alias Cont='cd ~/CR/comicrelief-contentful/ && ls -a'
 
 # git ================================
 # $ gac "commit message"

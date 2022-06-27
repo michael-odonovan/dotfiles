@@ -72,6 +72,7 @@ alias Learning='cd ~/Repos/Learning && ls -a'
 alias Pictures='cd ~/Repos/Pictures'
 
 # folders
+alias Eliz='cd ~/ElizHelp'
 alias Learning='cd ~/Repos/Learning && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
@@ -109,4 +110,6 @@ function bosh() {
 	git commit -m "update"
 	git push
 }
+
+alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 

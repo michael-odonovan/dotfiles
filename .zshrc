@@ -1,28 +1,30 @@
+
+## Paths ===========================
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# This sets up the source for my bash scripts:
+export PATH=$PATH:~/bin:~/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# zsh theme
+# Path to yarn
+PATH=$PATH:~/.yarn/bin
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+
+# zsh theme ===============================
 ZSH_THEME="af-magic"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-
 # MY STUFF ==================================================
 export EDITOR='nvim'
-
-# This sets up the source for my bash scripts:
-export PATH=$PATH:~/bin:~/.local/bin
 
 # Open tmux automatically on terminal start ==================
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
@@ -54,6 +56,8 @@ alias Zsh='vim ~/.zshrc'
 alias GitConfig='vim ~/.gitconfig'
 alias Wiki='cd ~/Repos/Wiki && vim index.md'
 alias Scratch='cd && vim scratch.md'
+alias ScratchJs='cd  && vim scratch.md'
+alias ScratchJs='vim ~/Repos/Learning/Scratch.js'
 ### vscode
 alias Settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
 alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'

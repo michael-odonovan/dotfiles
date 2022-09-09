@@ -79,6 +79,7 @@ alias Writing='cd ~/Writing && ls -a'
 alias Photos='cd ~/Pictures/Photos && ls -a'
 alias DotFiles='cd ~/DotFiles && ls -a'
 alias NewInstall='cd ~/NewInstall && ls -a'
+alias Wr='cd ~/Repos/wr && ls -a'
 
 # Areas
 alias Desk='cd ~/Desktop && ls -a'

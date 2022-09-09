@@ -9,7 +9,6 @@
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "window.zoomLevel": 1.7,
-  "workbench.colorTheme": "Dracula",
   "explorer.confirmDragAndDrop": false,
   "workbench.editor.labelFormat": "short",
   "breadcrumbs.enabled": true,

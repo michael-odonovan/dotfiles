@@ -74,7 +74,7 @@ alias Project='cd ~/Repos/RbcMobilityNextJs && ls -a'
 alias Learning='cd ~/Repos/Learning && ls -a'
 alias LEARNED='cd ~/Repos/Learning/LEARNED && ls -a'
 alias Pictures='cd ~/Repos/Pictures && ls -a'
-alias Wr='cd ~/Repos/wr && ls -a'
+alias Wr='cd ~/Repos/Wr && ls -a'
 
 # folders
 alias Eliz='cd ~/ElizHelp'

@@ -1,8 +1,5 @@
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = michael o'donovan
+	name = Micheal O'Donovan 
 	email = mikeodonovan3@gmail.com
   user = michael-odonovan
 [init]

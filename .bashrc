@@ -41,9 +41,10 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # ========== Aliases ===========
+
+# Longterm
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
-alias Project='cd ~/RbcMobilityNextJs && ls -a'
 alias Blog='cd ~/Blog && ls -a'
 alias Scratch='cd && vim scratch.md'
 alias Printing3d='cd ~/Printing3d && ls -a'
@@ -53,8 +54,6 @@ alias Trash='cd ~/.local/share/Trash/files/'
 
 alias ..='cd ..'
 
-# connect to bluetooth amplifier
-alias Sound='bluetoothctl connect 00:13:EF:A0:45:F5'
 # show largest 20 files in a folder:
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 

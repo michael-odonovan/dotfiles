@@ -35,7 +35,12 @@ fi
 # does this work???
 set -o vi
 
+
 # Aliases ===================
+
+# Working Directory Aliases
+alias Gold='cd ~/ElizHelp/goldfinch-carpentry && ls -a'
+
 # utilities
 alias ..='cd ..'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
@@ -90,10 +95,11 @@ alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
 alias Trash='cd ~/.local/share/Trash/files/'
 
-# current workplace
+# Current Workplace
 alias CR='cd ~/CR && ls -a'
 alias CL='cd ~/CR/component-library/ && ls -a'
 alias Cont='cd ~/CR/comicrelief-contentful/ && ls -a'
+alias ys = 'yarn styleguide'
 
 # git ================================
 # $ gac "commit message"

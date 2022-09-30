@@ -99,7 +99,7 @@ alias Trash='cd ~/.local/share/Trash/files/'
 alias CR='cd ~/CR && ls -a'
 alias CL='cd ~/CR/component-library/ && ls -a'
 alias Cont='cd ~/CR/comicrelief-contentful/ && ls -a'
-alias ys = 'yarn styleguide'
+alias ys='yarn styleguide'
 
 # git ================================
 # $ gac "commit message"

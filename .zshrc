@@ -95,6 +95,10 @@ alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
 alias Trash='cd ~/.local/share/Trash/files/'
 
+# React etc
+alias yd='yarn dev'
+alias ys='yarn start'
+
 # Current Workplace
 alias CR='cd ~/CR && ls -a'
 alias CL='cd ~/CR/component-library/ && ls -a'

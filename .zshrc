@@ -103,7 +103,8 @@ alias ys='yarn start'
 alias CR='cd ~/CR && ls -a'
 alias CL='cd ~/CR/component-library/ && ls -a'
 alias Cont='cd ~/CR/comicrelief-contentful/ && ls -a'
-alias ys='yarn styleguide'
+alias yst='yarn styleguide'
+alias cont='~/CR/comicrelief-contentful/ && ls -a'
 
 # git ================================
 # $ gac "commit message"

@@ -98,13 +98,13 @@ alias Trash='cd ~/.local/share/Trash/files/'
 # React etc
 alias yd='yarn dev'
 alias ys='yarn start'
+alias snaps='gacp "snaps"'
 
 # Current Workplace
-alias CR='cd ~/CR && ls -a'
-alias CL='cd ~/CR/component-library/ && ls -a'
-alias Cont='cd ~/CR/comicrelief-contentful/ && ls -a'
+alias cr='cd ~/CR && ls -a'
+alias cl='cd ~/CR/component-library/ && ls -a'
+alias comic='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias yst='yarn styleguide'
-alias cont='~/CR/comicrelief-contentful/ && ls -a'
 
 # git ================================
 # $ gac "commit message"

@@ -77,9 +77,12 @@ alias Blog='cd ~/Repos/Blog && ls -a'
 alias Printing3d='cd ~/Repos/Printing3d && ls -a'
 alias Project='cd ~/Repos/RbcMobilityNextJs && ls -a'
 alias Learning='cd ~/Repos/Learning && ls -a'
+alias Learn='cd ~/Repos/Learning && ls -a'
+alias myl='cd ~/Repos/Learning/my-learning-site/ && ls -a'
 alias LEARNED='cd ~/Repos/Learning/LEARNED && ls -a'
 alias Pictures='cd ~/Repos/Pictures && ls -a'
 alias Wr='cd ~/Repos/Wr && ls -a'
+alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
 
 # folders
 alias Eliz='cd ~/ElizHelp'

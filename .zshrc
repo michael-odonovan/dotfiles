@@ -85,18 +85,20 @@ alias Wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
 
 # folders
-alias Eliz='cd ~/ElizHelp'
-alias Learning='cd ~/Repos/Learning && ls -a'
+alias eliz='cd ~/ElizHelp'
+alias learning='cd ~/Repos/Learning && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
-alias Snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
-alias Documents='cd ~/Documents && ls -a'
-alias Scripts='cd ~/bin && ls -a'
-alias Photos='cd ~/Pictures/Photos && ls -a'
+alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
+alias snip='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
+alias documents='cd ~/Documents && ls -a'
+alias scripts='cd ~/bin && ls -a'
+alias photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
-alias Desk='cd ~/Desktop && ls -a'
-alias Downloads='cd ~/Downloads && ls -a'
-alias Trash='cd ~/.local/share/Trash/files/'
+alias desk='cd ~/Desktop && ls -a'
+alias downloads='cd ~/Downloads && ls -a'
+alias down='cd ~/Downloads && ls -a'
+alias trash='cd ~/.local/share/Trash/files/'
 
 # general web dev
 alias yd='yarn dev'

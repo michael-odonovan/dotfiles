@@ -102,6 +102,7 @@ alias Trash='cd ~/.local/share/Trash/files/'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias snaps='gacp "snaps"'
+alias live='live-server'
 
 # Current Workplace
 alias cr='cd ~/CR && ls -a'

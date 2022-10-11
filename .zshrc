@@ -98,7 +98,7 @@ alias Desk='cd ~/Desktop && ls -a'
 alias Downloads='cd ~/Downloads && ls -a'
 alias Trash='cd ~/.local/share/Trash/files/'
 
-# React etc
+# general web dev
 alias yd='yarn dev'
 alias ys='yarn start'
 alias snaps='gacp "snaps"'
@@ -106,7 +106,7 @@ alias snaps='gacp "snaps"'
 # Current Workplace
 alias cr='cd ~/CR && ls -a'
 alias cl='cd ~/CR/component-library/ && ls -a'
-alias comic='cd ~/CR/comicrelief-contentful/ && ls -a'
+alias cont='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias yst='yarn styleguide'
 
 # git ================================

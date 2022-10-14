@@ -35,6 +35,9 @@ ctrl + shift - 8 : yabai -m window --space 8
 ctrl + shift - 9 : yabai -m window --space 9
 ctrl + shift - 0 : yabai -m window --space 0
 
+# get out of horizontal split?
+shift + alt - k: yabai -m window --toggle split
+
 # Float / Unfloat window
 cmd + shift - space : \
     yabai -m window --toggle float; \
@@ -45,16 +48,16 @@ cmd + shift - space : \
 # Equalize size of windows
 # cmd + ctrl - down : yabai -m space --balance
 
+# Moving windows
+# shift + alt - a : yabai -m window --warp west
+# shift + alt - s : yabai -m window --warp north
+# shift + alt - d : yabai -m window --warp south
+# shift + alt - f : yabai -m window --warp east
+
 # Move focus container to workspace
 # shift + alt - m : yabai -m window --space last; yabai -m space --focus last
 # shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
 # shift + alt - n : yabai -m window --space next; yabai -m space --focus next
-
-# Moving windows
-# shift + alt - h : yabai -m window --warp west
-# shift + alt - j : yabai -m window --warp south
-# shift + alt - k : yabai -m window --warp north
-# shift + alt - l : yabai -mwindow --warp east
 
 # Restart Yabai
 # shift + lctrl + alt - r : \

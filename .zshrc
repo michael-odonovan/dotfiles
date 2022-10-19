@@ -103,7 +103,7 @@ alias trash='cd ~/.local/share/Trash/files/'
 # general web dev
 alias yd='yarn dev'
 alias ys='yarn start'
-alias snaps='gacp "snaps"'
+alias snaps='yarn test -u && gacp "snaps"'
 alias live='live-server'
 
 # Current Workplace

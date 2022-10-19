@@ -35,7 +35,7 @@ ctrl + shift - 8 : yabai -m window --space 8
 ctrl + shift - 9 : yabai -m window --space 9
 ctrl + shift - 0 : yabai -m window --space 0
 
-# get out of horizontal split?
+# get out of horizontal split
 shift + alt - k: yabai -m window --toggle split
 
 # Float / Unfloat window

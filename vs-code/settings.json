@@ -1,97 +1,170 @@
 {
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "*html": "html",
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
+  "emmet.triggerExpansionOnTab" : true,
+  "vim.visualModeKeyBindings" : [
+    {
+      "after" : [
+        ">",
+        "g",
+        "v"
+      ],
+      "before" : [
+        ">"
+      ]
+    },
+    {
+      "after" : [
+        "<",
+        "g",
+        "v"
+      ],
+      "before" : [
+        "<"
+      ]
+    }
+  ],
+  "files.exclude" : {
+    "**\/CVS" : true,
+    "**\/.DS_Store" : true,
+    "**\/.hg" : true,
+    "**\/node_modules" : true,
+    "**\/.svn" : true,
+    "**\/.git" : true
   },
-  "vim.leader": "<space>",
-  "editor.fontSize": 14,
-  "editor.tabSize": 2,
-  "window.zoomLevel": 1.7,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.editor.labelFormat": "short",
-  "breadcrumbs.enabled": true,
-  "editor.wordWrap": "on",
-  "window.menuBarVisibility": "visible",
-  "vim.normalModeKeyBindingsNonRecursive": [
+  "window.zoomLevel" : 1.7,
+  "git.ignoreMissingGitWarning" : true,
+  "editor.tabSize" : 2,
+  "workbench.editor.labelFormat" : "short",
+  "vim.insertModeKeyBindings" : [
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", ","],
-      "commands": ["workbench.action.openSettingsJson"]
-    },
-    {
-      "before": ["esc"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["<leader>", "d"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<C-d>"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": [":w"]
-    },
-    {
-      "before": ["<leader>", "b"],
-      "commands": ["workbench.action.terminal.new"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<C-c>"],
-      "commands": ["workbench.action.closeWindow"]
-    },
-    {
-      "before": ["<C-h>"],
-      "commands": ["workbench.explorer.fileView.focus"]
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["workbench.action.previousEditor"]
+      "after" : [
+        "<esc>"
+      ],
+      "before" : [
+        "j",
+        "k"
+      ]
     }
   ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before": [">"],
-      "after": [">", "g", "v"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<esc>"]
-    }
-  ],
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/node_modules": true
+  "window.menuBarVisibility" : "visible",
+  "editor.wordWrap" : "on",
+  "explorer.confirmDragAndDrop" : false,
+  "eslint.nodePath" : "",
+  "vim.leader" : "<space>",
+  "breadcrumbs.enabled" : true,
+  "editor.codeActionsOnSave" : {
+    "source.fixAll" : true
   },
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-        "source.fixAll": true
+  "vim.normalModeKeyBindingsNonRecursive" : [
+    {
+      "commands" : [
+        "workbench.action.toggleSidebarVisibility"
+      ],
+      "before" : [
+        "<leader>",
+        "e"
+      ]
     },
-  "eslint.nodePath": "",
-  "git.ignoreMissingGitWarning": true
+    {
+      "commands" : [
+        "workbench.action.openSettingsJson"
+      ],
+      "before" : [
+        "<leader>",
+        ","
+      ]
+    },
+    {
+      "commands" : [
+        ":nohl"
+      ],
+      "before" : [
+        "esc"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.splitEditor"
+      ],
+      "before" : [
+        "<leader>",
+        "d"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.closeActiveEditor"
+      ],
+      "before" : [
+        "<C-d>"
+      ]
+    },
+    {
+      "commands" : [
+        ":w"
+      ],
+      "before" : [
+        "<leader>",
+        "w"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.terminal.new"
+      ],
+      "before" : [
+        "<leader>",
+        "b"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.nextEditor"
+      ],
+      "before" : [
+        "<leader>",
+        "l"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.previousEditor"
+      ],
+      "before" : [
+        "<leader>",
+        "h"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.closeWindow"
+      ],
+      "before" : [
+        "<C-c>"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.explorer.fileView.focus"
+      ],
+      "before" : [
+        "<C-h>"
+      ]
+    },
+    {
+      "commands" : [
+        "workbench.action.previousEditor"
+      ],
+      "before" : [
+        "<C-l>"
+      ]
+    }
+  ],
+  "editor.accessibilitySupport" : "off",
+  "emmet.includeLanguages" : {
+    "*html" : "html",
+    "typescript" : "typescriptreact",
+    "javascript" : "javascriptreact"
+  },
+  "editor.fontSize" : 14,
+  "eslint.format.enable" : true
 }

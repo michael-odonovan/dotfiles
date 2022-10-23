@@ -1,4 +1,3 @@
-
 ## Paths ===========================
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -53,15 +52,12 @@ alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
 
 # files
-alias Sticky='vim ~/Sticky.md'
-alias PR='vim ~/Repos/GitPractise/PR-template.md'
 alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'
 alias Zsh='vim ~/.zshrc'
 alias GitConfig='vim ~/.gitconfig'
-alias Wiki='cd ~/Repos/Wiki && vim index.md'
-alias Todo='cd ~/Repos/Wiki && vim todo.md'
-alias Scratch='cd ~/Repos/Wiki && vim scratch.md'
+alias wiki='cd ~/Repos/Wiki && vim index.md'
+alias scratch='vim ~/desktop/scratch.md'
 ### vscode
 alias Settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
 alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'

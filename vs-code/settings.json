@@ -166,5 +166,8 @@
     "javascript" : "javascriptreact"
   },
   "editor.fontSize" : 14,
-  "eslint.format.enable" : true
+  "eslint.format.enable": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  }
 }

@@ -37,9 +37,6 @@ set -o vi
 
 # Aliases ===================
 
-# Working Directory Aliases
-alias Gold='cd ~/ElizHelp/goldfinch-carpentry && ls -a'
-
 # utilities
 alias ..='cd ..'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
@@ -50,6 +47,9 @@ alias vi='vim'
 alias yabaistart='brew services start yabai'
 alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
+alias yd='yarn dev'
+alias ys='yarn start'
+alias live='live-server'
 
 # files
 alias Init='cd ~/.config/nvim && vim init.lua'
@@ -67,46 +67,37 @@ alias Repos='cd ~/Repos && ls -a'
 alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
 alias GitPractise='cd ~/Repos/GitPractise && vim .'
 alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
-alias GitPractise='cd ~/Repos/GitPractise/ && vim .'
 alias Writing='cd ~/Repos/Writing && ls -a'
-alias Blog='cd ~/Repos/Blog && ls -a'
 alias Printing3d='cd ~/Repos/Printing3d && ls -a'
-alias Project='cd ~/Repos/RbcMobilityNextJs && ls -a'
-alias Learning='cd ~/Learning && ls -a'
-alias Learn='cd ~/Learning && ls -a'
 alias myl='cd ~/Learning/my-learning-site/ && ls -a'
-alias LEARNED='cd ~/Learning/LEARNED && ls -a'
 alias Pictures='cd ~/Repos/Pictures && ls -a'
 alias Wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
+alias Gold='cd ~/ElizHelp/goldfinch-carpentry && ls -a'
+
 
 # folders
 alias eliz='cd ~/ElizHelp'
-alias learning='cd ~/Repos/Learning && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias snips='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
-alias documents='cd ~/Documents && ls -a'
+alias docs='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
 alias desk='cd ~/Desktop && ls -a'
-alias downloads='cd ~/Downloads && ls -a'
 alias down='cd ~/Downloads && ls -a'
 alias trash='cd ~/.local/share/Trash/files/'
-
-# general web dev
-alias yd='yarn dev'
-alias ys='yarn start'
-alias snaps='yarn test -u && gacp "snaps"'
-alias live='live-server'
 
 # Current Workplace
 alias cr='cd ~/CR && ls -a'
 alias cl='cd ~/CR/component-library/ && ls -a'
 alias cont='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias yst='yarn styleguide'
+alias donate='cd ~/CR/react-donation/ && ls -a'
+alias tickets='cd ~/Desktop/tickets/ && ls -a'
+alias snaps='yarn test -u && gacp "snaps"'
 
 # git ================================
 # $ gac "commit message"

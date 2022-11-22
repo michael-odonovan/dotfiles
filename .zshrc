@@ -70,6 +70,8 @@ alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
 alias Writing='cd ~/Repos/Writing && ls -a'
 alias Printing3d='cd ~/Repos/Printing3d && ls -a'
 alias myl='cd ~/Learning/my-learning-site/ && ls -a'
+alias gitprac='cd ~/Learning/git-practise && ls -a'
+alias learn='cd ~/Learning && ls -a'
 alias Pictures='cd ~/Repos/Pictures && ls -a'
 alias Wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
@@ -77,7 +79,7 @@ alias Gold='cd ~/ElizHelp/goldfinch-carpentry && ls -a'
 
 
 # folders
-alias eliz='cd ~/ElizHelp'
+alias eliz='cd ~/ElizHelp && ls -a'
 alias Nvim='cd ~/.config/nvim/ && ls -a'
 alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias snips='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
@@ -100,6 +102,9 @@ alias tickets='cd ~/Desktop/tickets/ && ls -a'
 alias snaps='yarn test -u && gacp "snaps"'
 
 # git ================================
+alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
+alias gpom='git pull origin master'
+
 # $ gac "commit message"
 function gac() {
 	git add -A
@@ -120,5 +125,4 @@ function bosh() {
 	git push
 }
 
-alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 

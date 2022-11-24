@@ -103,7 +103,17 @@ alias snaps='yarn test -u && gacp "snaps"'
 
 # git ================================
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
-alias gpom='git pull origin master'
+
+# $ gpo "master" / "main"
+function gpo() {
+  git pull origin "$1"
+}
+
+# $ gac "commit message"
+function gac() {
+	git add -A
+	git commit -m "$1"
+}
 
 # $ gac "commit message"
 function gac() {

@@ -10,3 +10,5 @@
 	rebase = false
 [commit]
   template = ~/.gitmessage
+[credential]
+	helper = cache

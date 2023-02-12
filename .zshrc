@@ -93,13 +93,13 @@ alias down='cd ~/Downloads && ls -a'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace
-alias cr='cd ~/CR && ls -a'
+alias cr='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias cl='cd ~/CR/component-library/ && ls -a'
-alias cont='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/CR/react-donation/ && ls -a'
 alias tickets='cd ~/Desktop/tickets/ && ls -a'
 alias snaps='yarn test -u && gacp "snaps"'
+alias trash-gql='trash-put ./graphql/schema.gql'
 
 # git ================================
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'

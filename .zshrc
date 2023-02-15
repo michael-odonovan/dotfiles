@@ -23,12 +23,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # MY STUFF ==================================================
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # Open tmux automatically on terminal start ==================
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
- exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+# fi
 
 # Using vim functionality in Bash
 # does this work???
@@ -42,7 +42,7 @@ alias ..='cd ..'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
-alias vim='nvim' # If ever need to open original vim just use $ vi
+alias vim='lvim' # If ever need to open original vim just use $ vi
 alias vi='vim'
 alias yabaistart='brew services start yabai'
 alias yabairestart='brew services restart yabai'
@@ -52,7 +52,8 @@ alias ys='yarn start'
 alias live='live-server'
 
 # files
-alias Init='cd ~/.config/nvim && vim init.lua'
+alias Init='cd ~/.config/lvim && vim config.lua'
+# alias Init='cd ~/.config/nvim && vim init.lua'
 alias Bashrc='vim ~/.bashrc'
 alias Zsh='vim ~/.zshrc'
 alias GitConfig='vim ~/.gitconfig'

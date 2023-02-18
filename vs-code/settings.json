@@ -169,5 +169,6 @@
   "eslint.format.enable": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
-  }
+  },
+  "workbench.colorTheme": "Tokyo Night nv"
 }

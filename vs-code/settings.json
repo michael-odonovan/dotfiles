@@ -1,174 +1,174 @@
 {
-  "emmet.triggerExpansionOnTab" : true,
-  "vim.visualModeKeyBindings" : [
-    {
-      "after" : [
-        ">",
-        "g",
-        "v"
-      ],
-      "before" : [
-        ">"
-      ]
-    },
-    {
-      "after" : [
-        "<",
-        "g",
-        "v"
-      ],
-      "before" : [
-        "<"
-      ]
-    }
-  ],
-  "files.exclude" : {
-    "**\/CVS" : true,
-    "**\/.DS_Store" : true,
-    "**\/.hg" : true,
-    "**\/node_modules" : true,
-    "**\/.svn" : true,
-    "**\/.git" : true
+  "breadcrumbs.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   },
-  "window.zoomLevel" : 1.7,
-  "git.ignoreMissingGitWarning" : true,
-  "editor.tabSize" : 2,
-  "workbench.editor.labelFormat" : "short",
-  "vim.insertModeKeyBindings" : [
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "*html": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.format.enable": true,
+  "eslint.nodePath": "",
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/node_modules": true
+  },
+  "git.ignoreMissingGitWarning": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "vim.insertModeKeyBindings": [
     {
-      "after" : [
+      "after": [
         "<esc>"
       ],
-      "before" : [
+      "before": [
         "j",
         "k"
       ]
     }
   ],
-  "window.menuBarVisibility" : "visible",
-  "editor.wordWrap" : "on",
-  "explorer.confirmDragAndDrop" : false,
-  "eslint.nodePath" : "",
-  "vim.leader" : "<space>",
-  "breadcrumbs.enabled" : true,
-  "editor.codeActionsOnSave" : {
-    "source.fixAll" : true
-  },
-  "vim.normalModeKeyBindingsNonRecursive" : [
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "commands" : [
-        "workbench.action.toggleSidebarVisibility"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.openSettingsJson"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         ","
+      ],
+      "commands": [
+        "workbench.action.openSettingsJson"
       ]
     },
     {
-      "commands" : [
-        ":nohl"
-      ],
-      "before" : [
+      "before": [
         "esc"
+      ],
+      "commands": [
+        ":nohl"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.splitEditor"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "d"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.closeActiveEditor"
-      ],
-      "before" : [
+      "before": [
         "<C-d>"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
       ]
     },
     {
-      "commands" : [
-        ":w"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "w"
+      ],
+      "commands": [
+        ":w"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.terminal.new"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "b"
+      ],
+      "commands": [
+        "workbench.action.terminal.new"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.nextEditor"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "l"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
       ]
     },
     {
-      "commands" : [
-        "workbench.action.previousEditor"
-      ],
-      "before" : [
+      "before": [
         "<leader>",
         "h"
-      ]
-    },
-    {
-      "commands" : [
-        "workbench.action.closeWindow"
       ],
-      "before" : [
-        "<C-c>"
-      ]
-    },
-    {
-      "commands" : [
-        "workbench.explorer.fileView.focus"
-      ],
-      "before" : [
-        "<C-h>"
-      ]
-    },
-    {
-      "commands" : [
+      "commands": [
         "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "<C-c>"
       ],
-      "before" : [
+      "commands": [
+        "workbench.action.closeWindow"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.explorer.fileView.focus"
+      ]
+    },
+    {
+      "before": [
         "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
       ]
     }
   ],
-  "editor.accessibilitySupport" : "off",
-  "emmet.includeLanguages" : {
-    "*html" : "html",
-    "typescript" : "typescriptreact",
-    "javascript" : "javascriptreact"
-  },
-  "editor.fontSize" : 14,
-  "eslint.format.enable": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "workbench.colorTheme": "Tokyo Night nv"
+  "vim.visualModeKeyBindings": [
+    {
+      "after": [
+        ">",
+        "g",
+        "v"
+      ],
+      "before": [
+        ">"
+      ]
+    },
+    {
+      "after": [
+        "<",
+        "g",
+        "v"
+      ],
+      "before": [
+        "<"
+      ]
+    }
+  ],
+  "window.menuBarVisibility": "visible",
+  "window.zoomLevel": 1.7,
+  "workbench.colorTheme": "Tokyo Night nv",
+  "workbench.editor.labelFormat": "short"
 }

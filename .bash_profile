@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 # This little script pulls all the stuff in from .bashrc file:
 if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
@@ -18,3 +20,5 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 . "$HOME/.cargo/env"
 
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"

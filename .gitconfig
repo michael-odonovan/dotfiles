@@ -1,7 +1,7 @@
 [user]
 	name = Micheal O'Donovan 
 	email = mikeodonovan3@gmail.com
-  user = michael-odonovan
+	user = michael-odonovan
 [init]
 	defaultBranch = main
 [alias]
@@ -9,7 +9,7 @@
 [pull]
 	rebase = false
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [credential]
 	helper = cache
 [core]

@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 ## Paths ===========================
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -87,6 +89,7 @@ alias snips='cd ~/.config/lvim/snippets-luasnip-vscode/snippets/javascript-ecosy
 alias docs='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
+alias config='cd ~/.config && ls -a'
 
 # areas
 alias desk='cd ~/Desktop && ls -a'
@@ -98,7 +101,7 @@ alias cr='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias cl='cd ~/CR/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/CR/react-donation/ && ls -a'
-alias tickets='cd ~/Desktop/tickets/ && ls -a'
+alias tickets='cd ~/Desktop/tickets/ && vim'
 alias snaps='yarn test -u && gacp "snaps"'
 alias trash-gql='trash-put ./graphql/schema.gql'
 
@@ -136,4 +139,5 @@ function bosh() {
 	git push
 }
 
-
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

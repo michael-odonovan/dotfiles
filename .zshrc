@@ -38,7 +38,6 @@ set -o vi
 
 
 # Aliases ===================
-
 # utilities
 alias ..='cd ..'
 alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
@@ -52,6 +51,9 @@ alias yabaistop='brew services stop yabai'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias live='live-server'
+alias db='git branch | grep -v "master" | xargs git branch -D'
+alias lg='Lazygit'
+
 
 # files
 alias Init='cd ~/.config/nvim && ls -a && vim .'
@@ -72,9 +74,7 @@ alias GitPractise='cd ~/Repos/GitPractise && vim .'
 alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
 alias Writing='cd ~/Repos/Writing && ls -a'
 alias Printing3d='cd ~/Repos/Printing3d && ls -a'
-alias myl='cd ~/Learning/my-learning-site/ && ls -a'
-alias gitprac='cd ~/Learning/git-practise && ls -a'
-alias learn='cd ~/Learning && ls -a'
+alias myl='cd ~/Repos/my-learning-site/ && ls -a'
 alias Pictures='cd ~/Repos/Pictures && ls -a'
 alias Wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
@@ -132,11 +132,17 @@ function gacp() {
   git push
 }
 
-# lazy lazy git update for personal repos
+# lazy lazy update for personal repos
 function bosh() {
 	git add -A
 	git commit -m "update"
 	git push
+}
+
+# update Homebrew packages
+function update() {
+  brew update 
+  brew upgrade 
 }
 
 # Fig post block. Keep at the bottom of this file.

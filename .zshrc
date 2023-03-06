@@ -53,6 +53,7 @@ alias ys='yarn start'
 alias live='live-server'
 alias db='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
+alias yarnlong='yarn install --verbose --network-timeout 1000000'
 
 
 # files

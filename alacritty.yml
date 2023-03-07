@@ -1,0 +1,97 @@
+
+window:
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  padding: 
+    x: 10
+    y: 10
+
+  # Startup Mode (changes require restart)
+  startup_mode: Windowed
+
+font:
+
+  # Point size
+  size: 19
+
+  offset:
+    x: 0
+    y: 0
+
+  # Normal (roman) font face
+  normal:
+
+    # family: monospace
+    family: Hack Nerd Font
+    style: Regular
+
+  # Bold font face
+  bold:
+    # family: monospace
+    family: Hack Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+
+
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+# Getting Hash Key to work.
+key_bindings:
+  - { key: Key3,     mods: Alt,     chars: "#"                               }
+
+
+# Nightfox Alacritty Colors
+# Style: nightfox
+# Upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/nightfox/nightfox_alacritty.yml
+colors:
+
+  # Default colors
+  primary:
+    background: '0x191724'
+    foreground: '0xcdcecf'
+
+  # Normal colors
+  normal:
+    black:   '0x393b44'
+    red:     '0xc94f6d'
+    green:   '0x81b29a'
+    yellow:  '0xdbc074'
+    blue:    '0x719cd6'
+    magenta: '0x9d79d6'
+    cyan:    '0x63cdcf'
+    white:   '0xdfdfe0'
+
+  # Bright colors
+  bright:
+    black:   '0x475072'
+    red:     '0xd6616b'
+    green:   '0x58cd8b'
+    yellow:  '0xffe37e'
+    blue:    '0x84cee4'
+    magenta: '0xb8a1e3'
+    cyan:    '0x59f0ff'
+    white:   '0xf2f2f2'
+
+  indexed_colors:
+    - { index: 16, color: '0xf4a261' }
+    - { index: 17, color: '0xd67ad2' }
+  
+

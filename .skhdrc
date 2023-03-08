@@ -10,11 +10,11 @@ cmd - l : yabai -m window --focus east
 
 # Resize Windows  ============================
 # alt + cmd - h,j,k,l
-cmd + ctrl - h : yabai -m window --resize left:-300:0; \
-                  yabai -m window --resize right:-300:0
+cmd + ctrl - h : yabai -m window --resize left:-400:0; \
+                  yabai -m window --resize right:-400:0
 
-cmd + ctrl - l : yabai -m window --resize right:300:0; \
-                  yabai -m window --resize left:300:0
+cmd + ctrl - l : yabai -m window --resize right:400:0; \
+                  yabai -m window --resize left:400:0
 
 # Fullscreen Toggle ===============================
 cmd + ctrl - k : yabai -m window --toggle zoom-fullscreen

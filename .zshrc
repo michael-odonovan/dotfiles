@@ -38,7 +38,7 @@ set -o vi
 # Aliases ===================
 # utilities
 alias ..='cd ..'
-alias LargeFiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
+alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias kill8000='kill -9 $(lsof -ti:8000)'
@@ -50,17 +50,15 @@ alias yabaistop='brew services stop yabai'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias live='live-server'
-alias clearBranches='git branch | grep -v "master" | xargs git branch -D'
+alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
+alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 
 
 # files
 alias Init='cd ~/.config/nvim && ls -a && vim .'
-# alias Init='cd ~/.config/nvim && vim init.lua'
-alias Bashrc='vim ~/.bashrc'
 alias Zsh='vim ~/.zshrc'
-alias GitConfig='vim ~/.gitconfig'
 alias wiki='cd ~/Repos/Wiki && vim index.md'
 alias scratch='vim ~/desktop/scratch.md'
 ### vscode
@@ -68,17 +66,16 @@ alias Settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.jso
 alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
 
 # Repos
-alias Repos='cd ~/Repos && ls -a'
-alias Dotfiles='cd ~/Repos/Dotfiles && vim .'
-alias GitPractise='cd ~/Repos/GitPractise && vim .'
-alias CV='cd ~/Repos/CV && vim michael-odonovan-CV.md'
-alias Writing='cd ~/Repos/Writing && ls -a'
-alias Printing3d='cd ~/Repos/Printing3d && ls -a'
+alias repos='cd ~/Repos && ls -a'
+alias dotfiles='cd ~/Repos/Dotfiles && vim .'
+alias gitpractise='cd ~/Repos/GitPractise && vim .'
+alias cv='cd ~/Repos/CV && vim michael-odonovan-CV.md'
+alias writing='cd ~/Repos/Writing && ls -a'
+alias printing3d='cd ~/Repos/Printing3d && ls -a'
 alias myl='cd ~/Repos/my-learning-site/ && ls -a'
-alias Pictures='cd ~/Repos/Pictures && ls -a'
-alias Wr='cd ~/Repos/Wr && ls -a'
+alias pictures='cd ~/Repos/Pictures && ls -a'
+alias wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
-alias Gold='cd ~/ElizHelp/goldfinch-carpentry && ls -a'
 
 
 # folders

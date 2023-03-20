@@ -42,6 +42,7 @@ alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head 
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias kill8000='kill -9 $(lsof -ti:8000)'
+alias v='nvim' # If ever need to open nvim just use $ vi
 alias vim='nvim' # If ever need to open nvim just use $ vi
 alias vi='nvim'
 alias yabaistart='brew services start yabai'
@@ -54,6 +55,8 @@ alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
+alias f='vim -o `fzf`'
+alias t='tmux "$1"'
 
 
 # files
@@ -116,12 +119,6 @@ function gac() {
 	git commit -m "$1"
 }
 
-# $ gac "commit message"
-function gac() {
-	git add -A
-	git commit -m "$1"
-}
-
 # $ gacp "commit message"
 function gacp() {
 	git add -A
@@ -141,9 +138,6 @@ function update() {
   brew update 
   brew upgrade 
 }
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

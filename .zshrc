@@ -21,6 +21,10 @@ ZSH_THEME="af-magic"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+## z plugin usage => $ z {hint}
+source ~/.oh-my-zsh/custom/plugins/zsh-z/zsh-z.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # MY STUFF ==================================================
 export EDITOR='vim'
@@ -55,8 +59,20 @@ alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
+
+# fzf
+function f() {
+  local fname
+  fname=$(fzf) || return
+  vim "$fname"
+}
+
 alias f='vim -o `fzf`'
-# alias t='tmux "$1"'
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+alias fp='kitty @ launch --type=tab $(find ~/Documents/Projects -type d -maxdepth 1 | fzf)'
+
+# tmux
 function t() {
   tmux "$1"
 }

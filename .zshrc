@@ -56,7 +56,10 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias f='vim -o `fzf`'
-alias t='tmux "$1"'
+# alias t='tmux "$1"'
+function t() {
+  tmux "$1"
+}
 
 
 # files

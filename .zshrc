@@ -112,7 +112,7 @@ alias cr='cd ~/CR/comicrelief-contentful/ && ls -a'
 alias cl='cd ~/CR/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/CR/react-donation/ && ls -a'
-alias tickets='cd ~/CR/tickets/ && vim .'
+alias tickets='cd ~/repos/tickets/ && vim .'
 alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'
 

@@ -18,9 +18,9 @@ ZSH_THEME="af-magic"
 
 plugins=(git)
 
+# oh my zsh plugin manager
 source $ZSH/oh-my-zsh.sh
-## z plugin usage => $ z {hint}
-source ~/.oh-my-zsh/custom/plugins/zsh-z/zsh-z.plugin.zsh
+# zsh auto sugggestions
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
@@ -118,42 +118,54 @@ alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
-
-# $ gpo "master" / "main"
-function gpo() {
-  git pull origin "$1"
-}
-
-# $ gac "commit message"
-function gac() {
-	git add -A
-	git commit -m "$1"
-}
-
-# $ gacp "commit message"
-function gacp() {
-	git add -A
-	git commit -m "$1"
-  git push
-}
-
-# lazy lazy update for personal repos
-function bosh() {
-	git add -A
-	git commit -m "update"
-	git push
-}
-
-# update Homebrew packages
-function update() {
-  brew update 
-  brew upgrade 
-}
+alias gac='git add -A && git commit -m "$1"'
+alias bosh='git add -A && git commit -m "update" && git push'
+alias gpo='git pull origin "$1"'
+alias gacp='git add -A && git commit -m "$1" && git push'
 
 # node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# expanding an alias with <C-x>a
+# !!!!!!!! note if you are going to delete this, you need to google how to do it.
+local cmd_alias=""
+# Reveal Executed Alias
+alias_for() {
+  [[ $1 =~ '[[:punct:]]' ]] && return
+  local search=${1}
+  local found="$( alias $search )"
+  if [[ -n $found ]]; then
+    found=${found//\\//} # Replace backslash with slash
+    found=${found%\'} # Remove end single quote
+    found=${found#"$search="} # Remove alias name
+    found=${found#"'"} # Remove first single quote
+    echo "${found} ${2}" | xargs # Return found value (with parameters)
+  else
+    echo ""
+  fi
+}
+
+expand_command_line() {
+  first=$(echo "$1" | awk '{print $1;}')
+  rest=$(echo ${${1}/"${first}"/})
+
+  if [[ -n "${first//-//}" ]]; then # is not hypen
+    cmd_alias="$(alias_for "${first}" "${rest:1}")" # Check if there's an alias for the command
+    if [[ -n $cmd_alias ]] && [[ "${cmd_alias:0:1}" != "." ]]; then # If there was and not start with dot
+      echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}" # Print it
+    fi
+  fi
+}
+pre_validation() {
+  [[ $# -eq 0 ]] && return                    # If there's no input, return. Else...
+  expand_command_line "$@"
+}
+autoload -U add-zsh-hook                      # Load the zsh hook module. 
+add-zsh-hook preexec pre_validation           # Adds the hook 
+
 
 # fzf fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

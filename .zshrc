@@ -90,7 +90,7 @@ alias gitpractise='cd ~/repos/gitpractise && vim .'
 alias cv='cd ~/repos/cv && vim michael-odonovan-CV.md'
 alias writing='cd ~/repos/writing && ls -a'
 alias printing3d='cd ~/repos/printing3d && ls -a'
-alias myl='cd ~/repos/my-learning-site/ && ls -a'
+alias myl='cd ~/repos/mylearningsite/ && ls -a'
 alias mike='cd ~/repos/michaelodonovan.net/ && ls -a'
 
 # folders

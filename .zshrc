@@ -24,7 +24,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
-# MY STUFF ==================================================
+# vim stuff ==================================================
 export EDITOR='vim'
 
 # Open tmux automatically on terminal start ==================
@@ -56,6 +56,7 @@ alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
+alias tp='trash-put'
 
 # fzf =================
 function f() {
@@ -76,35 +77,34 @@ function t() {
 # files =================
 alias init='cd ~/.config/nvim && ls -a && vim .'
 alias zsh='vim ~/.zshrc'
-alias wiki='cd ~/Repos/Wiki && vim index.md'
+alias wiki='cd ~/repos/Wiki && vim index.md'
 alias scratch='vim ~/desktop/scratch.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
 
-# Repos
-alias repos='cd ~/Repos && ls -a'
-alias dotfiles='cd ~/Repos/Dotfiles && vim .'
-alias gp='cd ~/Repos/GitPractise && vim .'
-alias cv='cd ~/Repos/CV && vim michael-odonovan-CV.md'
-alias writing='cd ~/Repos/Writing && ls -a'
-alias printing3d='cd ~/Repos/Printing3d && ls -a'
-alias myl='cd ~/Repos/my-learning-site/ && ls -a'
-alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
-
+# repos
+alias repos='cd ~/repos && ls -a'
+alias dotfiles='cd ~/repos/dotfiles && vim .'
+alias gitpractise='cd ~/repos/gitpractise && vim .'
+alias cv='cd ~/repos/cv && vim michael-odonovan-CV.md'
+alias writing='cd ~/repos/writing && ls -a'
+alias printing3d='cd ~/repos/printing3d && ls -a'
+alias myl='cd ~/repos/my-learning-site/ && ls -a'
+alias mike='cd ~/repos/michaelodonovan.net/ && ls -a'
 
 # folders
 alias eliz='cd ~/ElizHelp && ls -a'
 alias config='cd ~/.config && ls -a'
-alias nvi='cd ~/.config/nvim/ && ls -a'
-alias snips='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
-alias dox='cd ~/Documents && ls -a'
+alias nvimfolder='cd ~/.config/nvim/ && ls -a'
+alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
+alias documents='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
-alias desk='cd ~/Desktop && ls -a'
-alias down='cd ~/Downloads && ls -a'
+alias desktop='cd ~/Desktop && ls -a'
+alias downloads='cd ~/Downloads && ls -a'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace
@@ -150,9 +150,11 @@ function update() {
   brew upgrade 
 }
 
+# node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# fzf fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

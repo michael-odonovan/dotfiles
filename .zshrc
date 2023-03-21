@@ -5,17 +5,15 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # This sets up the source for my bash scripts:
 export PATH=$PATH:~/bin:~/.local/bin
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # Path to yarn
 PATH=$PATH:~/.yarn/bin
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
+# zsh ===============================
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
-# zsh theme ===============================
+## zsh theme
 ZSH_THEME="af-magic"
 
 plugins=(git)
@@ -54,61 +52,55 @@ alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
 alias yd='yarn dev'
 alias ys='yarn start'
-alias live='live-server'
 alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 
-# fzf
+# fzf =================
 function f() {
   local fname
   fname=$(fzf) || return
   vim "$fname"
 }
 
-alias f='vim -o `fzf`'
-
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 alias fp='kitty @ launch --type=tab $(find ~/Documents/Projects -type d -maxdepth 1 | fzf)'
 
-# tmux
+# tmux =================
 function t() {
   tmux "$1"
 }
 
 
-# files
-alias Init='cd ~/.config/nvim && ls -a && vim .'
-alias Zsh='vim ~/.zshrc'
+# files =================
+alias init='cd ~/.config/nvim && ls -a && vim .'
+alias zsh='vim ~/.zshrc'
 alias wiki='cd ~/Repos/Wiki && vim index.md'
 alias scratch='vim ~/desktop/scratch.md'
 ### vscode
-alias Settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
-alias Keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
+alias settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
+alias keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
 
 # Repos
 alias repos='cd ~/Repos && ls -a'
 alias dotfiles='cd ~/Repos/Dotfiles && vim .'
-alias gitpractise='cd ~/Repos/GitPractise && vim .'
+alias gp='cd ~/Repos/GitPractise && vim .'
 alias cv='cd ~/Repos/CV && vim michael-odonovan-CV.md'
 alias writing='cd ~/Repos/Writing && ls -a'
 alias printing3d='cd ~/Repos/Printing3d && ls -a'
 alias myl='cd ~/Repos/my-learning-site/ && ls -a'
-alias pictures='cd ~/Repos/Pictures && ls -a'
-alias wr='cd ~/Repos/Wr && ls -a'
 alias mike='cd ~/Repos/michaelodonovan.net/ && ls -a'
 
 
 # folders
 alias eliz='cd ~/ElizHelp && ls -a'
-alias Nvim='cd ~/.config/nvim/ && ls -a'
-alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
+alias config='cd ~/.config && ls -a'
+alias nvi='cd ~/.config/nvim/ && ls -a'
 alias snips='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
-alias docs='cd ~/Documents && ls -a'
+alias dox='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
-alias config='cd ~/.config && ls -a'
 
 # areas
 alias desk='cd ~/Desktop && ls -a'
@@ -121,8 +113,8 @@ alias cl='cd ~/CR/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/CR/react-donation/ && ls -a'
 alias tickets='cd ~/CR/tickets/ && vim .'
-alias snaps='yarn test -u && gacp "snaps"'
-alias trash-gql='trash-put ./graphql/schema.gql'
+alias snaps='yarn test -u'
+alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
@@ -163,3 +155,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

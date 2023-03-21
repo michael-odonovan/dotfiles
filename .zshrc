@@ -108,10 +108,10 @@ alias downloads='cd ~/Downloads && ls -a'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace
-alias cr='cd ~/CR/comicrelief-contentful/ && ls -a'
-alias cl='cd ~/CR/component-library/ && ls -a'
+alias cr='cd ~/cr/comicrelief-contentful/ && ls -a'
+alias cl='cd ~/cr/component-library/ && ls -a'
 alias yst='yarn styleguide'
-alias donate='cd ~/CR/react-donation/ && ls -a'
+alias donate='cd ~/cr/react-donation/ && ls -a'
 alias tickets='cd ~/repos/tickets/ && vim .'
 alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'

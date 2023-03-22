@@ -17,9 +17,9 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
 
 ## oh-my-zsh plugins
-# plugins=(
-
-# )
+plugins=(
+  # zsh-syntax-highlighting
+)
 
 # oh my zsh plugin manager
 source $ZSH/oh-my-zsh.sh

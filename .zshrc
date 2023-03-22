@@ -55,6 +55,7 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
+alias pipe='vim ~/pipe.txt'
 
 # yarn
 alias y="yarn"

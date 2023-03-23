@@ -89,7 +89,7 @@ function t() {
 
 
 # files =================
-alias init='cd ~/.config/nvim && ls -a && vim .'
+alias init='cd ~/.config/nvim && vim .'
 alias zsh='vim ~/.zshrc'
 alias wiki='cd ~/repos/Wiki && vim index.md'
 alias scratch='vim ~/desktop/scratch.md'
@@ -102,15 +102,15 @@ alias repos='cd ~/repos && ls -a'
 alias dotfiles='cd ~/repos/dotfiles && vim .'
 alias gitpractise='cd ~/repos/gitpractise && vim .'
 alias cv='cd ~/repos/cv && vim michael-odonovan-CV.md'
-alias writing='cd ~/repos/writing && ls -a'
+alias writing='cd ~/repos/writing && tree'
 alias printing3d='cd ~/repos/printing3d && ls -a'
 alias myl='cd ~/repos/mylearningsite/ && ls -a'
-alias mike='cd ~/repos/michaelodonovan.net/ && ls -a'
+alias mike='cd ~/repos/michaelodonovan.net/ && tree'
 
 # folders
 alias eliz='cd ~/ElizHelp && ls -a'
-alias config='cd ~/.config && ls -a'
-alias nvimfolder='cd ~/.config/nvim/ && ls -a'
+alias config='cd ~/.config && tree'
+alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias documents='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
@@ -118,7 +118,7 @@ alias photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
 alias desktop='cd ~/Desktop && ls -a'
-alias downloads='cd ~/Downloads && ls -a'
+alias downloads='cd ~/Downloads && tree'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace

@@ -44,7 +44,7 @@ alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head 
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias kill8000='kill -9 $(lsof -ti:8000)'
-alias v='nvim' # If ever need to open nvim just use $ vi
+alias v='nvim .' # If ever need to open nvim just use $ vi
 alias vim='nvim' # If ever need to open nvim just use $ vi
 alias vi='nvim'
 alias yabaistart='brew services start yabai'
@@ -73,8 +73,13 @@ function f() {
   vim "$fname"
 }
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-alias fp='kitty @ launch --type=tab $(find ~/Documents/Projects -type d -maxdepth 1 | fzf)'
+export FZF_DEFAULT_OPTS='
+  --height 40% 
+  --layout=reverse 
+  --border
+'
+
+export FZF_DEFAULT_COMMAND='find .'
 
 
 # tmux =================
@@ -102,14 +107,14 @@ alias repos='cd ~/repos && ls -a'
 alias dotfiles='cd ~/repos/dotfiles && vim .'
 alias gitpractise='cd ~/repos/gitpractise && vim .'
 alias cv='cd ~/repos/cv && vim michael-odonovan-CV.md'
-alias writing='cd ~/repos/writing && tree'
+alias writing='cd ~/repos/writing && tree -L 2'
 alias printing3d='cd ~/repos/printing3d && ls -a'
 alias myl='cd ~/repos/mylearningsite/ && ls -a'
-alias mike='cd ~/repos/michaelodonovan.net/ && tree'
+alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 
 # folders
 alias eliz='cd ~/ElizHelp && ls -a'
-alias config='cd ~/.config && tree'
+alias config='cd ~/.config && tree -L 2'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
 alias documents='cd ~/Documents && ls -a'
@@ -118,7 +123,7 @@ alias photos='cd ~/Pictures/Photos && ls -a'
 
 # areas
 alias desktop='cd ~/Desktop && ls -a'
-alias downloads='cd ~/Downloads && tree'
+alias downloads='cd ~/Downloads && tree -L 2'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace

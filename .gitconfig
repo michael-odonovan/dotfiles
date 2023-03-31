@@ -13,4 +13,4 @@
 [credential]
 	helper = cache
 [core]
-	editor = vim
+	editor = lvim

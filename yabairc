@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Lives must live here!: ~/.yabairc
+
+# ~/.yabairc
+
 
 set -x
 

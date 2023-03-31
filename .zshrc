@@ -8,6 +8,9 @@ export PATH=$PATH:~/bin:~/.local/bin
 # Path to yarn
 PATH=$PATH:~/.yarn/bin
 
+# Homebrew path
+export PATH=/opt/homebrew/bin:$PATH
+
 
 # ZSH ===============================
 # Path to your oh-my-zsh installation.
@@ -30,11 +33,18 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # vim stuff ==================================================
-export EDITOR='vim'
+export EDITOR='nvim'
 
-# Using vim functionality in Bash
-# does this work???
+# Using vim functionality in Bash / Zsh
 set -o vi
+
+# note: can open vanilla vim with just $ vi, ie on new install
+alias vi='vim'
+alias vim='nvim'
+# or use just v
+function v() {
+  nvim "$1"
+}
 
 
 # Aliases ===================
@@ -44,9 +54,6 @@ alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head 
 alias root='cd `git rev-parse --show-toplevel`'
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias kill8000='kill -9 $(lsof -ti:8000)'
-alias v='nvim .' # If ever need to open nvim just use $ vi
-alias vim='nvim' # If ever need to open nvim just use $ vi
-alias vi='nvim'
 alias yabaistart='brew services start yabai'
 alias yabairestart='brew services restart yabai'
 alias yabaistop='brew services stop yabai'
@@ -55,7 +62,7 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
-alias pipe='vim ~/pipe.txt'
+alias pipe='nvim ~/pipe.txt'
 
 # yarn
 alias y="yarn"
@@ -70,7 +77,7 @@ alias yd='yarn dev'
 function f() {
   local fname
   fname=$(fzf) || return
-  vim "$fname"
+  nvim "$fname"
 }
 
 export FZF_DEFAULT_OPTS='
@@ -94,19 +101,19 @@ function t() {
 
 
 # files =================
-alias init='cd ~/.config/nvim && vim .'
-alias zsh='vim ~/.zshrc'
-alias wiki='cd ~/repos/Wiki && vim index.md'
-alias scratch='vim ~/desktop/scratch.md'
+alias init='cd ~/.config/nvim && nvim .'
+alias zsh='nvim ~/.zshrc'
+alias wiki='cd ~/repos/Wiki && nvim index.md'
+alias scratch='nvim ~/desktop/scratch.md'
 ### vscode
-alias settings='cd ~/Library/Application\ Support/Code/User/ && vim settings.json'
-alias keybindings='cd ~/Library/Application\ Support/Code/User/ && vim keybindings.json'
+alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
+alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'
 
 # repos
 alias repos='cd ~/repos && ls -a'
-alias dotfiles='cd ~/repos/dotfiles && vim .'
-alias gitpractise='cd ~/repos/gitpractise && vim .'
-alias cv='cd ~/repos/cv && vim michael-odonovan-CV.md'
+alias dotfiles='cd ~/repos/dotfiles && nvim .'
+alias gitpractise='cd ~/repos/gitpractise && nvim .'
+alias cv='cd ~/repos/cv && nvim michael-odonovan-CV.md'
 alias writing='cd ~/repos/writing && tree -L 2'
 alias printing3d='cd ~/repos/printing3d && ls -a'
 alias myl='cd ~/repos/mylearningsite/ && ls -a'
@@ -116,7 +123,7 @@ alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias eliz='cd ~/ElizHelp && ls -a'
 alias config='cd ~/.config && tree -L 2'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
-alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && vim .'
+alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && nvim .'
 alias documents='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
@@ -131,7 +138,7 @@ alias cr='cd ~/cr/comicrelief-contentful/ && ls -a'
 alias cl='cd ~/cr/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/cr/react-donation/ && ls -a'
-alias tickets='cd ~/repos/tickets/ && vim .'
+alias tickets='cd ~/repos/tickets/ && nvim .'
 alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'
 
@@ -180,7 +187,6 @@ alias_for() {
     echo ""
   fi
 }
-
 expand_command_line() {
   first=$(echo "$1" | awk '{print $1;}')
   rest=$(echo ${${1}/"${first}"/})

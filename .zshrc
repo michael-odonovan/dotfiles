@@ -21,7 +21,7 @@ ZSH_THEME="af-magic"
 
 ## oh-my-zsh plugins
 plugins=(
-  # zsh-syntax-highlighting
+  git
 )
 
 # oh my zsh plugin manager
@@ -108,6 +108,7 @@ alias scratch='nvim ~/desktop/scratch.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'
+alias new-install='nvim ~/repos/new-install/new-install.md'
 
 # repos
 alias repos='cd ~/repos && ls -a'
@@ -118,6 +119,9 @@ alias writing='cd ~/repos/writing && tree -L 2'
 alias printing3d='cd ~/repos/printing3d && ls -a'
 alias myl='cd ~/repos/mylearningsite/ && ls -a'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
+alias notes='cd ~/repos/notes/ && nvim .'
+alias todo='nvim ~/repos/notes/planning/1.today-todo.md'
+alias planning='nvim ~/repos/notes/planning/'
 
 # folders
 alias eliz='cd ~/ElizHelp && ls -a'
@@ -134,10 +138,11 @@ alias downloads='cd ~/Downloads && tree -L 2'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace
-alias cr='cd ~/cr/comicrelief-contentful/ && ls -a'
-alias cl='cd ~/cr/component-library/ && ls -a'
+alias comic='cd ~/comic-relief && ls -a'
+alias cr='cd ~/comic-relief/comicrelief-contentful/ && ls -a'
+alias cl='cd ~/comic/component-library/ && ls -a'
 alias yst='yarn styleguide'
-alias donate='cd ~/cr/react-donation/ && ls -a'
+alias donate='cd ~/comic/react-donation/ && ls -a'
 alias tickets='cd ~/repos/tickets/ && nvim .'
 alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'

@@ -1,3 +1,4 @@
+# Mike Zsh
 ## Paths ===========================
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -99,6 +100,18 @@ function t() {
   tmux "$1"
 }
 
+# Adjust window manager for mike / eliz keyboard
+function window() {
+  if [ $1 = "mike" ]; then
+    rm ~/.skhdrc
+    cp ~/.skhdrc-mike ~/.skhdrc
+    echo "changed to mike keyboard and window setup"
+  else
+    rm ~/.skhdrc
+    cp ~/.skhdrc-eliz ~/.skhdrc
+    echo "changed to eliz keyboard and window setup"
+  fi
+}
 
 # files =================
 alias init='cd ~/.config/nvim && nvim .'

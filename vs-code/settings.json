@@ -170,5 +170,6 @@
   "window.menuBarVisibility": "visible",
   "window.zoomLevel": 1.7,
   "workbench.colorTheme": "Tokyo Night nv",
-  "workbench.editor.labelFormat": "short"
+  "workbench.editor.labelFormat": "short",
+  "security.workspace.trust.untrustedFiles": "open"
 }

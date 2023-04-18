@@ -1,5 +1,6 @@
 # Must live here!: ~/.skhdrc
 
+
 # Move Focus to Window ===========================
 # Window Navigation
 cmd - h : yabai -m window --focus west

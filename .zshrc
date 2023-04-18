@@ -8,9 +8,14 @@ export PATH=$PATH:~/bin:~/.local/bin
 # Path to yarn
 PATH=$PATH:~/.yarn/bin
 
-# Homebrew path
+# Homebrew to path
 export PATH=/opt/homebrew/bin:$PATH
 
+# VS Code to path
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# ChatGPT / Open AI
+source "$HOME/.openai_key.zsh"
 
 # ZSH ===============================
 # Path to your oh-my-zsh installation.
@@ -99,16 +104,15 @@ function t() {
   tmux "$1"
 }
 
-
 # files =================
-alias init='cd ~/.config/nvim && nvim .'
+alias Init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'
 alias wiki='cd ~/repos/Wiki && nvim index.md'
 alias scratch='nvim ~/desktop/scratch.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'
-alias new-install='nvim ~/repos/new-install/new-install.md'
+alias new-install='nvim ~/repos/notes/code/new-install.md'
 
 # repos
 alias repos='cd ~/repos && ls -a'
@@ -140,9 +144,9 @@ alias trash='cd ~/.local/share/Trash/files/'
 # Current Workplace
 alias comic='cd ~/comic-relief && ls -a'
 alias cr='cd ~/comic-relief/comicrelief-contentful/ && ls -a'
-alias cl='cd ~/comic/component-library/ && ls -a'
+alias cl='cd ~/comic-relief/component-library/ && ls -a'
 alias yst='yarn styleguide'
-alias donate='cd ~/comic/react-donation/ && ls -a'
+alias donate='cd ~/comic-relief/react-donation/ && ls -a'
 alias tickets='cd ~/repos/tickets/ && nvim .'
 alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'

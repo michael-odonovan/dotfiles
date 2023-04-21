@@ -1,4 +1,3 @@
-# Mike Zsh
 ## Paths ===========================
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -46,7 +45,7 @@ set -o vi
 
 # note: can open vanilla vim with just $ vi, ie on new install
 alias vi='vim'
-alias vim='nvim'
+alias vim='vim'
 # or use just v
 function v() {
   nvim "$1"
@@ -105,19 +104,6 @@ function t() {
   tmux "$1"
 }
 
-# Adjust window manager for mike / eliz keyboard
-function window() {
-  if [ $1 = "mike" ]; then
-    rm ~/.skhdrc
-    cp ~/.skhdrc-mike ~/.skhdrc
-    echo "changed to mike keyboard and window setup"
-  else
-    rm ~/.skhdrc
-    cp ~/.skhdrc-eliz ~/.skhdrc
-    echo "changed to eliz keyboard and window setup"
-  fi
-}
-
 # files =================
 alias Init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'
@@ -135,14 +121,15 @@ alias gitpractise='cd ~/repos/gitpractise && nvim .'
 alias cv='cd ~/repos/cv && nvim michael-odonovan-CV.md'
 alias writing='cd ~/repos/writing && tree -L 2'
 alias printing3d='cd ~/repos/printing3d && ls -a'
-alias myl='cd ~/repos/mylearningsite/ && ls -a'
+alias myl='cd ~/repos/my-learning-site/ && ls -a'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias notes='cd ~/repos/notes/ && nvim .'
 alias todo='nvim ~/repos/notes/planning/1.today-todo.md'
 alias planning='nvim ~/repos/notes/planning/'
+alias wr='cd ~/repos/wr/'
 
 # folders
-alias eliz='cd ~/ElizHelp && ls -a'
+alias eliz='cd ~/elizhelp && ls -a'
 alias config='cd ~/.config && tree -L 2'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && nvim .'

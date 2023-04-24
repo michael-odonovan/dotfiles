@@ -93,6 +93,10 @@ export FZF_DEFAULT_OPTS='
 
 export FZF_DEFAULT_COMMAND='find .'
 
+# update packages from a list
+function yarnup() {
+  yarn upgrade $1@^
+}
 
 # tmux =================
 # Open tmux automatically on terminal start ==================

@@ -153,7 +153,6 @@ alias cl='cd ~/comic-relief/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/comic-relief/react-donation/ && ls -a'
 alias tickets='cd ~/repos/tickets/ && nvim .'
-alias snaps='yarn test -u'
 alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================

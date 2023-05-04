@@ -108,6 +108,9 @@ function t() {
   tmux "$1"
 }
 
+# alias ts='tmux-sessions.sh && tmux attach'
+
+
 # files =================
 alias init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'

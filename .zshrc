@@ -86,8 +86,8 @@ function f() {
 }
 
 export FZF_DEFAULT_OPTS='
-  --height 40% 
-  --layout=reverse 
+  --height 40%
+  --layout=reverse
   --border
 '
 
@@ -109,7 +109,7 @@ function t() {
 }
 
 # files =================
-alias Init='cd ~/.config/nvim && nvim .'
+alias init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'
 alias wiki='cd ~/repos/Wiki && nvim index.md'
 alias scratch='nvim ~/desktop/scratch.md'
@@ -136,7 +136,7 @@ alias wr='cd ~/repos/wr/'
 alias eliz='cd ~/elizhelp && ls -a'
 alias config='cd ~/.config && tree -L 2'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
-alias snippets='cd ~/.config/nvim/snippets-luasnip-vscode/snippets/javascript-ecosystem/ && nvim .'
+alias snippets='cd ~/.config/nvim/snippets/snippets/javascript-ecosystem/ && nvim .'
 alias documents='cd ~/Documents && ls -a'
 alias scripts='cd ~/bin && ls -a'
 alias photos='cd ~/Pictures/Photos && ls -a'
@@ -162,7 +162,7 @@ function gpo() {
   git pull origin "$1"
 }
 function gac() {
-  git add -A 
+  git add -A
   git commit -m "$1"
 }
 function gacp() {
@@ -171,12 +171,12 @@ function gacp() {
   git push
 }
 function bosh() {
-  git add -A 
-  git commit -m "update" 
+  git add -A
+  git commit -m "update"
   git push
 }
 
- 
+
 # node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -215,8 +215,8 @@ pre_validation() {
   [[ $# -eq 0 ]] && return                    # If there's no input, return. Else...
   expand_command_line "$@"
 }
-autoload -U add-zsh-hook                      # Load the zsh hook module. 
-add-zsh-hook preexec pre_validation           # Adds the hook 
+autoload -U add-zsh-hook                      # Load the zsh hook module.
+add-zsh-hook preexec pre_validation           # Adds the hook
 
 
 # fzf fuzzy finder

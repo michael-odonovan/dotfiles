@@ -67,7 +67,7 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
-alias snaps='yarn run just -u --maxWorker 1'
+alias snaps='yarn run jest -u --maxWorkers 1'
 
 
 # yarn
@@ -163,7 +163,7 @@ alias trashgql='trash-put ./graphql/schema.gql'
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 function gpo() {
-  git pull origin "$1"
+  git pull origin "$1" && yarn
 }
 function gac() {
   git add -A

@@ -67,7 +67,8 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
-alias pipe='nvim ~/pipe.txt'
+alias snaps='yarn run just -u --maxWorker 1'
+
 
 # yarn
 alias y="yarn"
@@ -137,7 +138,7 @@ alias wr='cd ~/repos/wr/'
 
 # folders
 alias eliz='cd ~/elizhelp && ls -a'
-alias config='cd ~/.config && tree -L 2'
+alias config='cd ~/.config && ls -a'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets/snippets/javascript-ecosystem/ && nvim .'
 alias documents='cd ~/Documents && ls -a'

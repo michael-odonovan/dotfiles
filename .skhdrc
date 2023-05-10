@@ -60,9 +60,3 @@ cmd + shift - space : \
 # shift + alt - p : yabai -m window --space prev; yabai -m space --focus prev
 # shift + alt - n : yabai -m window --space next; yabai -m space --focus next
 
-# Restart Yabai
-# shift + lctrl + alt - r : \
-    # /usr/bin/env osascript <<< \
-        # "display notification \"Restarting Yabai\" with title \"Yabai\""; \
-    # launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
-

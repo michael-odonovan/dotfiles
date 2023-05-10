@@ -57,11 +57,17 @@ function v() {
 alias ..='cd ..'
 alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
 alias root='cd `git rev-parse --show-toplevel`'
+
 alias kill3000='kill -9 $(lsof -ti:3000)'
 alias kill8000='kill -9 $(lsof -ti:8000)'
-alias yabaistart='brew services start yabai'
-alias yabairestart='brew services restart yabai'
-alias yabaistop='brew services stop yabai'
+
+alias yabaistart='yabai --start-service'
+alias yabairestart='yabai --restart-service'
+alias yabaistop='yabai --stop-service'
+alias skhdstart='skhd --start-service'
+alias skhdrestart='skhd --restart-service'
+alias skhdstop='skhd --stop-service'
+
 alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'

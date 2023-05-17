@@ -132,13 +132,13 @@ alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindi
 alias new-install='nvim ~/repos/notes/code/new-install.md'
 
 # repos
-alias repos='cd ~/repos && ls -a'
+alias repos='cd ~/repos && lst'
 alias dotfiles='cd ~/repos/dotfiles && nvim .'
 alias gitpractise='cd ~/repos/gitpractise && nvim .'
 alias cv='cd ~/repos/cv && nvim michael-odonovan-CV.md'
 alias writing='cd ~/repos/writing && tree -L 2'
-alias printing3d='cd ~/repos/printing3d && ls -a'
-alias myl='cd ~/repos/my-learning-site/ && ls -a'
+alias printing3d='cd ~/repos/printing3d && lst'
+alias myl='cd ~/repos/my-learning-site/ && lst'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias notes='cd ~/repos/notes/ && nvim .'
 alias todo='nvim ~/repos/notes/planning/1.today-todo.md'
@@ -146,25 +146,25 @@ alias planning='nvim ~/repos/notes/planning/'
 alias wr='cd ~/repos/wr/'
 
 # folders
-alias eliz='cd ~/elizhelp && ls -a'
-alias config='cd ~/.config && ls -a'
+alias eliz='cd ~/elizhelp && lst'
+alias config='cd ~/.config && lst'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets/snippets/javascript-ecosystem/ && nvim .'
-alias documents='cd ~/Documents && ls -a'
-alias scripts='cd ~/bin && ls -a'
-alias photos='cd ~/Pictures/Photos && ls -a'
+alias documents='cd ~/Documents && lst'
+alias scripts='cd ~/bin && lst'
+alias photos='cd ~/Pictures/Photos && lst'
 
 # areas
-alias desktop='cd ~/Desktop && ls -a'
+alias desktop='cd ~/Desktop && lst'
 alias downloads='cd ~/Downloads && tree -L 2'
 alias trash='cd ~/.local/share/Trash/files/'
 
 # Current Workplace
-alias comic='cd ~/comic-relief && ls -a'
-alias cr='cd ~/comic-relief/comicrelief-contentful/ && ls -a'
-alias cl='cd ~/comic-relief/component-library/ && ls -a'
+alias comic='cd ~/comic-relief && lst'
+alias cr='cd ~/comic-relief/comicrelief-contentful/ && lst'
+alias cl='cd ~/comic-relief/component-library/ && lst'
 alias yst='yarn styleguide'
-alias donate='cd ~/comic-relief/react-donation/ && ls -a'
+alias donate='cd ~/comic-relief/react-donation/ && lst'
 alias tickets='cd ~/Desktop//tickets/ && nvim .'
 alias trashgql='trash-put ./graphql/schema.gql'
 

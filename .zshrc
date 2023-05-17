@@ -74,6 +74,9 @@ alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
 alias snaps='yarn run jest -u --maxWorkers 1'
+alias lst='ls -a | tee'
+# cypress errors
+alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
 
 
 # yarn
@@ -162,7 +165,7 @@ alias cr='cd ~/comic-relief/comicrelief-contentful/ && ls -a'
 alias cl='cd ~/comic-relief/component-library/ && ls -a'
 alias yst='yarn styleguide'
 alias donate='cd ~/comic-relief/react-donation/ && ls -a'
-alias tickets='cd ~/repos/tickets/ && nvim .'
+alias tickets='cd ~/Desktop//tickets/ && nvim .'
 alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================

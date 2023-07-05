@@ -1,7 +1,7 @@
 set noswapfile
 
 set printoptions=duplex:off,number:y,left:0px
-set printfont=Courier:h10
+set printfont=Courier:h12
 
 " Don't try to be vi compatible
 set nocompatible

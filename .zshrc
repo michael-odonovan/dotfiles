@@ -80,6 +80,8 @@ alias snaps='yarn test -u'
 alias lsa='ls -a -1'
 # cypress errors
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
+alias lintfix='yarn run lint -- --fix'
+alias gitclear='cd .git && tp index.lock'
 
 
 # yarn

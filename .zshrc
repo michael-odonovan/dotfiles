@@ -80,7 +80,7 @@ alias snaps='yarn test -u'
 alias lsa='ls -a -1'
 # cypress errors
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
-alias lintfix='yarn run lint -- --fix'
+alias lintfix='yarn run lint -- --fix && yarn lint'
 alias gitclear='cd .git && tp index.lock'
 
 
@@ -181,8 +181,10 @@ alias tickets='cd ~/repos/tickets/ && lsa'
 alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================
-alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
+
+alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
+
 function gpo() {
   git pull origin "$1" && yarn
 }

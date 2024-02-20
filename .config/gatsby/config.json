@@ -6,5 +6,8 @@
 	"feedback": {
 		"firstCheckDate": 1680535021319,
 		"sevenDayFeedbackDate": 1681203414757
+	},
+	"cli": {
+		"packageManager": "npm"
 	}
 }

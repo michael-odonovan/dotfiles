@@ -2,7 +2,7 @@
   "breadcrumbs.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.fontSize": 14,
   "editor.tabSize": 2,
@@ -169,7 +169,7 @@
   ],
   "window.menuBarVisibility": "visible",
   "window.zoomLevel": 1.7,
-  "workbench.colorTheme": "Tokyo Night nv",
+  "workbench.colorTheme": "Dracula",
   "workbench.editor.labelFormat": "short",
   "security.workspace.trust.untrustedFiles": "open"
 }

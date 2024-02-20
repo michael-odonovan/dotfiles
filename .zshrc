@@ -147,7 +147,8 @@ alias printing3d='cd ~/repos/printing3d && lsa'
 alias myl='cd ~/repos/my-learning-site/ && lsa'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias notes='cd ~/repos/notes/ && lsa'
-alias dig='nvim ~/repos/notes/planning/2.digital-standup.md'
+alias diy='cd ~/repos/notes/diy/ && nvim .'
+alias dig='nvim ~/repos/notes/planning/3.digital-standup.md'
 alias todo='nvim ~/repos/notes/planning/1.today-todo.md'
 alias planning='nvim ~/repos/notes/planning/'
 alias dig='nvim ~/repos/notes/planning/2.digital-standup.md'
@@ -249,3 +250,10 @@ add-zsh-hook preexec pre_validation           # Adds the hook
 # fzf fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# bun completions
+[ -s "/Users/mike4031/.bun/_bun" ] && source "/Users/mike4031/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

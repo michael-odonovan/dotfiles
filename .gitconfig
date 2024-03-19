@@ -11,6 +11,6 @@
 [commit]
 	template = ~/.gitmessage
 [credential]
-	helper = cache
+	helper = store
 [core]
 	editor = nvim

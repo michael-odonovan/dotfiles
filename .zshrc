@@ -76,7 +76,7 @@ alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
-alias snaps='yarn test -u'
+alias snaps='yarn jest -u'
 alias lsa='ls -a -1'
 # cypress errors
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'

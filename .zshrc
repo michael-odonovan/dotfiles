@@ -71,8 +71,6 @@ alias skhdstart='skhd --start-service'
 alias skhdrestart='skhd --restart-service'
 alias skhdstop='skhd --stop-service'
 
-alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
-alias lg='Lazygit'
 alias yarnlong='yarn install --verbose --network-timeout 1000000'
 alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
@@ -81,8 +79,6 @@ alias lsa='ls -a -1'
 # cypress errors
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
 alias lintfix='yarn run lint -- --fix && yarn lint'
-alias gitclear='cd .git && tp index.lock'
-
 
 # yarn
 alias y="yarn"
@@ -181,8 +177,12 @@ alias tickets='cd ~/repos/tickets/ && lsa'
 alias trashgql='trash-put ./graphql/schema.gql'
 
 # git ================================
+# git stuff
+alias copygit='git branch --show-current | pbcopy'
+alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
+alias lg='Lazygit'
+alias gitclear='cd .git && tp index.lock'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
-
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 
 function gpo() {

@@ -128,6 +128,7 @@ alias init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'
 alias wiki='cd ~/repos/Wiki && nvim index.md'
 alias scratch='nvim ~/desktop/scratch.md'
+alias scratch2='nvim ~/desktop/scratch2.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'

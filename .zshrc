@@ -145,6 +145,7 @@ alias printing3d='cd ~/repos/printing3d && lsa'
 alias myl='cd ~/repos/my-learning-site/ && lsa'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias notes='cd ~/repos/notes/ && lsa'
+alias storage='cd ~/repos/notes/storage/ && nvim .'
 alias music='cd ~/repos/notes/music/ && lsa'
 alias diy='cd ~/repos/notes/diy/ && nvim .'
 alias todo='nvim ~/repos/planning/1.today-todo.md'
@@ -165,7 +166,7 @@ alias scripts='cd ~/bin && lsa'
 alias photos='cd ~/Pictures/Photos && lsa'
 
 # areas
-alias desktop='cd ~/Desktop && lsa'
+alias Desktop='cd ~/Desktop && lsa'
 alias downloads='cd ~/Downloads && tree -L 2'
 alias trash='cd ~/.local/share/Trash/files/'
 
@@ -212,7 +213,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias ydmax='NODE_OPTIONS=--max_old_space_size=8192 yarn dev'
+alias ydmax='NODE_OPTIONS=--max_old_space_size=8192; yarn dev'
 
 # expanding an alias with <C-x>a
 local cmd_alias=""

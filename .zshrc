@@ -11,11 +11,8 @@ PATH=$PATH:~/.yarn/bin
 # Homebrew to path
 export PATH=/opt/homebrew/bin:$PATH
 
-# path to python ??? not sure this is working
-export Path=$HOME/Library/Python/3.11/bin
-
-# VS Code to path
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# path to python ??? this isn't working
+# export PATH="/opt/homebrew/bin/python3:$PATH"
 
 # ChatGPT / Open AI
 source "$HOME/.openai_key.zsh"
@@ -90,6 +87,8 @@ alias ys='yarn start'
 alias yd='yarn dev'
 alias yo='yarn outdated'
 alias yb='yarn build'
+
+# for upgrading packages
 function yu() {
   yarn upgrade $1@latest
 }
@@ -129,7 +128,7 @@ alias zsh='nvim ~/.zshrc'
 alias wiki='cd ~/repos/Wiki && nvim index.md'
 alias scratch='nvim ~/desktop/scratch.md'
 alias scratch2='nvim ~/desktop/scratch2.md'
-alias work='nvim ~/desktop/work-notes.md'
+alias Work='nvim ~/desktop/work-notes.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'
@@ -140,13 +139,13 @@ alias repos='cd ~/repos && lsa'
 alias dotfiles='cd ~/repos/dotfiles && nvim .'
 alias gitpractise='cd ~/repos/gitpractise && nvim .'
 alias cv='cd ~/repos/cv && nvim michael-odonovan-CV.md'
-alias writing='cd ~/repos/writing && tree -L 2'
+alias writing='cd ~/repos/writing/aboriginal-tracker-ned-kelly-detective/ && nvim .'
 alias printing3d='cd ~/repos/printing3d && lsa'
 alias myl='cd ~/repos/my-learning-site/ && lsa'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
 alias notes='cd ~/repos/notes/ && lsa'
 alias storage='cd ~/repos/notes/storage/ && nvim .'
-alias music='cd ~/repos/notes/music/ && lsa'
+alias music='cd ~/repos/notes/music/ && nvim .'
 alias diy='cd ~/repos/notes/diy/ && nvim .'
 alias todo='nvim ~/repos/planning/1.today-todo.md'
 alias planning='nvim ~/repos/planning/'
@@ -179,10 +178,11 @@ alias yst='yarn styleguide'
 alias donate='cd ~/comic-relief/react-donation/ && lsa'
 alias tickets='cd ~/repos/tickets/ && lsa'
 alias trashgql='trash-put ./graphql/schema.gql'
+alias gatsbyclean='yarn rebuild-schema-dev'
 
 # git ================================
 # git stuff
-alias copygit='git branch --show-current | pbcopy'
+alias branch='git branch --show-current | pbcopy'
 alias clearbranches='git branch | grep -v "master" | xargs git branch -D'
 alias lg='Lazygit'
 alias gitclear='cd .git && tp index.lock'

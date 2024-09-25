@@ -3,8 +3,8 @@
 
 # Move Focus to Window ===========================
 # Window Navigation
-shift + alt - h : yabai -m window --focus west
-shift + alt - l : yabai -m window --focus east
+cmd - h : yabai -m window --focus west
+cmd - l : yabai -m window --focus east
 # cmd + ctrl - up : yabai -m window --focus north
 # cmd + ctrl - down : yabai -m window --focus south
 

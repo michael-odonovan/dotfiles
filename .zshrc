@@ -76,7 +76,7 @@ alias snaps='yarn jest -u'
 alias lsa='ls -a -1'
 # cypress errors
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
-alias lintfix='npx eslint . --fix'
+alias lintfix='yarn eslint src --fix'
 
 
 # yarn
@@ -209,6 +209,11 @@ function bosh() {
   git add -A
   git commit -m "update"
   git push
+}
+function sc() {
+  yarn add -D babel-plugin-styled-components &&
+  echo '{"plugins": [["babel-plugin-styled-components", { "displayName": true }]]}' > .babelrc &&
+  echo "Babel styled-components plugin installed"
 }
 
 

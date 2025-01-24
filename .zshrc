@@ -184,6 +184,11 @@ alias tickets='nvim ~/Desktop/tickets.md'
 alias trashgql='trash-put ./graphql/schema.gql'
 alias gatsbyclean='yarn rebuild-schema-dev'
 
+function resizeImages() {
+  mogrify -resize 600x600\> *.png
+  mogrify -resize 600x600\> *.jpg
+}
+
 # git ================================
 # git stuff
 alias branch='git branch --show-current | pbcopy'

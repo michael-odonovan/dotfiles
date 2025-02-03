@@ -215,6 +215,12 @@ function bosh() {
   git commit -m "update"
   git push
 }
+function resetHard() {
+  git fetch origin
+  git reset --hard origin/master
+}
+
+
 function sc() {
   yarn add -D babel-plugin-styled-components &&
   echo '{"plugins": [["babel-plugin-styled-components", { "displayName": true }]]}' > .babelrc &&

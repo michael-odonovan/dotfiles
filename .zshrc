@@ -215,9 +215,11 @@ function bosh() {
   git commit -m "update"
   git push
 }
+# usage $ resetHard or $ resetHard main
 function resetHard() {
+  local branch=${1:-master} # Default is "master" branch
   git fetch origin
-  git reset --hard origin/master
+  git reset --hard origin/$branch
 }
 
 

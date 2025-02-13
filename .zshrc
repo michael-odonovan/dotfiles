@@ -200,6 +200,9 @@ alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && gi
 
 function gpo() {
   git pull origin "$1" && yarn
+  git add -A
+  git commit -m "merge main/master"
+  git push
 }
 function gac() {
   git add -A

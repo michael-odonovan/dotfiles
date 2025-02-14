@@ -198,11 +198,51 @@ alias gitclear='cd .git && tp index.lock'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && git push'
 
+# function gpo() {
+#   git pull --no-edit origin "$1" && yarn
+#   git add -A
+#   git commit -m "merge main/master"
+#   git push
+# }
 function gpo() {
-  git pull origin "$1" && yarn
-  git add -A
-  git commit -m "merge main/master"
-  git push
+    # Default to 'main' if no branch is specified
+    local branch="${1:-main}"
+
+    # Store current branch name
+    local current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+    echo "Pulling from origin/$branch..."
+
+    # Try to pull from specified branch
+    if ! git pull --no-edit origin "$branch"; then
+        echo "Pull failed! Aborting. Is the branch name correct?"
+        return 1
+    fi
+
+    # Run yarn only if package.json exists and was changed
+    if [[ -f "package.json" ]] && git diff --name-only HEAD@{1} HEAD | grep -q "package.json"; then
+        echo "Package.json changed, running yarn..."
+        if ! yarn; then
+            echo "Yarn install failed! Aborting."
+            return 1
+        fi
+    fi
+
+    # Check if there are changes to commit
+    if ! git diff --quiet HEAD; then
+        git add -A
+        git commit -m "merge: pulled changes from origin/$branch into $current_branch"
+
+        echo "Pushing to origin/$current_branch..."
+        if ! git push origin "$current_branch"; then
+            echo "Push failed! Aborting."
+            return 1
+        fi
+    else
+        echo "No changes to commit after pull."
+    fi
+
+    echo "Operation completed successfully!"
 }
 function gac() {
   git add -A

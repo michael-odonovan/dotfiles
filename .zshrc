@@ -207,12 +207,10 @@ alias gpempty='git commit --allow-empty -m "Empty commit to trigger build" && gi
 function gpo() {
     # Default to 'main' if no branch is specified
     local branch="${1:-main}"
-
     # Store current branch name
     local current_branch=$(git rev-parse --abbrev-ref HEAD)
 
     echo "Pulling from origin/$branch..."
-
     # Try to pull from specified branch
     if ! git pull --no-edit origin "$branch"; then
         echo "Pull failed! Aborting. Is the branch name correct?"
@@ -228,11 +226,10 @@ function gpo() {
         fi
     fi
 
-    # Check if there are changes to commit
-    if ! git diff --quiet HEAD; then
+    # Check if there are changes to commit (including untracked files)
+    if ! git diff --quiet HEAD || ! git diff --quiet --cached || [ -n "$(git ls-files --others --exclude-standard)" ]; then
         git add -A
         git commit -m "merge: pulled changes from origin/$branch into $current_branch"
-
         echo "Pushing to origin/$current_branch..."
         if ! git push origin "$current_branch"; then
             echo "Push failed! Aborting."

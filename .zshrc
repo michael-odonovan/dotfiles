@@ -78,7 +78,6 @@ alias lsa='ls -a -1'
 alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
 alias lintfix='yarn eslint src --fix'
 
-
 # yarn
 alias y="yarn"
 alias ya="yarn add"
@@ -95,6 +94,9 @@ function yu() {
   yarn upgrade $1@latest
 }
 
+# run playwright tests locally
+alias playwrightlocal="npx playwright test"
+alias playlocal="npx playwright test"
 
 # fzf =================
 function f() {
@@ -280,3 +282,79 @@ add-zsh-hook preexec pre_validation           # Adds the hook
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Playwright test runner function for zsh config
+# Usage: playwright_run [test_file]
+# Add this to your .zshrc file
+playwright_run() {
+  local test_file="$1"
+  local base_dir="$(pwd)"
+  local playwright_config="playwright.config.js"
+  local playwright_ts_config="playwright.config.ts"
+  local config_file=""
+
+  # Check for existence of config files
+  if [[ -f "$base_dir/$playwright_config" ]]; then
+    config_file="$playwright_config"
+  elif [[ -f "$base_dir/$playwright_ts_config" ]]; then
+    config_file="$playwright_ts_config"
+  fi
+
+  # Check if playwright is installed
+  if ! npm list --depth=0 | grep -q "playwright"; then
+    if ! npm list -g --depth=0 | grep -q "playwright"; then
+      echo "Error: Playwright not found. Please install it locally or globally."
+      return 1
+    fi
+  fi
+
+  # Determine version to handle compatibility
+  local playwright_version=""
+  if [[ -f "$base_dir/node_modules/playwright/package.json" ]]; then
+    playwright_version=$(cat "$base_dir/node_modules/playwright/package.json" | grep \"version\" | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d ' ')
+  elif [[ -f "$base_dir/node_modules/@playwright/test/package.json" ]]; then
+    playwright_version=$(cat "$base_dir/node_modules/@playwright/test/package.json" | grep \"version\" | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d ' ')
+  fi
+
+  echo "Using Playwright version: $playwright_version"
+
+  # Set command based on whether a specific test was requested
+  local command=""
+  if [[ -n "$test_file" ]]; then
+    echo "Running specific test: $test_file"
+    command="npx playwright test $test_file"
+  else
+    echo "Running all tests"
+    command="npx playwright test"
+  fi
+
+  # Check if we need to explicitly specify a config file
+  if [[ -n "$config_file" ]]; then
+    command="$command --config=$config_file"
+  fi
+
+  # Add compatibility flags based on version if needed
+  if [[ -n "$playwright_version" ]]; then
+    # Compare versions and add compatibility flags if needed
+    # This is a simplified version check - you can expand this for specific version requirements
+    major_version=$(echo $playwright_version | cut -d. -f1)
+    minor_version=$(echo $playwright_version | cut -d. -f2)
+
+    # Example of version-specific flags
+    if [[ $major_version -lt 1 || ($major_version -eq 1 && $minor_version -lt 20) ]]; then
+      # Add flags for older versions if needed
+      command="$command --reporter=list"
+    else
+      # Newer version flags
+      command="$command --reporter=html"
+    fi
+  fi
+
+  # Execute the command
+  echo "Executing: $command"
+  eval $command
+  return $?
+}
+
+# Optional alias for shorter command
+alias ptest='playwright_run'

@@ -11,8 +11,11 @@ PATH=$PATH:~/.yarn/bin
 # Homebrew to path
 export PATH=/opt/homebrew/bin:$PATH
 
-# path to python ??? this isn't working
-# export PATH="/opt/homebrew/bin/python3:$PATH"
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # ChatGPT / Open AI
 source "$HOME/.openai_key.zsh"

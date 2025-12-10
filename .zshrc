@@ -59,7 +59,6 @@ function v() {
 # utilities
 alias ..='cd ..'
 alias largefiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -hr | head -n20'
-# alias root='cd `git rev-parse --show-toplevel`'
 alias root='cd $(git rev-parse --show-toplevel)'
 
 alias kill3000='kill -9 $(lsof -ti:3000)'
@@ -79,8 +78,6 @@ alias trashnvim='rm -rf ~/.local/share/nvim/ && rm -rf ~/.config/nvim'
 alias tp='trash-put'
 alias snaps='yarn jest -u'
 alias lsa='ls -a -1'
-# cypress errors
-alias cyp='yarn cy:run &> ~/Desktop/cl-cy-errors.md | tee'
 alias lintfix='yarn eslint src --fix'
 
 # yarn
@@ -93,6 +90,13 @@ alias ys='yarn start'
 alias yd='yarn dev'
 alias yo='yarn outdated'
 alias yb='yarn build'
+
+# updating homebrew packages
+function brewUpdate() {
+    brew update
+    brew upgrade
+    brew cleanup
+}
 
 # for upgrading packages
 function yu() {
@@ -134,14 +138,12 @@ function t() {
 # files =================
 alias init='cd ~/.config/nvim && nvim .'
 alias zsh='nvim ~/.zshrc'
-alias wiki='cd ~/repos/Wiki && nvim index.md'
 alias scratch='nvim ~/desktop/scratch.md'
 alias scratch2='nvim ~/desktop/scratch2.md'
 ### vscode
 alias settings='cd ~/Library/Application\ Support/Code/User/ && nvim settings.json'
 alias keybindings='cd ~/Library/Application\ Support/Code/User/ && nvim keybindings.json'
 alias new-install='nvim ~/repos/notes/code/new-install.md'
-
 # repos
 alias repos='cd ~/repos && lsa'
 alias dotfiles='cd ~/repos/dotfiles && nvim .'
@@ -151,21 +153,15 @@ alias writing='cd ~/repos/writing/aboriginal-tracker-ned-kelly-detective/ && nvi
 alias printing3d='cd ~/repos/printing3d && lsa'
 alias myl='cd ~/repos/my-learning-site/ && lsa'
 alias mike='cd ~/repos/michaelodonovan.net/ && tree -L 2'
-alias notes='cd ~/repos/notes/ && lsa'
-alias car='cd ~/repos/notes/car/ && lsa'
-alias storage='cd ~/repos/storage/ && nvim .'
-alias music='cd ~/repos/notes/music/ && nvim .'
-alias diy='cd ~/Desktop/diy-notes-photos/ && nvim .'
-alias todo='nvim ~/repos/notes/planning/1.today-todo.md'
-alias planning='nvim ~/repos/notes/planning/'
-alias dig='nvim ~/repos/notes/planning/3.digital-standup.md'
-alias wr='cd ~/repos/wr/'
-alias v1='cd ~/repos/vite1-scratch/ && lsa'
-alias v2='cd ~/repos/vite2-scratch/ && lsa'
-alias js1='cd ~/repos/js1-scratch/ && lsa'
+alias notes='cd ~/repos/A-General/notes/ && lsa'
+alias car='cd ~/repos/A-General/notes/car/ && lsa'
+alias storage='cd ~/repos/A-General/storage/ && nvim .'
+alias diy='cd ~/repos/A-General/diy-notes-photos/ && nvim .'
+alias todo='nvim ~/repos/A-General/notes/planning/1.today-todo.md'
+alias planning='nvim ~/repos/A-General/notes/planning/'
+alias dig='nvim ~/repos/A-General/notes/planning/3.digital-standup.md'
 
 # folders
-alias eliz='cd ~/elizhelp && lsa'
 alias config='cd ~/.config && lsa'
 alias nvimfolder='cd ~/.config/nvim/ && tree'
 alias snippets='cd ~/.config/nvim/snippets/snippets/javascript-ecosystem/ && nvim .'
@@ -186,7 +182,7 @@ alias storybook='cd ~/comic-relief/storybook/ && lsa'
 alias yst='yarn styleguide'
 alias donate='cd ~/comic-relief/react-donation/ && lsa'
 
-alias tickets='nvim ~/Desktop/tickets.md'
+alias tickets='nvim ~/repos/A-General/notes/planning/tickets.md'
 
 alias trashgql='trash-put ./graphql/schema.gql'
 alias gatsbyclean='yarn rebuild-schema-dev'
@@ -361,5 +357,3 @@ playwright_run() {
   return $?
 }
 
-# Optional alias for shorter command
-alias ptest='playwright_run'
